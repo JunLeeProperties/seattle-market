@@ -1,5 +1,5 @@
 {
- "_안내": "따옴표(\") 안의 글만 고치면 웹페이지에 그대로 반영됩니다. areas 안의 jun_buy, jun_sell, jun_memo가 Jun의 의견 칸입니다. jun_memo에 현장 이야기를 쓰면 의견 칸 맨 위에 나옵니다(비워 두면 안 보여요).",
+ "_안내": "따옴표(\") 안의 글만 고치면 웹페이지에 그대로 반영됩니다. areas 안의 jun_buy, jun_sell, jun_memo가 Jun의 의견 칸입니다. jun_memo에 현장 이야기를 쓰면 의견 칸 맨 위에 나옵니다(비워 두면 안 보여요). 영어 버전은 맨 아래 en 안에 같은 구조로 있습니다.",
  "weekly": {
   "King": "새 매물(434건)과 펜딩(433건)이 거의 같습니다. 가격을 내린 매물(488건)이 펜딩보다 많아, 셀러들이 가격을 시장에 맞춰 가는 흐름이 이어지고 있습니다. 거래 완료가 21% 줄었지만 지난주에 10월 말 클로징이 몰렸던 영향이 커서, 한 주 숫자만으로 판단하기는 이릅니다.",
   "Snohomish": "새 매물은 12% 늘었는데 펜딩은 190건으로 지난주와 비슷합니다. 가격을 내린 매물(257건)이 펜딩보다 많아 바이어가 고를 수 있는 폭이 넓습니다. 거래 완료 39% 감소도 월말 클로징 효과를 감안해서 보시는 게 좋습니다.",
@@ -294,6 +294,270 @@
    "jun_memo": "",
    "jun_buy": "여름보다 협상하기가 훨씬 좋아졌어요. 다만 새 매물이 줄고 있고 매물 자체도 다른 도시보다 적어서, 좋은 집을 오래 기다리기는 어려울 수 있어요.",
    "jun_sell": "여름 가격을 기준으로 생각하시면 안 돼요. 석 달 사이에 팔리는 기간이 두 배가 됐어요. 그래도 경쟁 매물이 줄고 있다는 건 셀러에게 좋은 소식이에요."
+  }
+ },
+ "en": {
+  "weekly": {
+   "King": "New listings (434) and pendings (433) are almost equal. Price cuts (488) outnumber pendings, so sellers continue to adjust prices to the market. Closed sales fell 21%, but last week included a rush of end-of-October closings, so it's too early to judge from one week.",
+   "Snohomish": "New listings rose 12%, while pendings stayed at 190, about the same as last week. Price cuts (257) outnumber pendings, giving buyers plenty of choice. The 39% drop in closed sales should also be read with the end-of-month closing effect in mind.",
+   "Pierce": "Pendings (292) far outnumber new listings (176). The monthly numbers lean toward buyers, but this week contracts are happening faster than new homes come on the market. Worth watching for another week or two."
+  },
+  "areas": {
+   "King": {
+    "label": "Leaning toward buyers",
+    "tag": "Buyers",
+    "sub": "More homes on the market, but they still sell as fast as usual",
+    "read": [
+     "Months of inventory is 4.9, more than 60% above the usual level for this time of year (3.0). New listings are 15% above normal and sales are 18% below, so homes are piling up.",
+     "Yet the median home still sells in 18 days, almost the same as usual (17). Homes that are priced right sell as before, while the rest stay on the market and push inventory up.",
+     "Homes are selling at 97.1% of their original list price (usually 98.4%). The median sale price is down 2.0%, but price per sq ft is down 6.8%, so the real price adjustment is larger than the median suggests.",
+     "Active listings dipped from 10,002 in September to 9,509 in October. Inventory normally falls at this time of year, so it is too early to call a turn."
+    ],
+    "watch": "Whether inventory falls faster than last year in Nov–Dec, and whether sale-to-original-list drops below 97%",
+    "jun_buy": "Buyers have more homes to choose from than at any point since 2024. If a home has been listed for more than three weeks, it's worth starting a price conversation. Well-priced homes still sell within two to three weeks, though, so don't wait too long on one you love.",
+    "jun_sell": "Homes that don't sell in the first two to three weeks usually end up with a price cut. With so much competition nearby, starting with a market-based price and a well-prepared home is your best strategy.",
+    "jun_memo": ""
+   },
+   "Snohomish": {
+    "label": "Clearly leaning toward buyers",
+    "tag": "Buyers (strong)",
+    "sub": "All three signals point to buyers, four months in a row",
+    "read": [
+     "Months of inventory is 4.3, 1.8 times the usual level (2.4). Of the three counties, this is the biggest change from normal.",
+     "Days on market rose every month, from 16 in July to 24 in October, about 30% longer than usual (18.5).",
+     "October closed sales were 684, 23% below normal (887), and have fallen every month since July (974).",
+     "The median sale price is $680K, down 4.5% from last year, the largest drop of the three counties."
+    ],
+    "watch": "Whether the decline in closed sales stops, and whether days on market goes past 25",
+    "jun_buy": "There are 37% more listings than last year and prices have come down, so buyers have breathing room right now. On homes listed for three weeks or more, negotiate not just price but also repairs and closing costs.",
+    "jun_sell": "Homes are taking longer to sell every month. Pricing off last year's numbers can mean a long wait, so I'd recommend pricing based on homes that actually sold in the last one to two months.",
+    "jun_memo": ""
+   },
+   "Pierce": {
+    "label": "Leaning toward buyers",
+    "tag": "Buyers",
+    "sub": "The numbers favor buyers, but new listings are starting to shrink",
+    "read": [
+     "Months of inventory 4.3 (usually 3.3), days on market 33 (usually 25), and sale-to-original-list 96.8% (usually 98.2%). All three signals point to buyers.",
+     "On the other hand, October new listings were 1,122, 15% fewer than last October and below normal. Active listings fell from 4,409 in August to 4,102.",
+     "Recent weekly data also shows far more pendings (292) than new listings (176), meaning the built-up inventory is slowly being absorbed.",
+     "The median sale price is $550K, up 0.9% from last year, the only one of the three counties where prices did not fall."
+    ],
+    "watch": "Whether shrinking new listings push months of inventory below 4",
+    "jun_buy": "There is room to negotiate right now. Homes are selling at about 96.8% of the original price and taking over a month to sell. With fewer new listings coming, though, this window may not stay open for long.",
+    "jun_sell": "Less competition is good news for sellers. It still takes about a month to sell, so not starting too high usually leads to a better result.",
+    "jun_memo": ""
+   },
+   "Seattle": {
+    "label": "Mixed signals",
+    "tag": "Mixed",
+    "sub": "A split market: some homes sell fast while others sit",
+    "read": [
+     "Months of inventory is 4.9, 40% above normal (3.5). The 3,541 active listings are also 30% above normal.",
+     "Yet the median home sells in just 12 days, the fastest of all 14 cities and quicker than usual (16). Sale-to-original-list is 98.4%, also the highest of the 14 cities.",
+     "Taken together, the homes that sell go within two weeks at nearly full price, while the rest remain unsold.",
+     "Seattle has a high share of condos, so condo inventory may be driving the overall numbers up. This data combines all home types, so we'll split it by type in the next update."
+    ],
+    "watch": "Inventory split by houses vs. condos, and whether closed sales fall below 654",
+    "jun_buy": "Every home in Seattle is a different story. Homes listed for over a month, especially condos, have real room to negotiate. On the other hand, a well-kept single-family home can still sell within two weeks, so the same strategy won't work for both.",
+    "jun_sell": "If the price and condition are right, homes still sell within 12 days. Miss those first two weeks and it's easy to get lost among 3,500+ listings. In Seattle, the first price really matters.",
+    "jun_memo": ""
+   },
+   "Bellevue": {
+    "label": "Clearly leaning toward buyers",
+    "tag": "Buyers (strong)",
+    "sub": "The longest months of inventory of all 14 cities",
+    "read": [
+     "Months of inventory is 5.8, double the usual level (2.9) and the longest of all 14 cities.",
+     "Days on market is 23 (usually 14) and sale-to-original-list is 95.0% (usually 98.0%). On average, homes sell about 5% below their first asking price.",
+     "The median sale price is $1.50M, down only 1.4%, but price per sq ft is down 11.4%. More large homes selling kept the median up, so the real adjustment is closer to the price per sq ft figure.",
+     "Active listings have fallen four months in a row, from 727 in July to 642. Inventory has peaked but is still 43% above last year."
+    ],
+    "watch": "Whether listings keep falling, and whether sale-to-original-list holds around 95%",
+    "jun_buy": "Bellevue is one of the strongest negotiating positions for buyers among the 14 cities. Homes are selling about 5% below the first price on average, so on a home that's been sitting, you can feel comfortable offering more boldly.",
+    "jun_sell": "Price per sq ft is about 11% lower than last year. If you think in terms of what your neighbor sold for last year, you may be out of step with the market. Let's price based on the last three months of sales together.",
+    "jun_memo": ""
+   },
+   "Kirkland": {
+    "label": "Leaning toward buyers",
+    "tag": "Buyers",
+    "sub": "Homes sell at the usual pace; the adjustment is happening in price",
+    "read": [
+     "Months of inventory is 5.0, 1.8 times the usual level (2.8).",
+     "Days on market is 19, not far from normal (17). The pace of sales itself has not slowed.",
+     "Instead, prices moved. The median sale price fell 9.7% and price per sq ft fell 11.2%, the largest median drop of the 14 cities. Sale-to-original-list is 95.7% (usually 98.0%).",
+     "October closed sales were 101, 22% below normal (130)."
+    ],
+    "watch": "Whether the drop in median price stops, and whether days on market stays near normal",
+    "jun_buy": "Prices are down close to 10% from last year. Homes that cut their price tend to sell quickly, so keep an eye on listings that just adjusted.",
+    "jun_sell": "Homes priced to the market still sell within three weeks, like usual. Starting at the right price tends to get you a better final number than starting high and cutting later.",
+    "jun_memo": ""
+   },
+   "Redmond": {
+    "label": "Leaning toward buyers",
+    "tag": "Buyers",
+    "sub": "Inventory is 2.5x normal, yet homes that sell go in two weeks",
+    "read": [
+     "Months of inventory is 5.0, 2.5 times the usual level (2.0). Active listings are 50% above last year.",
+     "Days on market is 14, the same as usual. But sale-to-original-list is 95.7%, 3 points below normal (98.7%).",
+     "Half of homes sell within two weeks, yet sale prices are more than 4% below the first asking price. Fast sellers are mixed with homes that sat and sold after big price cuts.",
+     "October closed sales were 63, 32% below normal (92). With so few sales, monthly numbers swing a lot (days on market was 36 in August, 14 in October)."
+    ],
+    "watch": "Whether closed sales recover, and whether sale-to-original-list returns above 96%",
+    "jun_buy": "With 50% more listings than last year, you have plenty of choice. Homes that have been sitting tend to adjust their price quite a bit. Just keep in mind that great new listings still draw competition.",
+    "jun_sell": "The first two weeks matter most. Homes that didn't sell in that window often ended up with big price cuts.",
+    "jun_memo": ""
+   },
+   "Sammamish": {
+    "label": "Clearly leaning toward buyers",
+    "tag": "Buyers (strong)",
+    "sub": "The biggest change from normal, but the summer peak has passed",
+    "read": [
+     "Months of inventory is 5.1, 2.8 times the usual level (1.8), the biggest change from normal of the 14 cities.",
+     "Sale-to-original-list is 94.6%, the lowest of the 14 cities (usually 98.1%). 43% of listings have cut their price.",
+     "Listings are falling, though: from 321 in July to 254 in October, and months of inventory came down from 6.1 to 5.1.",
+     "The median sale price fell 5.7% and price per sq ft fell 10.2%. With only about 58 sales a month, monthly numbers can swing."
+    ],
+    "watch": "Whether listings keep falling, and whether sale-to-original-list recovers above 95%",
+    "jun_buy": "Homes are selling more than 5% below the first price on average, so there's good room to negotiate. That said, listings have been falling for three months, so there isn't as much choice as in the summer.",
+    "jun_sell": "More than 4 in 10 listings have cut their price. If the starting price is above market, homes often sell even lower after the cut, so it's worth setting the first price carefully.",
+    "jun_memo": ""
+   },
+   "Issaquah": {
+    "label": "Clearly leaning toward buyers",
+    "tag": "Buyers (strong)",
+    "sub": "All three signals favor buyers, but low sales volume means big swings",
+    "read": [
+     "Months of inventory 4.7 (usually 2.6), sale-to-original-list 96.0% (usually 97.9%).",
+     "Days on market is 33, longer than usual (19). It was only 15 in August and September, though, and with just 37 sales in October, one month isn't enough to call a trend.",
+     "The median sale price rose 1.4%, but price per sq ft fell 8.4%. A higher share of large homes selling appears to have lifted the median.",
+     "October's 37 sales are 29% below normal (52) and about half of July (71)."
+    ],
+    "watch": "Whether 33 days on market is a one-off, and whether sales recover to the 40s",
+    "jun_buy": "With fewer sales, more sellers are waiting. Price per sq ft is about 8% lower than last year, so instead of looking at the rising median, compare homes by price per sq ft.",
+    "jun_sell": "With only about 37 sales a month, every buyer counts. If you get a first offer, please don't brush it off. Let's review it carefully together.",
+    "jun_memo": ""
+   },
+   "Renton": {
+    "label": "Clearly leaning toward buyers",
+    "tag": "Buyers (strong)",
+    "sub": "All three signals favor buyers, holding steady for two months",
+    "read": [
+     "Months of inventory is 4.7, 1.7 times the usual level (2.7).",
+     "Days on market is 28, almost 70% longer than usual (17), and around a month for the second straight month after September (30).",
+     "Sale-to-original-list is 96.3% (usually 97.9%), and 44% of listings have cut their price.",
+     "The median sale price fell 2.8% and price per sq ft fell 4.6%, a smaller adjustment than the Eastside."
+    ],
+    "watch": "Whether days on market passes 30, and whether closed sales (96) fall further",
+    "jun_buy": "Homes are taking close to a month to sell and 44% have cut their price. There's little reason to rush, so you can comfortably ask for things like inspection repairs.",
+    "jun_sell": "Plan on about a month and you'll feel more at ease. With so many price cuts around you, selling without a reduction means your first price needs to be clearly reasonable compared to nearby homes.",
+    "jun_memo": ""
+   },
+   "Kent": {
+    "label": "Leaning toward buyers",
+    "tag": "Buyers",
+    "sub": "Pace and inventory favor buyers, but prices are still rising",
+    "read": [
+     "Months of inventory 4.5 (usually 2.8), days on market 29 (usually 20), sale-to-original-list 97.4% (usually 98.8%).",
+     "Yet the median sale price is $650K, up 5.6% from last year, the biggest rise of the 14 cities. Price per sq ft fell 3.0%, so more large-home sales are part of the story.",
+     "October new listings were 125, 17% fewer than last October (150). Active listings were flat for three months, then fell to 431 in October.",
+     "40% of listings have cut their price (35% last year)."
+    ],
+    "watch": "Whether new listings keep shrinking, and whether price per sq ft turns back up",
+    "jun_buy": "Homes take nearly a month to sell, so you have time to think. But prices here are relatively affordable, demand is steady, and new listings are shrinking, so big discounts are hard to expect.",
+    "jun_sell": "Prices are holding up, but homes take longer to sell. Homes are trading at about 97% of the first price, so keep that in mind when setting yours.",
+    "jun_memo": ""
+   },
+   "Federal-Way": {
+    "label": "Mixed signals",
+    "tag": "Mixed",
+    "sub": "Inventory and negotiation favor buyers; pace and prices are holding",
+    "read": [
+     "Months of inventory is 5.1, 65% above normal (3.1). Active listings are 48% above last year.",
+     "Sale-to-original-list is 96.1% (usually 97.7%), and 44% of listings have cut their price (35% last year).",
+     "Days on market, however, is 23, close to normal (25). This has always been an area where homes take over three weeks to sell.",
+     "Prices actually rose: the median sale price is up 3.9% and price per sq ft up 2.1%. It's the only one of the 14 cities where price per sq ft went up."
+    ],
+    "watch": "Whether months of inventory falls below 5, and whether price gains continue",
+    "jun_buy": "There are lots of listings and many price cuts, so you can definitely negotiate. But actual sale prices are higher than last year. Demand around the $600K range is steady, so waiting for a big price drop may not pay off.",
+    "jun_sell": "Prices are holding, but homes that started high are ending up with cuts. Competition is up almost 50% from last year, so make your home stand out with great photos and condition.",
+    "jun_memo": ""
+   },
+   "Maple-Valley": {
+    "label": "Leaning toward buyers",
+    "tag": "Buyers",
+    "sub": "Fewer listings than most, yet the longest time to sell",
+    "read": [
+     "Months of inventory is 3.8, tied with Tacoma as the shortest of the 14 cities. It's still 1.9 times the usual level (2.0).",
+     "Days on market is 43, the longest of the 14 cities, and has grown every month since July (16). Usually it's 30.",
+     "Sale-to-original-list is 97.0%, close to normal (97.4%). 48% of listings have cut their price, similar to last year (50%), so the room to negotiate is about the same as usual.",
+     "With only 31 sales in October, a few homes can move the numbers a lot. It's more accurate to look at two to three months together."
+    ],
+    "watch": "Whether days on market stays in the 40s, and how much new listings drop over the winter",
+    "jun_buy": "There aren't many listings, but there's no need to rush. Many homes have been on the market for over a month. Final prices are around 97% of the first price, though, so large discounts are rare.",
+    "jun_sell": "Homes do sell, but it takes time. Plan for about six weeks. You don't need a big price cut, but starting high can make that wait even longer.",
+    "jun_memo": ""
+   },
+   "Everett": {
+    "label": "Clearly leaning toward buyers",
+    "tag": "Buyers (strong)",
+    "sub": "All three signals favor buyers, and prices have come down",
+    "read": [
+     "Months of inventory 4.1 (usually 2.5), days on market 25 (usually 20), sale-to-original-list 97.0% (usually 98.0%).",
+     "Closed sales fell four months in a row, from 158 in July to 108 in October, 23% below normal (141).",
+     "The median sale price fell 6.5% and price per sq ft fell 11.8%, the second-largest price per sq ft drop after Bothell.",
+     "October new listings were 211, above normal (184). Homes keep coming on the market while fewer people are buying."
+    ],
+    "watch": "Whether the decline in sales stops, and whether the drop in price per sq ft slows",
+    "jun_buy": "Prices are clearly lower than last year and new listings keep coming. There are many more homes to choose from in the $500Ks.",
+    "jun_sell": "Sales have been falling for four months, and there's no sign yet that waiting will help. If you're planning to sell, pricing based on recent sales is the way to go.",
+    "jun_memo": ""
+   },
+   "Lynnwood": {
+    "label": "Mixed signals",
+    "tag": "Mixed",
+    "sub": "Sales dropped sharply, but prices are holding",
+    "read": [
+     "Months of inventory is 4.2, 1.9 times normal (2.2), and days on market is 21 (usually 16).",
+     "October closed sales were 62, 44% below normal (110), a sharp drop from 99 in September.",
+     "Yet sale-to-original-list is 98.2%, the same as usual (98.3%) and second only to Seattle among the 14 cities. The median sale price is up 5.1%.",
+     "Sales are down but there's almost no price negotiation. Sellers are holding firm on price while buyers wait and watch."
+    ],
+    "watch": "Whether October's drop in sales is temporary, and whether sale-to-original-list falls below 98%",
+    "jun_buy": "There are 46% more listings than last year, but sellers aren't cutting prices much. Still, the share of price cuts has risen to 40% (from 32%), so start with homes that have begun adjusting.",
+    "jun_sell": "Homes that sold got full price, but far fewer homes sold. When sales keep falling, price adjustments often follow, so let's keep an eye on the market together.",
+    "jun_memo": ""
+   },
+   "Bothell": {
+    "label": "Clearly leaning toward buyers",
+    "tag": "Buyers (strong)",
+    "sub": "The biggest price adjustment of the 14 cities",
+    "read": [
+     "Months of inventory is 4.9, 2.1 times normal (2.3), and days on market is 23, almost 70% longer than usual (14).",
+     "Sale-to-original-list is 96.2%, 2.8 points below normal (99.0%). Homes here used to sell at almost exactly their first price.",
+     "55% of listings have cut their price (38% last year), the highest of the 14 cities.",
+     "The median sale price fell 9.1% and price per sq ft fell 12.2%, the largest price per sq ft drop of the 14 cities. Bothell spans King and Snohomish counties and has a lot of new construction, which is worth keeping in mind."
+    ],
+    "watch": "Whether the share of price cuts drops below 50%, and whether the price per sq ft decline stops",
+    "jun_buy": "One in two listings has cut its price. You can buy at close to 10% below last year, and for new construction, be sure to ask about builder incentives too.",
+    "jun_sell": "Price cuts are more common here than anywhere else. Set your first price by comparing it with nearby homes that already cut, and you can avoid going down the same road.",
+    "jun_memo": ""
+   },
+   "Tacoma": {
+    "label": "Leaning toward buyers",
+    "tag": "Buyers",
+    "sub": "Cooled quickly over three months, but supply is shrinking too",
+    "read": [
+     "In July, homes sold at 100.0% of the first price in 12 days. In October it was 97.4% and 26 days (usually 98.8% and 18).",
+     "Months of inventory is 3.8, 30% above normal (2.9), still one of the shortest of the 14 cities.",
+     "October new listings were 320, 18% fewer than last October (391), and closed sales (235) were 21% below normal (299). Both sellers and buyers have pulled back.",
+     "The median sale price is $500K, up 2.0%, while price per sq ft fell 5.5%."
+    ],
+    "watch": "Whether longer days on market is seasonal, and whether new listings keep shrinking",
+    "jun_buy": "It's much easier to negotiate than in the summer. But new listings are shrinking and inventory is lower than in other cities, so waiting a long time for the right home may be hard.",
+    "jun_sell": "Don't price based on summer. Time to sell has doubled in three months. The good news is that competing listings are shrinking.",
+    "jun_memo": ""
+   }
   }
  }
 }
