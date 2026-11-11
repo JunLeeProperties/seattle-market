@@ -560,7 +560,7 @@ function calc(){
   $('c-out').textContent=f(m); $('c-loan').textContent=f(L); $('c-dp').textContent=f(P*d); $('c-int').textContent=f(m*n-L);
 }
 function select(id,scroll){
-  cur=id; document.querySelectorAll('.chip').forEach(b=>b.setAttribute('aria-pressed',b.dataset.id===id));
+  cur=id; if($('region-mobile'))$('region-mobile').value=id; document.querySelectorAll('.chip').forEach(b=>b.setAttribute('aria-pressed',b.dataset.id===id));
   renderVerdict();renderKpis();renderCharts();renderJun();renderTable();
   $('c-price').value=Math.round(S(byId(id)).price/1000)*1000; calc();
   if(scroll)$('jun').scrollIntoView({behavior:'smooth',block:'start'});
