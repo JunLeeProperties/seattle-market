@@ -30,6 +30,10 @@
 - **매월**: Jun이 NWMLS InfoSparks에 로그인 → 3개 카운티·14개 도시 지표 수집, Redfin 도시 페이지에서 가격 → `src/data.json` 갱신 → 17개 지역 분석 문장 재작성 → 빌드·푸시, PDF 리포트도 새로 제작
   - 다음 달 할 일: 시애틀은 단독주택/콘도를 나눠 받아 "콘도 재고" 가설 확인
 
+## 마켓 리포트 PDF + QR
+- QR → https://junleeproperties.github.io/seattle-market/report/ (고정 주소, QR 재인쇄 불필요)
+- 매달: `report/YYYY-MM.pdf` 추가 → `report/reports.json`에 `{"file":"YYYY-MM.pdf","ym":"YYYY-MM","pages":N}` 한 줄 추가 → 푸시. 최신 달이 자동으로 맨 위, 나머지는 '지난 리포트'로 쌓임
+
 ## 판정 방식
 재고 소진 기간·판매 소요일·최초 리스팅가 대비를 그 지역 예년(2024·2025년 9~11월 평균, 인덱스 8,9,10,20,21,22)과 비교. msi/dom ±15%, po ±0.8%p → 신호 점수. 거기에 거래 건수·새 매물·가격 흐름을 사람이 보고 최종 판정(뚜렷/기우는 중/신호 엇갈림)을 `notes.json`에 적음.
 
