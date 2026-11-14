@@ -130,7 +130,7 @@ footer b{color:var(--ink)}
  .pg em{width:100%}
  .clist{grid-template-columns:1fr}
 }
-#weekly{margin:8px 0 34px;padding:26px 0 30px;border-top:2px solid var(--ink);border-bottom:1px solid var(--rule)}
+#weekly{margin:8px 0 30px;padding:26px 0 8px;border-top:2px solid var(--ink)}
 .wkhead{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;flex-wrap:wrap;margin-bottom:18px}
 .wkdate{font-size:15px;font-weight:700;margin-top:2px}
 .wknote{font-size:12px;color:var(--grey);margin:0 0 14px}
@@ -189,12 +189,21 @@ footer b{color:var(--ink)}
 #weekly.closed{padding-bottom:22px}
 .wkmini{display:none;font-size:13px;color:#333;margin-top:6px}
 #weekly.closed .wkmini{display:block;cursor:pointer}
+.wkopen{display:none;width:100%;margin-top:14px;align-items:center;justify-content:space-between;gap:12px;text-align:left;background:var(--g);color:#fff;border:0;padding:16px 20px;cursor:pointer;min-height:56px}
+.wkopen b{display:block;font-size:16px;font-weight:900}
+.wkopen small{display:block;font-size:12px;opacity:.85;margin-top:3px;line-height:1.5}
+.wkopen i{font-style:normal;font-size:20px}
+#weekly.closed .wkopen{display:flex}
+#weekly.closed .wktog{display:none}
+.wkmini{cursor:pointer}
+.chap{margin:6px 0 10px;padding-top:26px;border-top:2px solid var(--ink)}
+.chap h2{margin-bottom:2px}
 </style>
 </head>
 <body>
 <header class="top"><div class="wrap">
   <img src="data:image/png;base64,__LOGO__" alt="Jun Lee Properties">
-  <nav aria-label="페이지 내 이동"><a href="#weekly" data-en="This Week">이번 주</a><a href="#jun" data-en="Analysis">분석·의견</a><a href="#market" data-en="Market">시장 현황</a><a href="#trend" data-en="Trends">추이</a><a href="#compare" data-en="Compare">도시 비교</a></nav>
+  <nav aria-label="페이지 내 이동"><a href="#weekly" data-en="Weekly">주간</a><a href="#monthly" data-en="Monthly">월간</a><a href="#jun" data-en="Analysis">분석·의견</a><a href="#market" data-en="Market">시장 현황</a><a href="#trend" data-en="Trends">추이</a><a href="#compare" data-en="Compare">도시 비교</a></nav>
   <div class="lang" role="group" aria-label="Language"><button type="button" data-lang="ko">한국어</button><button type="button" data-lang="en">EN</button></div>
   <a class="cta" href="#contact" data-en="Contact">상담 문의</a>
 </div></header>
@@ -209,14 +218,20 @@ footer b{color:var(--ink)}
 
   <section id="weekly">
     <div class="wkhead">
-      <div><div class="eyebrow">WEEKLY MARKET RECAP</div><h2 data-en="This Week&#39;s Market">이번 주 시장</h2><p class="wkdate" id="wk-date"></p></div>
+      <div><div class="eyebrow" data-en="PART 1 · WEEKLY MARKET RECAP">PART 1 · WEEKLY MARKET RECAP</div><h2 data-en="Weekly Report">주간 리포트</h2><p class="wkdate" id="wk-date"></p></div>
       <button type="button" class="wktog" id="wk-tog" aria-expanded="true" aria-controls="wk-grid"><span id="wk-togl">접기</span><i>▾</i></button>
     </div>
     <p class="wkmini" id="wk-mini"></p>
+    <button type="button" class="wkopen" id="wk-open" aria-controls="wk-grid"><span><b data-en="Open this week&#39;s report">이번 주 주간 리포트 펼쳐 보기</b><small data-en="New listings · Pending · Sold · Price cuts · Canceled, by county, vs. last week">카운티별 신규 매물 · 펜딩 · 거래 · 가격 인하 · 취소, 지난주와 비교</small></span><i>▾</i></button>
     <p class="wknote" data-en="Activity by county for the week · Change vs. last week · Source: NWMLS · Canceled includes expired">카운티별 한 주 동안의 거래 활동 · 증감은 지난주 대비 · 출처 NWMLS · 취소에는 만료 매물 포함</p>
     <div class="wkgrid" id="wk-grid"></div>
   </section>
 
+  <div class="chap" id="monthly">
+    <div class="eyebrow" data-en="PART 2 · MONTHLY ANALYSIS">PART 2 · MONTHLY ANALYSIS</div>
+    <h2 data-en="Monthly Analysis by Area">지역별 월간 분석</h2>
+    <p class="sub" data-en="NWMLS, October 2026 · Pick an area and the analysis, numbers and charts below all switch to it.">NWMLS 2026년 10월 기준 · 지역을 고르시면 아래 분석, 숫자, 그래프가 모두 그 지역으로 바뀝니다.</p>
+  </div>
   <div class="picker" id="picker" role="group" aria-label="지역 선택"></div>
 
   <section id="jun">
@@ -459,7 +474,7 @@ function renderWeekly(){
   const w=WEEKLY[WEEKLY.length-1], pw=WEEKLY.length>1?WEEKLY[WEEKLY.length-2]:null;
   const f=d=>{const [y,m,dd]=d.split('-');return LANG==='en'?`${MON[+m-1]} ${+dd}`:`${+m}월 ${+dd}일`};
   $('wk-date').textContent=`${f(w.start)} ${T('~','–')} ${f(w.end)}, ${w.end.slice(0,4)}`;
-  $('wk-mini').innerHTML=['King','Snohomish','Pierce'].map(id=>`<b>${nm(byId(id))}</b> ${T('펜딩','pending')} ${w[id][1]}`).join(' · ')+` <span style="color:var(--grey)">${T('· 눌러서 자세히 보기','· tap to see more')}</span>`;
+  $('wk-mini').innerHTML=['King','Snohomish','Pierce'].map(id=>`<b>${nm(byId(id))}</b> ${T('펜딩','pending')} ${w[id][1]}`).join(' · ')
   if(typeof setWk==='function')setWk();
   $('wk-grid').innerHTML=['King','Snohomish','Pierce'].map(id=>{
     const v=w[id], mx=Math.max(...v), a=byId(id);
@@ -474,7 +489,7 @@ function renderWeekly(){
 let WKOPEN=(()=>{try{const v=localStorage.getItem('wkopen');if(v!==null)return v==='1'}catch(e){}return window.matchMedia('(min-width:861px)').matches})();
 function setWk(){ $('weekly').classList.toggle('closed',!WKOPEN); $('wk-tog').setAttribute('aria-expanded',WKOPEN); $('wk-togl').textContent=WKOPEN?T('접기','Hide'):T('펼쳐 보기','Show'); }
 const wkFlip=()=>{WKOPEN=!WKOPEN;try{localStorage.setItem('wkopen',WKOPEN?'1':'0')}catch(e){}setWk()};
-$('wk-tog').addEventListener('click',wkFlip);$('wk-mini').addEventListener('click',wkFlip);
+$('wk-tog').addEventListener('click',wkFlip);$('wk-open').addEventListener('click',wkFlip);$('wk-mini').addEventListener('click',wkFlip);
 renderWeekly();
 </script>
 </body>
