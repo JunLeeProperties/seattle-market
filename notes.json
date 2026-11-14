@@ -83,13 +83,13 @@
    "read": [
     "재고 소진 기간이 5.8개월로 예년(2.9개월)의 두 배입니다. 14개 도시 중 가장 깁니다.",
     "판매 소요일은 23일(예년 14일), 최초 리스팅가 대비는 95.0%(예년 98.0%)입니다. 평균적으로 처음 가격보다 5% 정도 낮게 거래되고 있습니다.",
-    "중간 거래가는 150만 달러로 1.4%만 내렸지만, sqft당 가격은 11.4% 내렸습니다. 큰 집이 상대적으로 많이 팔리면서 중간가가 유지된 것이라, 실제 가격 조정은 sqft당 가격 쪽에 더 가깝습니다.",
+    "중간 거래가는 144만 달러로 4.0% 내렸고, sqft당 가격은 9.2% 내렸습니다. 큰 집이 상대적으로 많이 팔리면서 중간가 하락 폭이 작게 보이는 것이라, 실제 가격 조정은 sqft당 가격 쪽에 더 가깝습니다.",
     "현재 매물은 7월 727채에서 넉 달 연속 줄어 642채가 됐습니다. 매물은 정점을 지났지만, 아직 작년보다 43% 많습니다."
    ],
    "watch": "매물 감소가 계속되는지, 최초 리스팅가 대비가 95% 선에서 멈추는지",
    "jun_memo": "",
    "jun_buy": "14개 도시 중에서 바이어 협상력이 가장 큰 곳 중 하나예요. 평균적으로 처음 가격보다 5% 정도 낮게 거래되고 있으니, 오래 나와 있는 집이라면 그보다 더 과감하게 제안해 보셔도 괜찮아요.",
-   "jun_sell": "sqft당 가격이 작년보다 11% 정도 낮아요. 작년에 이웃집이 팔린 가격을 기준으로 생각하시면 시장과 차이가 날 수 있어요. 최근 석 달 동안의 거래를 기준으로 함께 가격을 잡아 보시면 좋겠어요."
+   "jun_sell": "sqft당 가격이 작년보다 9% 정도 낮아요. 작년에 이웃집이 팔린 가격을 기준으로 생각하시면 시장과 차이가 날 수 있어요. 최근 석 달 동안의 거래를 기준으로 함께 가격을 잡아 보시면 좋겠어요."
   },
   "Kirkland": {
    "name": "커클랜드",
@@ -100,7 +100,7 @@
    "read": [
     "재고 소진 기간이 5.0개월로 예년(2.8개월)의 1.8배입니다.",
     "판매 소요일은 19일로 예년(17일)과 큰 차이가 없습니다. 집이 팔리는 속도 자체는 느려지지 않았습니다.",
-    "대신 가격이 움직였습니다. 중간 거래가는 9.7%, sqft당 가격은 11.2% 내렸고, 중간가 하락 폭이 14개 도시 중 가장 큽니다. 최초 리스팅가 대비도 95.7%(예년 98.0%)입니다.",
+    "대신 가격이 움직였습니다. 중간 거래가는 9.4%, sqft당 가격은 10.5% 내렸습니다. sqft당 가격 하락 폭은 14개 도시 중 보텔 다음으로 큽니다. 최초 리스팅가 대비도 95.7%(예년 98.0%)입니다.",
     "10월 거래는 101건으로 예년(130건)보다 22% 적습니다."
    ],
    "watch": "중간 거래가 하락이 멈추는지, 판매 소요일이 예년 수준을 유지하는지",
@@ -133,14 +133,14 @@
    "sub": "예년과 비교해 가장 크게 변했지만, 여름 정점은 지났습니다",
    "read": [
     "재고 소진 기간이 5.1개월로 예년(1.8개월)의 2.8배입니다. 예년과 비교한 변화 폭이 14개 도시 중 가장 큽니다.",
-    "최초 리스팅가 대비는 94.6%로 14개 도시 중 가장 낮습니다(예년 98.1%). 매물의 43%가 가격을 내렸습니다.",
+    "최초 리스팅가 대비는 94.6%로 14개 도시 중 가장 낮습니다(예년 98.1%).",
     "다만 매물은 줄고 있습니다. 현재 매물이 7월 321채에서 10월 254채로, 재고 소진 기간도 6.1개월에서 5.1개월로 내려왔습니다.",
-    "중간 거래가는 5.7%, sqft당 가격은 10.2% 내렸습니다. 한 달 거래가 58건 정도라 월별 숫자의 변동은 큰 편입니다."
+    "중간 거래가는 10.8%, sqft당 가격은 10.1% 내렸습니다. 한 달 거래가 58건 정도라 월별 숫자의 변동은 큰 편입니다."
    ],
    "watch": "매물 감소가 이어지는지, 최초 리스팅가 대비가 95% 위로 회복되는지",
    "jun_memo": "",
    "jun_buy": "처음 가격보다 평균 5% 넘게 낮게 거래되고 있어서 협상 여지가 큰 편이에요. 다만 매물이 석 달째 줄고 있어서, 여름만큼 선택지가 많지는 않아요.",
-   "jun_sell": "매물 10채 중 4채 이상이 가격을 내렸어요. 처음 가격이 시세보다 높으면 내린 뒤에도 더 낮게 팔리는 경우가 많아서, 시작 가격을 신중하게 정하시는 게 좋아요."
+   "jun_sell": "가격이 작년보다 10% 정도 내려왔어요. 처음 가격이 시세보다 높으면 내린 뒤에도 더 낮게 팔리는 경우가 많아서, 시작 가격을 신중하게 정하시는 게 좋아요."
   },
   "Issaquah": {
    "name": "이사콰",
@@ -151,7 +151,7 @@
    "read": [
     "재고 소진 기간 4.7개월(예년 2.6개월), 최초 리스팅가 대비 96.0%(예년 97.9%)입니다.",
     "판매 소요일은 33일로 예년(19일)보다 깁니다. 다만 8~9월에는 15일이었고 10월 거래가 37건뿐이라, 한 달 숫자만으로 흐름을 말하기는 어렵습니다.",
-    "중간 거래가는 1.4% 올랐지만 sqft당 가격은 8.4% 내렸습니다. 큰 집 거래 비중이 높아지면서 중간가가 오른 것으로 보입니다.",
+    "중간 거래가는 11.9% 올랐지만 sqft당 가격은 7.6% 내렸습니다. 큰 집 거래 비중이 높아지면서 중간가가 오른 것으로 보입니다.",
     "10월 거래 37건은 예년(52건)보다 29% 적고, 7월(71건)의 절반 수준입니다."
    ],
    "watch": "판매 소요일 33일이 일시적인지, 거래 건수가 40건대를 회복하는지",
@@ -168,12 +168,12 @@
    "read": [
     "재고 소진 기간이 4.7개월로 예년(2.7개월)의 1.7배입니다.",
     "판매 소요일은 28일로 예년(17일)보다 70% 가까이 깁니다. 9월(30일)에 이어 두 달째 한 달 안팎입니다.",
-    "최초 리스팅가 대비는 96.3%(예년 97.9%)이고, 매물의 44%가 가격을 내렸습니다.",
-    "중간 거래가는 2.8%, sqft당 가격은 4.6% 내렸습니다. 이스트사이드보다는 가격 조정 폭이 작습니다."
+    "최초 리스팅가 대비는 96.3%(예년 97.9%)입니다.",
+    "중간 거래가는 3.4%, sqft당 가격은 4.0% 내렸습니다. 이스트사이드보다는 가격 조정 폭이 작습니다."
    ],
    "watch": "판매 소요일이 30일을 넘어서는지, 거래 건수(96건)가 더 줄어드는지",
    "jun_memo": "",
-   "jun_buy": "팔리기까지 한 달 가까이 걸리고, 매물의 44%가 가격을 내렸어요. 서두르실 필요가 적은 시장이라 인스펙션이나 수리 요청 같은 조건도 편하게 넣어 보실 수 있어요.",
+   "jun_buy": "팔리기까지 한 달 가까이 걸리고, 처음 가격보다 4% 가까이 낮게 거래되고 있어요. 서두르실 필요가 적은 시장이라 인스펙션이나 수리 요청 같은 조건도 편하게 넣어 보실 수 있어요.",
    "jun_sell": "한 달 정도는 걸린다고 생각하고 준비하시면 마음이 편해요. 가격을 내린 매물이 많아서, 인하 없이 팔려면 처음 가격이 주변보다 확실히 합리적이어야 해요."
   },
   "Kent": {
@@ -184,9 +184,9 @@
    "sub": "속도와 재고는 바이어 쪽인데, 가격은 아직 오르고 있습니다",
    "read": [
     "재고 소진 기간 4.5개월(예년 2.8개월), 판매 소요일 29일(예년 20일), 최초 리스팅가 대비 97.4%(예년 98.8%)입니다.",
-    "그런데 중간 거래가는 65만 달러로 작년보다 5.6% 올라 14개 도시 중 가장 많이 올랐습니다. sqft당 가격은 3.0% 내려, 큰 집 거래가 늘어난 영향도 섞여 있습니다.",
+    "그런데 중간 거래가는 65만 달러로 작년보다 3.2% 올랐습니다. sqft당 가격은 4.2% 내려, 큰 집 거래가 늘어난 영향도 섞여 있습니다.",
     "10월 새 매물은 125건으로 작년 10월(150건)보다 17% 적습니다. 현재 매물도 석 달간 제자리였다가 10월에 431채로 줄었습니다.",
-    "매물의 40%가 가격을 내렸습니다(작년 35%)."
+    "10월 펜딩은 작년 10월보다 5% 적어, 계약 흐름은 작년과 비슷합니다."
    ],
    "watch": "새 매물 감소가 이어지는지, sqft당 가격이 다시 오르는지",
    "jun_memo": "",
@@ -201,13 +201,13 @@
    "sub": "재고와 협상은 바이어 쪽, 속도와 가격은 버티고 있습니다",
    "read": [
     "재고 소진 기간이 5.1개월로 예년(3.1개월)보다 65% 깁니다. 현재 매물은 작년보다 48% 많습니다.",
-    "최초 리스팅가 대비는 96.1%(예년 97.7%)이고, 매물의 44%가 가격을 내렸습니다(작년 35%).",
+    "최초 리스팅가 대비는 96.1%(예년 97.7%)입니다.",
     "반면 판매 소요일은 23일로 예년(25일)과 비슷합니다. 원래 팔리기까지 3주 넘게 걸리던 지역입니다.",
-    "가격은 오히려 올랐습니다. 중간 거래가는 3.9%, sqft당 가격은 2.1% 올랐고, sqft당 가격이 오른 곳은 14개 도시 중 이곳뿐입니다."
+    "가격은 크게 내리지 않았습니다. 중간 거래가는 2.3% 내렸고, sqft당 가격은 작년과 같습니다. sqft당 가격이 내리지 않은 곳은 14개 도시 중 이곳과 메이플밸리뿐입니다."
    ],
-   "watch": "재고 소진 기간이 5개월 아래로 내려오는지, 가격 상승이 이어지는지",
+   "watch": "재고 소진 기간이 5개월 아래로 내려오는지, 가격이 지금 수준을 지키는지",
    "jun_memo": "",
-   "jun_buy": "매물이 많고 가격을 내리는 집도 많아서 협상은 충분히 해 보실 수 있어요. 다만 실제 거래 가격은 작년보다 높아요. 60만 달러 안팎 가격대의 수요가 꾸준해서, 가격이 크게 떨어지길 기다리시기는 어려울 것 같아요.",
+   "jun_buy": "매물이 많고 처음 가격보다 4% 정도 낮게 거래되고 있어서 협상은 충분히 해 보실 수 있어요. 다만 실제 거래 가격은 작년과 큰 차이가 없어요. 60만 달러 안팎 가격대의 수요가 꾸준해서, 가격이 크게 떨어지길 기다리시기는 어려울 것 같아요.",
    "jun_sell": "가격은 유지되고 있지만, 처음 가격을 높게 잡은 집은 결국 가격을 내리고 있어요. 경쟁 매물이 작년보다 절반 가까이 늘었으니 사진과 집 상태로 차이를 만들어 보세요."
   },
   "Maple-Valley": {
@@ -219,7 +219,7 @@
    "read": [
     "재고 소진 기간은 3.8개월로 14개 도시 중 타코마와 함께 가장 짧습니다. 그래도 예년(2.0개월)보다는 1.9배 깁니다.",
     "판매 소요일은 43일로 14개 도시 중 가장 깁니다. 7월 16일에서 매달 길어졌습니다(예년 30일).",
-    "최초 리스팅가 대비는 97.0%로 예년(97.4%)과 비슷합니다. 가격을 내린 매물도 48%로 작년(50%)과 비슷해, 협상 폭 자체는 예년과 크게 다르지 않습니다.",
+    "최초 리스팅가 대비는 97.0%로 예년(97.4%)과 비슷해, 협상 폭 자체는 예년과 크게 다르지 않습니다.",
     "10월 거래가 31건이라 집 몇 채에 따라 숫자가 크게 움직입니다. 흐름은 2~3개월을 묶어서 보시는 게 정확합니다."
    ],
    "watch": "판매 소요일이 40일대에 머무는지, 겨울에 새 매물이 얼마나 줄어드는지",
@@ -236,7 +236,7 @@
    "read": [
     "재고 소진 기간 4.1개월(예년 2.5개월), 판매 소요일 25일(예년 20일), 최초 리스팅가 대비 97.0%(예년 98.0%)입니다.",
     "거래 건수가 7월 158건에서 10월 108건으로 넉 달 연속 줄었습니다. 예년(141건)보다 23% 적습니다.",
-    "중간 거래가는 6.5%, sqft당 가격은 11.8% 내렸습니다. sqft당 가격 하락 폭은 보텔 다음으로 큽니다.",
+    "중간 거래가는 11.6% 내려 14개 도시 중 하락 폭이 가장 큽니다. sqft당 가격은 3.5% 내려, 작은 집 거래가 늘어난 영향도 섞여 있습니다.",
     "10월 새 매물은 211건으로 예년(184건)보다 많습니다. 매물은 꾸준히 나오는데 사려는 사람이 줄어든 모습입니다."
    ],
    "watch": "거래 건수 감소가 멈추는지, sqft당 가격 하락이 완만해지는지",
@@ -253,12 +253,12 @@
    "read": [
     "재고 소진 기간은 4.2개월로 예년(2.2개월)의 1.9배이고, 판매 소요일은 21일(예년 16일)입니다.",
     "10월 거래는 62건으로 예년(110건)보다 44% 적습니다. 9월 99건에서 한 달 만에 크게 줄었습니다.",
-    "그런데 최초 리스팅가 대비는 98.2%로 예년(98.3%)과 같고, 14개 도시 중 시애틀 다음으로 높습니다. 중간 거래가도 5.1% 올랐습니다.",
+    "그런데 최초 리스팅가 대비는 98.2%로 예년(98.3%)과 같고, 14개 도시 중 시애틀 다음으로 높습니다. 중간 거래가도 작년과 같은 수준(+0.2%)입니다.",
     "거래는 줄었는데 가격 협상은 거의 없는 상태입니다. 셀러는 가격을 지키고, 바이어는 기다리며 지켜보는 모습으로 읽힙니다."
    ],
    "watch": "10월 거래 감소가 일시적인지, 최초 리스팅가 대비가 98% 아래로 내려가는지",
    "jun_memo": "",
-   "jun_buy": "매물은 작년보다 46% 많은데, 셀러들이 가격을 잘 내리지 않고 있어요. 그래도 가격을 내린 매물 비율이 40%로 작년(32%)보다 늘고 있으니, 가격 조정을 시작한 집부터 살펴보시면 좋아요.",
+   "jun_buy": "매물은 작년보다 46% 많은데, 셀러들이 가격을 잘 내리지 않고 있어요. 그래도 sqft당 가격은 작년보다 7% 정도 낮아졌으니, 가격 조정을 시작한 집부터 살펴보시면 좋아요.",
    "jun_sell": "팔린 집은 제값을 받았지만, 팔린 집 자체가 크게 줄었어요. 거래가 계속 줄면 가격 조정이 뒤따르는 경우가 많아서, 시장 분위기를 같이 지켜보시면 좋겠어요."
   },
   "Bothell": {
@@ -270,13 +270,12 @@
    "read": [
     "재고 소진 기간은 4.9개월로 예년(2.3개월)의 2.1배이고, 판매 소요일은 23일로 예년(14일)보다 70% 가까이 깁니다.",
     "최초 리스팅가 대비는 96.2%로 예년(99.0%)보다 2.8%p 낮습니다. 예년에는 거의 처음 가격 그대로 팔리던 곳입니다.",
-    "매물의 55%가 가격을 내렸습니다(작년 38%). 14개 도시 중 가장 높습니다.",
-    "중간 거래가는 9.1%, sqft당 가격은 12.2% 내려 sqft당 가격 하락 폭이 14개 도시 중 가장 큽니다. 보텔은 킹·스노호미시 두 카운티에 걸쳐 있고 신축 비중이 높다는 점도 함께 보셔야 합니다."
+    "중간 거래가는 7.6%, sqft당 가격은 10.8% 내려 sqft당 가격 하락 폭이 14개 도시 중 가장 큽니다. 보텔은 킹·스노호미시 두 카운티에 걸쳐 있고 신축 비중이 높다는 점도 함께 보셔야 합니다."
    ],
-   "watch": "가격을 내린 매물 비율이 50% 아래로 내려오는지, sqft당 가격 하락이 멈추는지",
+   "watch": "최초 리스팅가 대비가 97% 위로 돌아오는지, sqft당 가격 하락이 멈추는지",
    "jun_memo": "",
-   "jun_buy": "매물 두 채 중 한 채가 가격을 내렸어요. 작년보다 10% 가까이 낮은 가격에 살 수 있고, 신축이라면 빌더 인센티브도 꼭 같이 확인해 보세요.",
-   "jun_sell": "가격 인하가 가장 흔한 시장이에요. 주변에서 가격을 내린 매물들과 비교해서 처음 가격을 정하시면, 같은 길을 피하실 수 있어요."
+   "jun_buy": "처음 가격보다 평균 4% 가까이 낮게 거래되고 있어요. sqft당 가격으로 보면 작년보다 10% 넘게 낮은 가격에 살 수 있고, 신축이라면 빌더 인센티브도 꼭 같이 확인해 보세요.",
+   "jun_sell": "처음 가격보다 낮게 팔리는 집이 많은 시장이에요. 주변에서 가격을 내린 매물들과 비교해서 처음 가격을 정하시면, 같은 길을 피하실 수 있어요."
   },
   "Tacoma": {
    "name": "타코마",
@@ -288,7 +287,7 @@
     "7월에는 처음 가격의 100.0%에 12일 만에 팔리던 시장이었습니다. 10월에는 97.4%, 26일이 됐습니다(예년 98.8%, 18일).",
     "재고 소진 기간은 3.8개월로 예년(2.9개월)보다 30% 깁니다. 그래도 14개 도시 중에서는 가장 짧은 편입니다.",
     "10월 새 매물은 320건으로 작년 10월(391건)보다 18% 적고, 거래 건수(235건)도 예년(299건)보다 21% 적습니다. 파는 사람과 사는 사람이 함께 줄었습니다.",
-    "중간 거래가는 50만 달러로 2.0% 올랐고, sqft당 가격은 5.5% 내렸습니다."
+    "중간 거래가는 50만 달러로 1.9% 올랐고, sqft당 가격은 3.4% 내렸습니다."
    ],
    "watch": "판매 소요일 증가가 계절 영향인지, 새 매물 감소가 이어지는지",
    "jun_memo": "",
@@ -370,12 +369,12 @@
     "read": [
      "Months of inventory is 5.8, double the usual level (2.9) and the longest of all 14 cities.",
      "Days on market is 23 (usually 14) and sale-to-original-list is 95.0% (usually 98.0%). On average, homes sell about 5% below their first asking price.",
-     "The median sale price is $1.50M, down only 1.4%, but price per sq ft is down 11.4%. More large homes selling kept the median up, so the real adjustment is closer to the price per sq ft figure.",
+     "The median sale price is $1.44M, down 4.0%, while price per sq ft is down 9.2%. More large homes selling makes the median drop look smaller, so the real adjustment is closer to the price per sq ft figure.",
      "Active listings have fallen four months in a row, from 727 in July to 642. Inventory has peaked but is still 43% above last year."
     ],
     "watch": "Whether listings keep falling, and whether sale-to-original-list holds around 95%",
     "jun_buy": "Bellevue is one of the strongest negotiating positions for buyers among the 14 cities. Homes are selling about 5% below the first price on average, so on a home that's been sitting, you can feel comfortable offering more boldly.",
-    "jun_sell": "Price per sq ft is about 11% lower than last year. If you think in terms of what your neighbor sold for last year, you may be out of step with the market. Let's price based on the last three months of sales together.",
+    "jun_sell": "Price per sq ft is about 9% lower than last year. If you think in terms of what your neighbor sold for last year, you may be out of step with the market. Let's price based on the last three months of sales together.",
     "jun_memo": ""
    },
    "Kirkland": {
@@ -385,7 +384,7 @@
     "read": [
      "Months of inventory is 5.0, 1.8 times the usual level (2.8).",
      "Days on market is 19, not far from normal (17). The pace of sales itself has not slowed.",
-     "Instead, prices moved. The median sale price fell 9.7% and price per sq ft fell 11.2%, the largest median drop of the 14 cities. Sale-to-original-list is 95.7% (usually 98.0%).",
+     "Instead, prices moved. The median sale price fell 9.4% and price per sq ft fell 10.5%, the second-largest price per sq ft drop of the 14 cities after Bothell. Sale-to-original-list is 95.7% (usually 98.0%).",
      "October closed sales were 101, 22% below normal (130)."
     ],
     "watch": "Whether the drop in median price stops, and whether days on market stays near normal",
@@ -414,13 +413,13 @@
     "sub": "The biggest change from normal, but the summer peak has passed",
     "read": [
      "Months of inventory is 5.1, 2.8 times the usual level (1.8), the biggest change from normal of the 14 cities.",
-     "Sale-to-original-list is 94.6%, the lowest of the 14 cities (usually 98.1%). 43% of listings have cut their price.",
+     "Sale-to-original-list is 94.6%, the lowest of the 14 cities (usually 98.1%).",
      "Listings are falling, though: from 321 in July to 254 in October, and months of inventory came down from 6.1 to 5.1.",
-     "The median sale price fell 5.7% and price per sq ft fell 10.2%. With only about 58 sales a month, monthly numbers can swing."
+     "The median sale price fell 10.8% and price per sq ft fell 10.1%. With only about 58 sales a month, monthly numbers can swing."
     ],
     "watch": "Whether listings keep falling, and whether sale-to-original-list recovers above 95%",
     "jun_buy": "Homes are selling more than 5% below the first price on average, so there's good room to negotiate. That said, listings have been falling for three months, so there isn't as much choice as in the summer.",
-    "jun_sell": "More than 4 in 10 listings have cut their price. If the starting price is above market, homes often sell even lower after the cut, so it's worth setting the first price carefully.",
+    "jun_sell": "Prices are down about 10% from last year. If the starting price is above market, homes often sell even lower after the cut, so it's worth setting the first price carefully.",
     "jun_memo": ""
    },
    "Issaquah": {
@@ -430,7 +429,7 @@
     "read": [
      "Months of inventory 4.7 (usually 2.6), sale-to-original-list 96.0% (usually 97.9%).",
      "Days on market is 33, longer than usual (19). It was only 15 in August and September, though, and with just 37 sales in October, one month isn't enough to call a trend.",
-     "The median sale price rose 1.4%, but price per sq ft fell 8.4%. A higher share of large homes selling appears to have lifted the median.",
+     "The median sale price rose 11.9%, but price per sq ft fell 7.6%. A higher share of large homes selling appears to have lifted the median.",
      "October's 37 sales are 29% below normal (52) and about half of July (71)."
     ],
     "watch": "Whether 33 days on market is a one-off, and whether sales recover to the 40s",
@@ -445,11 +444,11 @@
     "read": [
      "Months of inventory is 4.7, 1.7 times the usual level (2.7).",
      "Days on market is 28, almost 70% longer than usual (17), and around a month for the second straight month after September (30).",
-     "Sale-to-original-list is 96.3% (usually 97.9%), and 44% of listings have cut their price.",
-     "The median sale price fell 2.8% and price per sq ft fell 4.6%, a smaller adjustment than the Eastside."
+     "Sale-to-original-list is 96.3% (usually 97.9%).",
+     "The median sale price fell 3.4% and price per sq ft fell 4.0%, a smaller adjustment than the Eastside."
     ],
     "watch": "Whether days on market passes 30, and whether closed sales (96) fall further",
-    "jun_buy": "Homes are taking close to a month to sell and 44% have cut their price. There's little reason to rush, so you can comfortably ask for things like inspection repairs.",
+    "jun_buy": "Homes are taking close to a month to sell, at nearly 4% below the first price. There's little reason to rush, so you can comfortably ask for things like inspection repairs.",
     "jun_sell": "Plan on about a month and you'll feel more at ease. With so many price cuts around you, selling without a reduction means your first price needs to be clearly reasonable compared to nearby homes.",
     "jun_memo": ""
    },
@@ -459,9 +458,9 @@
     "sub": "Pace and inventory favor buyers, but prices are still rising",
     "read": [
      "Months of inventory 4.5 (usually 2.8), days on market 29 (usually 20), sale-to-original-list 97.4% (usually 98.8%).",
-     "Yet the median sale price is $650K, up 5.6% from last year, the biggest rise of the 14 cities. Price per sq ft fell 3.0%, so more large-home sales are part of the story.",
+     "Yet the median sale price is $650K, up 3.2% from last year. Price per sq ft fell 4.2%, so more large-home sales are part of the story.",
      "October new listings were 125, 17% fewer than last October (150). Active listings were flat for three months, then fell to 431 in October.",
-     "40% of listings have cut their price (35% last year)."
+     "October pending sales were 5% below last October, so contract activity is close to last year."
     ],
     "watch": "Whether new listings keep shrinking, and whether price per sq ft turns back up",
     "jun_buy": "Homes take nearly a month to sell, so you have time to think. But prices here are relatively affordable, demand is steady, and new listings are shrinking, so big discounts are hard to expect.",
@@ -474,12 +473,12 @@
     "sub": "Inventory and negotiation favor buyers; pace and prices are holding",
     "read": [
      "Months of inventory is 5.1, 65% above normal (3.1). Active listings are 48% above last year.",
-     "Sale-to-original-list is 96.1% (usually 97.7%), and 44% of listings have cut their price (35% last year).",
+     "Sale-to-original-list is 96.1% (usually 97.7%).",
      "Days on market, however, is 23, close to normal (25). This has always been an area where homes take over three weeks to sell.",
-     "Prices actually rose: the median sale price is up 3.9% and price per sq ft up 2.1%. It's the only one of the 14 cities where price per sq ft went up."
+     "Prices have held up fairly well: the median sale price is down 2.3% and price per sq ft is flat. Federal Way and Maple Valley are the only two of the 14 cities where price per sq ft did not fall."
     ],
-    "watch": "Whether months of inventory falls below 5, and whether price gains continue",
-    "jun_buy": "There are lots of listings and many price cuts, so you can definitely negotiate. But actual sale prices are higher than last year. Demand around the $600K range is steady, so waiting for a big price drop may not pay off.",
+    "watch": "Whether months of inventory falls below 5, and whether prices hold at this level",
+    "jun_buy": "There are lots of listings and homes sell about 4% below the first price, so you can definitely negotiate. But actual sale prices are close to last year's. Demand around the $600K range is steady, so waiting for a big price drop may not pay off.",
     "jun_sell": "Prices are holding, but homes that started high are ending up with cuts. Competition is up almost 50% from last year, so make your home stand out with great photos and condition.",
     "jun_memo": ""
    },
@@ -490,7 +489,7 @@
     "read": [
      "Months of inventory is 3.8, tied with Tacoma as the shortest of the 14 cities. It's still 1.9 times the usual level (2.0).",
      "Days on market is 43, the longest of the 14 cities, and has grown every month since July (16). Usually it's 30.",
-     "Sale-to-original-list is 97.0%, close to normal (97.4%). 48% of listings have cut their price, similar to last year (50%), so the room to negotiate is about the same as usual.",
+     "Sale-to-original-list is 97.0%, close to normal (97.4%), so the room to negotiate is about the same as usual.",
      "With only 31 sales in October, a few homes can move the numbers a lot. It's more accurate to look at two to three months together."
     ],
     "watch": "Whether days on market stays in the 40s, and how much new listings drop over the winter",
@@ -505,7 +504,7 @@
     "read": [
      "Months of inventory 4.1 (usually 2.5), days on market 25 (usually 20), sale-to-original-list 97.0% (usually 98.0%).",
      "Closed sales fell four months in a row, from 158 in July to 108 in October, 23% below normal (141).",
-     "The median sale price fell 6.5% and price per sq ft fell 11.8%, the second-largest price per sq ft drop after Bothell.",
+     "The median sale price fell 11.6%, the largest drop of the 14 cities. Price per sq ft fell 3.5%, so more sales of smaller homes are part of the story.",
      "October new listings were 211, above normal (184). Homes keep coming on the market while fewer people are buying."
     ],
     "watch": "Whether the decline in sales stops, and whether the drop in price per sq ft slows",
@@ -520,11 +519,11 @@
     "read": [
      "Months of inventory is 4.2, 1.9 times normal (2.2), and days on market is 21 (usually 16).",
      "October closed sales were 62, 44% below normal (110), a sharp drop from 99 in September.",
-     "Yet sale-to-original-list is 98.2%, the same as usual (98.3%) and second only to Seattle among the 14 cities. The median sale price is up 5.1%.",
+     "Yet sale-to-original-list is 98.2%, the same as usual (98.3%) and second only to Seattle among the 14 cities. The median sale price is flat from last year (+0.2%).",
      "Sales are down but there's almost no price negotiation. Sellers are holding firm on price while buyers wait and watch."
     ],
     "watch": "Whether October's drop in sales is temporary, and whether sale-to-original-list falls below 98%",
-    "jun_buy": "There are 46% more listings than last year, but sellers aren't cutting prices much. Still, the share of price cuts has risen to 40% (from 32%), so start with homes that have begun adjusting.",
+    "jun_buy": "There are 46% more listings than last year, but sellers aren't cutting prices much. Still, price per sq ft is about 7% lower than last year, so start with homes that have begun adjusting.",
     "jun_sell": "Homes that sold got full price, but far fewer homes sold. When sales keep falling, price adjustments often follow, so let's keep an eye on the market together.",
     "jun_memo": ""
    },
@@ -535,12 +534,11 @@
     "read": [
      "Months of inventory is 4.9, 2.1 times normal (2.3), and days on market is 23, almost 70% longer than usual (14).",
      "Sale-to-original-list is 96.2%, 2.8 points below normal (99.0%). Homes here used to sell at almost exactly their first price.",
-     "55% of listings have cut their price (38% last year), the highest of the 14 cities.",
-     "The median sale price fell 9.1% and price per sq ft fell 12.2%, the largest price per sq ft drop of the 14 cities. Bothell spans King and Snohomish counties and has a lot of new construction, which is worth keeping in mind."
+     "The median sale price fell 7.6% and price per sq ft fell 10.8%, the largest price per sq ft drop of the 14 cities. Bothell spans King and Snohomish counties and has a lot of new construction, which is worth keeping in mind."
     ],
-    "watch": "Whether the share of price cuts drops below 50%, and whether the price per sq ft decline stops",
-    "jun_buy": "One in two listings has cut its price. You can buy at close to 10% below last year, and for new construction, be sure to ask about builder incentives too.",
-    "jun_sell": "Price cuts are more common here than anywhere else. Set your first price by comparing it with nearby homes that already cut, and you can avoid going down the same road.",
+    "watch": "Whether sale-to-original-list returns above 97%, and whether the price per sq ft decline stops",
+    "jun_buy": "Homes are selling nearly 4% below the first price on average. On a price-per-sq-ft basis you can buy at more than 10% below last year, and for new construction, be sure to ask about builder incentives too.",
+    "jun_sell": "Many homes here sell below their first price. Set your first price by comparing it with nearby homes that already cut, and you can avoid going down the same road.",
     "jun_memo": ""
    },
    "Tacoma": {
@@ -551,7 +549,7 @@
      "In July, homes sold at 100.0% of the first price in 12 days. In October it was 97.4% and 26 days (usually 98.8% and 18).",
      "Months of inventory is 3.8, 30% above normal (2.9), still one of the shortest of the 14 cities.",
      "October new listings were 320, 18% fewer than last October (391), and closed sales (235) were 21% below normal (299). Both sellers and buyers have pulled back.",
-     "The median sale price is $500K, up 2.0%, while price per sq ft fell 5.5%."
+     "The median sale price is $500K, up 1.9%, while price per sq ft fell 3.4%."
     ],
     "watch": "Whether longer days on market is seasonal, and whether new listings keep shrinking",
     "jun_buy": "It's much easier to negotiate than in the summer. But new listings are shrinking and inventory is lower than in other cities, so waiting a long time for the right home may be hard.",

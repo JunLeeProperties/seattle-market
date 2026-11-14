@@ -203,7 +203,7 @@ footer b{color:var(--ink)}
     <div class="eyebrow">SEATTLE MARKET INDEX · 2026 OCTOBER</div>
     <h1 data-en="Seattle Real Estate:<br>Who Has the Edge Right Now?">시애틀 부동산 시장,<br>지금 누구에게 유리한가</h1>
     <p data-en="Home prices, inventory and sales pace across King, Snohomish and Pierce counties and 14 cities, updated every month. Pick an area and every number and chart below will update.">킹 · 스노호미시 · 피어스 3개 카운티와 14개 도시의 집값, 매물, 거래 속도를 매달 정리합니다. 지역을 고르시면 아래 숫자와 그래프가 모두 바뀝니다.</p>
-    <div class="upd" data-en="Data: <b>NWMLS October 2026</b> · <b>Redfin Jul–Sep 2026</b> · Weekly figures updated weekly, everything else monthly">기준: <b>NWMLS 2026년 10월</b> · <b>Redfin 2026년 7~9월</b> · 주간 지표는 매주, 나머지는 매달 업데이트</div>
+    <div class="upd" data-en="Data: <b>NWMLS October 2026</b> · city prices <b>Aug–Oct 2026</b> · Weekly figures updated weekly, everything else monthly">기준: <b>NWMLS 2026년 10월</b> · 도시 가격 <b>2026년 8~10월</b> · 주간 지표는 매주, 나머지는 매달 업데이트</div>
   </div>
 
   <section id="weekly">
@@ -218,10 +218,10 @@ footer b{color:var(--ink)}
 
   <section id="jun">
     <div class="eyebrow">ANALYSIS &amp; OPINION</div><h2 id="j-title">시장 분석과 Jun의 의견</h2>
-    <p class="jlead" data-en="On the left is the market as seen through NWMLS and Redfin data. On the right is Jun&#39;s take, from working with clients every day.">왼쪽은 NWMLS·Redfin 데이터로 본 시장이고, 오른쪽은 현장에서 손님들과 함께하는 Jun의 생각입니다.</p>
+    <p class="jlead" data-en="On the left is the market as seen through NWMLS data. On the right is Jun&#39;s take, from working with clients every day.">왼쪽은 NWMLS 데이터로 본 시장이고, 오른쪽은 현장에서 손님들과 함께하는 Jun의 생각입니다.</p>
     <div class="two">
       <div class="col data">
-        <div class="colh"><span class="badge">DATA</span><b data-en="What the Data Says">데이터로 본 시장</b><small data-en="Based on NWMLS · Redfin">NWMLS · Redfin 기준</small></div>
+        <div class="colh"><span class="badge">DATA</span><b data-en="What the Data Says">데이터로 본 시장</b><small data-en="Based on NWMLS">NWMLS 기준</small></div>
         <ol id="d-read"></ol>
         <p class="dwatch"><b data-en="Watch next month">다음 달에 지켜볼 것</b><span id="d-watch"></span></p>
       </div>
@@ -294,7 +294,7 @@ footer b{color:var(--ink)}
 </div></div>
 
 <footer><div class="wrap">
-  <p data-en="<b>Sources</b> · County figures and city listings, sales, days on market, months of inventory and sale-to-original-list: NWMLS InfoSparks, October 2026, all home types (retrieved Nov 9, 2026). City median sale price, price per sq ft and share of price cuts: Redfin, Jul–Sep 2026, 3-month basis."><b>자료 출처</b> · 카운티 지표와 도시별 매물·거래·판매 소요일·재고 소진 기간·최초 리스팅가 대비: NWMLS InfoSparks, 2026년 10월, 모든 주택 유형 (2026년 11월 9일 조회). 도시별 중간 거래가·sqft당 가격·가격 내린 매물 비율: Redfin, 2026년 7~9월 3개월 기준.</p>
+  <p data-en="<b>Sources</b> · County figures and city listings, sales, days on market, months of inventory and sale-to-original-list: NWMLS InfoSparks, October 2026, all home types (retrieved Nov 9, 2026). City median sale price and price per sq ft: NWMLS InfoSparks, Aug–Oct 2026, 3-month basis."><b>자료 출처</b> · 카운티 지표와 도시별 매물·거래·판매 소요일·재고 소진 기간·최초 리스팅가 대비: NWMLS InfoSparks, 2026년 10월, 모든 주택 유형 (2026년 11월 9일 조회). 도시별 중간 거래가·sqft당 가격: NWMLS InfoSparks, 2026년 8~10월 3개월 기준.</p>
   <p data-en="Market direction compares months of inventory, days on market and sale-to-original-list with each area&#39;s usual level (average of Sep–Nov 2024 and 2025), together with sales, new listings and price trends. When signals point in opposite directions, it is shown as &#39;Mixed signals.&#39; This is a reference classification based on all home types combined. &#39;Jun&#39;s View&#39; is Jun Lee&#39;s personal opinion, separate from the data.">시장 방향은 재고 소진 기간, 판매 소요일, 최초 리스팅가 대비 3가지를 그 지역의 예년(2024·2025년 9~11월 평균)과 비교한 뒤, 거래 건수·새 매물·가격 흐름을 함께 보고 정합니다. 신호가 서로 반대 방향이면 '신호 엇갈림'으로 표시합니다. 참고용 분류이며 주택 유형을 합친 자료입니다. 'Jun의 의견'은 데이터와 별개로 Jun Lee가 직접 쓴 개인 의견입니다.</p>
   <p>Jun Lee · Real Estate Broker · Compass</p>
 </div></footer>
@@ -344,7 +344,7 @@ function signals(a){
 }
 function verdict(a){ const N=NA(a.id); if(N&&N.label) return [N.label,N.tag,N.cls]; const sc=signals(a).score;
   return sc>=3?[T('바이어 쪽으로 뚜렷하게 기움','Clearly leaning toward buyers'),T('바이어 쪽 (뚜렷)','Buyers (strong)'),'by']:sc===2?[T('바이어 쪽으로 기우는 중','Leaning toward buyers'),T('바이어 쪽','Buyers'),'b']:sc<=-3?[T('셀러 쪽으로 뚜렷하게 기움','Clearly leaning toward sellers'),T('셀러 쪽 (뚜렷)','Sellers (strong)'),'s']:sc===-2?[T('셀러 쪽으로 기우는 중','Leaning toward sellers'),T('셀러 쪽','Sellers'),'s']:[T('균형','Balanced'),T('균형','Balanced'),'']; }
-function pLabel(a){ return a.psrc==='rf'?T('7~9월','Jul–Sep'):T('10월','Oct'); }
+function pLabel(a){ return a.psrc==='n3'?T('8~10월','Aug–Oct'):T('10월','Oct'); }
 
 function renderPicker(){
   const groups=[...new Set(A.map(a=>a.grp))];
@@ -406,7 +406,7 @@ function renderCharts(){
   $('t-title').textContent=T(`${a.ko} 추이`,`${a.en} Trends`);
   const pm=NM.slice(0,a.p.length);
   const defs=[
-    [T('중간 거래가','Median sale price'), a.psrc==='rf'?T('Redfin · 3개월 기준','Redfin · 3-month basis'):T('NWMLS · 월별','NWMLS · monthly'), pm, a.p, money,'line',false],
+    [T('중간 거래가','Median sale price'), a.psrc==='n3'?T('NWMLS · 3개월 기준','NWMLS · 3-month basis'):T('NWMLS · 월별','NWMLS · monthly'), pm, a.p, money,'line',false],
     [T('현재 매물','Active listings'),T('NWMLS · 월말 기준','NWMLS · end of month'),NM,a.inv,v=>num(v),'bar',true],
     [T('거래 건수','Closed sales'),T('NWMLS · 월별','NWMLS · monthly'),NM,a.cs,v=>num(v),'bar',true],
     [T('재고 소진 기간','Months of inventory'),T('NWMLS · 개월','NWMLS · months'),NM,a.msi,v=>v.toFixed(1),'line',true]];

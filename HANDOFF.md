@@ -20,14 +20,14 @@
   - `weekly.<King|Snohomish|Pierce>`: 이번 주 읽기
   - `en`: 위와 같은 구조의 영어 버전
 - `src/template.html` — 페이지 원본 (자리표시 `__LOGO__ __FACE__ __QR__ __DATA__ __WEEKLY__ __NOTES__`)
-- `src/data.json` — 17개 지역 월간 데이터 (카운티 3 + 도시 14). NWMLS 시계열 2024-01~2026-10(34개월, 인덱스 33=2026년 10월), 도시 가격(p)은 Redfin 3개월 기준
+- `src/data.json` — 17개 지역 월간 데이터 (카운티 3 + 도시 14). NWMLS 시계열 2024-01~2026-10(34개월, 인덱스 33=2026년 10월), 도시 가격(p)은 NWMLS 3개월 이동(msp roll3, psrc=n3)
 - `src/weekly.json` — 주간 데이터 배열 `[{start,end,King:[신규,펜딩,거래,가격인하,취소],...}]`
 - `src/img.json` — 로고/사진/QR base64
 - 빌드: `python3 src/build.py` → `index.html` 생성 → commit & push → 1~2분 뒤 반영
 
 ## 정기 업데이트
 - **매주**: Jun이 카운티별 주간 카드 이미지 3장(NWMLS)을 줌 → `src/weekly.json`에 한 주 추가 → `notes.json`의 `weekly`(+`en.weekly`) 문장 갱신 → 빌드·푸시. 증감율은 자동 계산. 카드의 %와 직접 계산이 다르면 Jun에게 확인 (11/2~9 피어스 가격인하 222 vs 카드 3%↓ 불일치 확인 대기 중)
-- **매월**: Jun이 NWMLS InfoSparks에 로그인 → 3개 카운티·14개 도시 지표 수집, Redfin 도시 페이지에서 가격 → `src/data.json` 갱신 → 17개 지역 분석 문장 재작성 → 빌드·푸시, PDF 리포트도 새로 제작
+- **매월**: Jun이 NWMLS InfoSparks에 로그인 → 3개 카운티·14개 도시 지표 수집 (도시 가격은 calc=roll3 msp·mpsf) → `src/data.json` 갱신 → 17개 지역 분석 문장 재작성 → 빌드·푸시, PDF 리포트도 새로 제작
   - 다음 달 할 일: 시애틀은 단독주택/콘도를 나눠 받아 "콘도 재고" 가설 확인
 
 ## 마켓 리포트 PDF + QR
