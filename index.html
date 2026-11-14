@@ -188,7 +188,7 @@ footer b{color:var(--ink)}
 #weekly.closed .wkgrid,#weekly.closed .wknote{display:none}
 #weekly.closed{padding-bottom:22px}
 .wkmini{display:none;font-size:13px;color:#333;margin-top:6px}
-#weekly.closed .wkmini{display:block}
+#weekly.closed .wkmini{display:block;cursor:pointer}
 </style>
 </head>
 <body>
@@ -1078,7 +1078,8 @@ function renderWeekly(){
 }
 let WKOPEN=(()=>{try{const v=localStorage.getItem('wkopen');if(v!==null)return v==='1'}catch(e){}return window.matchMedia('(min-width:861px)').matches})();
 function setWk(){ $('weekly').classList.toggle('closed',!WKOPEN); $('wk-tog').setAttribute('aria-expanded',WKOPEN); $('wk-togl').textContent=WKOPEN?T('접기','Hide'):T('펼쳐 보기','Show'); }
-$('wk-tog').addEventListener('click',()=>{WKOPEN=!WKOPEN;try{localStorage.setItem('wkopen',WKOPEN?'1':'0')}catch(e){}setWk()});
+const wkFlip=()=>{WKOPEN=!WKOPEN;try{localStorage.setItem('wkopen',WKOPEN?'1':'0')}catch(e){}setWk()};
+$('wk-tog').addEventListener('click',wkFlip);$('wk-mini').addEventListener('click',wkFlip);
 renderWeekly();
 </script>
 </body>
