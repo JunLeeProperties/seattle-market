@@ -255,6 +255,7 @@ footer b{color:var(--ink)}
     <div class="seg" role="group" aria-label="기간" id="range">
       <button type="button" data-n="12" aria-pressed="false" data-en="1Y">1년</button><button type="button" data-n="60" aria-pressed="true" data-en="5Y">5년</button><button type="button" data-n="120" aria-pressed="false" data-en="10Y">10년</button>
     </div>
+    <p class="sub" id="samelg" style="margin:-4px 0 14px"></p>
     <div class="charts" id="charts"></div>
   </section>
 
@@ -376,9 +377,12 @@ function chart(host,months,vals,fmt,kind,zero){
   o+=`<line x1="${pl}" x2="${w-pr}" y1="${h-pb}" y2="${h-pb}" stroke="#111" stroke-width=".8"/>`;
   const yStep=n>72?2:1; months.forEach((m,i)=>{if(m.endsWith('-01')&&(+m.slice(0,4))%yStep===0)o+=`<text x="${X(i)}" y="${h-7}" class="ax" text-anchor="middle">${n>72?m.slice(0,4):m.slice(0,4)}</text>`});
   if(n<=13)months.forEach((m,i)=>{if(i%3===0&&!m.endsWith('-01'))o+=`<text x="${X(i)}" y="${h-7}" class="ax" text-anchor="middle">${+m.slice(5)}${T('월','')}</text>`});
-  if(kind==='bar'){vals.forEach((v,i)=>{o+=`<rect x="${X(i)-bw*.36}" y="${Y(v)}" width="${bw*.72}" height="${h-pb-Y(v)}" fill="${i===n-1?'#1f4d3a':'#cfd8d2'}"/>`})}
+  const LMm=months[n-1].slice(5), same=i=>months[i].slice(5)===LMm;
+  if(n>13)months.forEach((m,i)=>{if(same(i)&&i!==n-1&&kind!=='bar')o+=`<line x1="${X(i)}" x2="${X(i)}" y1="${pt}" y2="${h-pb}" stroke="#e8a33d" stroke-width="1" opacity=".55"/>`});
+  if(kind==='bar'){vals.forEach((v,i)=>{o+=`<rect x="${X(i)-bw*.36}" y="${Y(v)}" width="${Math.max(bw*.72,1)}" height="${h-pb-Y(v)}" fill="${i===n-1?'#1f4d3a':(n>13&&same(i))?'#e8a33d':'#cfd8d2'}"/>`})}
   else{const pts=vals.map((v,i)=>`${X(i).toFixed(1)},${Y(v).toFixed(1)}`).join(' ');
-    o+=`<polygon points="${X(0)},${h-pb} ${pts} ${X(n-1)},${h-pb}" fill="#e9f0eb"/><polyline points="${pts}" fill="none" stroke="#111" stroke-width="2.2" stroke-linejoin="round"/><circle cx="${X(n-1)}" cy="${Y(vals[n-1])}" r="3.6" fill="#111"/>`}
+    o+=`<polygon points="${X(0)},${h-pb} ${pts} ${X(n-1)},${h-pb}" fill="#e9f0eb"/><polyline points="${pts}" fill="none" stroke="#111" stroke-width="2.2" stroke-linejoin="round"/><circle cx="${X(n-1)}" cy="${Y(vals[n-1])}" r="3.6" fill="#111"/>`;
+    if(n>13)vals.forEach((v,i)=>{if(same(i)&&i!==n-1)o+=`<circle cx="${X(i)}" cy="${Y(v)}" r="3.4" fill="#e8a33d" stroke="#fff" stroke-width="1"/>`});}
   o+=`<text x="${w-pr+8}" y="${Y(vals[n-1])+4}" class="el">${fmt(vals[n-1])}</text>`;
   o+=`<g class="tip" visibility="hidden"><line y1="${pt}" y2="${h-pb}" stroke="#1f4d3a"/><circle r="4" fill="#1f4d3a"/><rect width="118" height="22" fill="#111"/><text fill="#fff" font-size="11.5" font-weight="700"></text></g>`;
   o+=`<rect x="${pl}" y="${pt}" width="${w-pl-pr}" height="${h-pt-pb}" fill="transparent"/></svg>`;
@@ -406,6 +410,8 @@ function renderCharts(){
     [T('재고 소진 기간','Months of inventory'),T('NWMLS · 개월','NWMLS · months'),...G('msi'),v=>v.toFixed(1),'line',true],
     [T('판매 소요일','Days on market'),T('NWMLS · 중간값, 일','NWMLS · median, days'),...G('dom'),v=>Math.round(v)+T('일',''),'line',true],
     [T('최초 리스팅가 대비','Sale-to-original-list'),T('NWMLS · %','NWMLS · %'),G('po')[0],G('po')[1].map(v=>v*100),pct,'line',false]];
+  const lm0=(L?lm:NM).slice(-1)[0], mi=+lm0.slice(5);
+  $('samelg').innerHTML=range>12?`<span style="display:inline-block;width:10px;height:10px;background:#e8a33d;margin-right:6px"></span>${T(`주황색은 해마다 ${mi}월 (같은 달끼리 비교)`,`Orange marks ${MON[mi-1]} of each year (same-month comparison)`)} · <span style="display:inline-block;width:10px;height:10px;background:#1f4d3a;margin:0 6px"></span>${T('최신 달','Latest month')}`:'';
   $('charts').innerHTML=defs.map((d,i)=>`<div class="card"><h3>${d[0]}<small>${d[1]}</small></h3><div id="ch${i}" data-label="${d[0]}"></div></div>`).join('');
   defs.forEach((d,i)=>chart($('ch'+i),d[2],d[3],d[4],d[5],d[6]));
 }

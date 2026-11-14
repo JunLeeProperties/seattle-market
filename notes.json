@@ -13,7 +13,7 @@
    "cls": "b",
    "sub": "매물은 늘었지만, 팔리는 속도는 예년과 같습니다",
    "read": [
-    "재고 소진 기간이 4.9개월로, 예년 이맘때(3.0개월)보다 60% 넘게 길어졌습니다. 새 매물은 예년보다 15% 많이 나왔고 거래는 18% 줄어 매물이 쌓이는 흐름입니다.",
+    "재고 소진 기간이 4.9개월로, 예년 이맘때(3.1개월)보다 60% 가까이 길어졌습니다. 새 매물은 예년보다 15% 많이 나왔고 거래는 18% 줄어 매물이 쌓이는 흐름입니다.",
     "그런데 집이 팔리기까지 걸리는 기간은 18일로 예년(17일)과 거의 같습니다. 팔릴 집은 예전처럼 팔리고, 그렇지 않은 집이 남으면서 재고가 늘어난 것으로 보입니다.",
     "거래 가격은 처음 내놓은 가격의 97.1% 수준입니다(예년 98.4%). 중간 거래가는 2.0% 내렸지만 sqft당 가격은 6.8% 내려, 실제 가격 조정은 중간가에서 보이는 것보다 큽니다.",
     "현재 매물은 9월 10,002채에서 10월 9,509채로 줄었습니다. 다만 이맘때는 원래 매물이 줄어드는 시기라 흐름이 바뀌었다고 보기는 아직 이릅니다."
@@ -32,7 +32,7 @@
    "read": [
     "재고 소진 기간이 4.3개월로 예년(2.4개월)의 1.8배입니다. 세 카운티 가운데 예년과 비교해 가장 크게 달라진 곳입니다.",
     "집이 팔리기까지 걸리는 기간이 7월 16일에서 10월 24일로 매달 조금씩 길어졌습니다. 예년(18.5일)보다 30% 정도 깁니다.",
-    "10월 거래는 684건으로 예년(887건)보다 23% 적습니다. 7월 974건 이후 계속 줄고 있습니다.",
+    "10월 거래는 684건으로 예년(896건)보다 24% 적습니다. 7월 974건 이후 계속 줄고 있습니다.",
     "중간 거래가는 68만 달러로 작년보다 4.5% 내렸습니다. 세 카운티 중 가장 많이 내린 곳입니다."
    ],
    "watch": "거래 건수 감소가 멈추는지, 판매 소요일이 25일을 넘어서는지",
@@ -84,7 +84,7 @@
     "재고 소진 기간이 5.8개월로 예년(2.9개월)의 두 배입니다. 14개 도시 중 가장 깁니다.",
     "판매 소요일은 23일(예년 14일), 최초 리스팅가 대비는 95.0%(예년 98.0%)입니다. 평균적으로 처음 가격보다 5% 정도 낮게 거래되고 있습니다.",
     "중간 거래가는 144만 달러로 4.0% 내렸고, sqft당 가격은 9.2% 내렸습니다. 큰 집이 상대적으로 많이 팔리면서 중간가 하락 폭이 작게 보이는 것이라, 실제 가격 조정은 sqft당 가격 쪽에 더 가깝습니다.",
-    "현재 매물은 7월 727채에서 넉 달 연속 줄어 642채가 됐습니다. 매물은 정점을 지났지만, 아직 작년보다 43% 많습니다."
+    "현재 매물은 7월 727채에서 석 달 연속 줄어 642채가 됐습니다. 매물은 정점을 지났지만, 아직 작년보다 43% 많습니다."
    ],
    "watch": "매물 감소가 계속되는지, 최초 리스팅가 대비가 95% 선에서 멈추는지",
    "jun_memo": "",
@@ -118,7 +118,7 @@
     "재고 소진 기간이 5.0개월로 예년(2.0개월)의 2.5배입니다. 현재 매물도 작년보다 50% 많습니다.",
     "판매 소요일은 14일로 예년과 같습니다. 그런데 최초 리스팅가 대비는 95.7%로 예년(98.7%)보다 3%p 낮습니다.",
     "절반은 2주 안에 팔리는데 거래 가격은 처음 가격보다 4% 넘게 낮다는 뜻입니다. 빨리 팔리는 집과, 오래 남았다가 가격을 크게 내린 뒤 팔리는 집이 섞여 있습니다.",
-    "10월 거래는 63건으로 예년(92건)보다 32% 적습니다. 거래 건수가 적어 달마다 숫자가 크게 출렁입니다(8월 판매 소요일 36일, 10월 14일)."
+    "10월 거래는 63건으로 예년(93건)보다 32% 적습니다. 거래 건수가 적어 달마다 숫자가 크게 출렁입니다(8월 판매 소요일 36일, 10월 14일)."
    ],
    "watch": "거래 건수가 회복되는지, 최초 리스팅가 대비가 96% 위로 돌아오는지",
    "jun_memo": "",
@@ -166,7 +166,7 @@
    "cls": "by",
    "sub": "세 신호 모두 바이어 쪽이고, 두 달째 같은 수준입니다",
    "read": [
-    "재고 소진 기간이 4.7개월로 예년(2.7개월)의 1.7배입니다.",
+    "재고 소진 기간이 4.7개월로 예년(2.7개월)의 1.8배입니다.",
     "판매 소요일은 28일로 예년(17일)보다 70% 가까이 깁니다. 9월(30일)에 이어 두 달째 한 달 안팎입니다.",
     "최초 리스팅가 대비는 96.3%(예년 97.9%)입니다.",
     "중간 거래가는 3.4%, sqft당 가격은 4.0% 내렸습니다. 이스트사이드보다는 가격 조정 폭이 작습니다."
@@ -200,7 +200,7 @@
    "cls": "mix",
    "sub": "재고와 협상은 바이어 쪽, 속도와 가격은 버티고 있습니다",
    "read": [
-    "재고 소진 기간이 5.1개월로 예년(3.1개월)보다 65% 깁니다. 현재 매물은 작년보다 48% 많습니다.",
+    "재고 소진 기간이 5.1개월로 예년(3.1개월)보다 60% 넘게 깁니다. 현재 매물은 작년보다 48% 많습니다.",
     "최초 리스팅가 대비는 96.1%(예년 97.7%)입니다.",
     "반면 판매 소요일은 23일로 예년(25일)과 비슷합니다. 원래 팔리기까지 3주 넘게 걸리던 지역입니다.",
     "가격은 크게 내리지 않았습니다. 중간 거래가는 2.3% 내렸고, sqft당 가격은 작년과 같습니다. sqft당 가격이 내리지 않은 곳은 14개 도시 중 이곳과 메이플밸리뿐입니다."
@@ -235,7 +235,7 @@
    "sub": "세 신호 모두 바이어 쪽이고, 가격도 꽤 내려왔습니다",
    "read": [
     "재고 소진 기간 4.1개월(예년 2.5개월), 판매 소요일 25일(예년 20일), 최초 리스팅가 대비 97.0%(예년 98.0%)입니다.",
-    "거래 건수가 7월 158건에서 10월 108건으로 넉 달 연속 줄었습니다. 예년(141건)보다 23% 적습니다.",
+    "거래 건수가 6월 이후 넉 달 연속 줄어, 7월 158건에서 10월 108건이 됐습니다. 예년(141건)보다 23% 적습니다.",
     "중간 거래가는 11.6% 내려 14개 도시 중 하락 폭이 가장 큽니다. sqft당 가격은 3.5% 내려, 작은 집 거래가 늘어난 영향도 섞여 있습니다.",
     "10월 새 매물은 211건으로 예년(184건)보다 많습니다. 매물은 꾸준히 나오는데 사려는 사람이 줄어든 모습입니다."
    ],
@@ -285,7 +285,7 @@
    "sub": "석 달 사이 빠르게 식었지만, 공급도 함께 줄고 있습니다",
    "read": [
     "7월에는 처음 가격의 100.0%에 12일 만에 팔리던 시장이었습니다. 10월에는 97.4%, 26일이 됐습니다(예년 98.8%, 18일).",
-    "재고 소진 기간은 3.8개월로 예년(2.9개월)보다 30% 깁니다. 그래도 14개 도시 중에서는 가장 짧은 편입니다.",
+    "재고 소진 기간은 3.8개월로 예년(3.0개월)보다 30% 가까이 깁니다. 그래도 14개 도시 중에서는 가장 짧은 편입니다.",
     "10월 새 매물은 320건으로 작년 10월(391건)보다 18% 적고, 거래 건수(235건)도 예년(299건)보다 21% 적습니다. 파는 사람과 사는 사람이 함께 줄었습니다.",
     "중간 거래가는 50만 달러로 1.9% 올랐고, sqft당 가격은 3.4% 내렸습니다."
    ],
@@ -307,7 +307,7 @@
     "tag": "Buyers",
     "sub": "More homes on the market, but they still sell as fast as usual",
     "read": [
-     "Months of inventory is 4.9, more than 60% above the usual level for this time of year (3.0). New listings are 15% above normal and sales are 18% below, so homes are piling up.",
+     "Months of inventory is 4.9, nearly 60% above the usual level for this time of year (3.1). New listings are 15% above normal and sales are 18% below, so homes are piling up.",
      "Yet the median home still sells in 18 days, almost the same as usual (17). Homes that are priced right sell as before, while the rest stay on the market and push inventory up.",
      "Homes are selling at 97.1% of their original list price (usually 98.4%). The median sale price is down 2.0%, but price per sq ft is down 6.8%, so the real price adjustment is larger than the median suggests.",
      "Active listings dipped from 10,002 in September to 9,509 in October. Inventory normally falls at this time of year, so it is too early to call a turn."
@@ -324,7 +324,7 @@
     "read": [
      "Months of inventory is 4.3, 1.8 times the usual level (2.4). Of the three counties, this is the biggest change from normal.",
      "Days on market rose every month, from 16 in July to 24 in October, about 30% longer than usual (18.5).",
-     "October closed sales were 684, 23% below normal (887), and have fallen every month since July (974).",
+     "October closed sales were 684, 24% below normal (896), and have fallen every month since July (974).",
      "The median sale price is $680K, down 4.5% from last year, the largest drop of the three counties."
     ],
     "watch": "Whether the decline in closed sales stops, and whether days on market goes past 25",
@@ -370,7 +370,7 @@
      "Months of inventory is 5.8, double the usual level (2.9) and the longest of all 14 cities.",
      "Days on market is 23 (usually 14) and sale-to-original-list is 95.0% (usually 98.0%). On average, homes sell about 5% below their first asking price.",
      "The median sale price is $1.44M, down 4.0%, while price per sq ft is down 9.2%. More large homes selling makes the median drop look smaller, so the real adjustment is closer to the price per sq ft figure.",
-     "Active listings have fallen four months in a row, from 727 in July to 642. Inventory has peaked but is still 43% above last year."
+     "Active listings have fallen three months in a row, from 727 in July to 642. Inventory has peaked but is still 43% above last year."
     ],
     "watch": "Whether listings keep falling, and whether sale-to-original-list holds around 95%",
     "jun_buy": "Bellevue is one of the strongest negotiating positions for buyers among the 14 cities. Homes are selling about 5% below the first price on average, so on a home that's been sitting, you can feel comfortable offering more boldly.",
@@ -400,7 +400,7 @@
      "Months of inventory is 5.0, 2.5 times the usual level (2.0). Active listings are 50% above last year.",
      "Days on market is 14, the same as usual. But sale-to-original-list is 95.7%, 3 points below normal (98.7%).",
      "Half of homes sell within two weeks, yet sale prices are more than 4% below the first asking price. Fast sellers are mixed with homes that sat and sold after big price cuts.",
-     "October closed sales were 63, 32% below normal (92). With so few sales, monthly numbers swing a lot (days on market was 36 in August, 14 in October)."
+     "October closed sales were 63, 32% below normal (93). With so few sales, monthly numbers swing a lot (days on market was 36 in August, 14 in October)."
     ],
     "watch": "Whether closed sales recover, and whether sale-to-original-list returns above 96%",
     "jun_buy": "With 50% more listings than last year, you have plenty of choice. Homes that have been sitting tend to adjust their price quite a bit. Just keep in mind that great new listings still draw competition.",
@@ -442,7 +442,7 @@
     "tag": "Buyers (strong)",
     "sub": "All three signals favor buyers, holding steady for two months",
     "read": [
-     "Months of inventory is 4.7, 1.7 times the usual level (2.7).",
+     "Months of inventory is 4.7, 1.8 times the usual level (2.7).",
      "Days on market is 28, almost 70% longer than usual (17), and around a month for the second straight month after September (30).",
      "Sale-to-original-list is 96.3% (usually 97.9%).",
      "The median sale price fell 3.4% and price per sq ft fell 4.0%, a smaller adjustment than the Eastside."
@@ -472,7 +472,7 @@
     "tag": "Mixed",
     "sub": "Inventory and negotiation favor buyers; pace and prices are holding",
     "read": [
-     "Months of inventory is 5.1, 65% above normal (3.1). Active listings are 48% above last year.",
+     "Months of inventory is 5.1, more than 60% above normal (3.1). Active listings are 48% above last year.",
      "Sale-to-original-list is 96.1% (usually 97.7%).",
      "Days on market, however, is 23, close to normal (25). This has always been an area where homes take over three weeks to sell.",
      "Prices have held up fairly well: the median sale price is down 2.3% and price per sq ft is flat. Federal Way and Maple Valley are the only two of the 14 cities where price per sq ft did not fall."
@@ -503,7 +503,7 @@
     "sub": "All three signals favor buyers, and prices have come down",
     "read": [
      "Months of inventory 4.1 (usually 2.5), days on market 25 (usually 20), sale-to-original-list 97.0% (usually 98.0%).",
-     "Closed sales fell four months in a row, from 158 in July to 108 in October, 23% below normal (141).",
+     "Closed sales have fallen four months in a row since June, from 158 in July to 108 in October, 23% below normal (141).",
      "The median sale price fell 11.6%, the largest drop of the 14 cities. Price per sq ft fell 3.5%, so more sales of smaller homes are part of the story.",
      "October new listings were 211, above normal (184). Homes keep coming on the market while fewer people are buying."
     ],
@@ -547,7 +547,7 @@
     "sub": "Cooled quickly over three months, but supply is shrinking too",
     "read": [
      "In July, homes sold at 100.0% of the first price in 12 days. In October it was 97.4% and 26 days (usually 98.8% and 18).",
-     "Months of inventory is 3.8, 30% above normal (2.9), still one of the shortest of the 14 cities.",
+     "Months of inventory is 3.8, nearly 30% above normal (3.0), still one of the shortest of the 14 cities.",
      "October new listings were 320, 18% fewer than last October (391), and closed sales (235) were 21% below normal (299). Both sellers and buyers have pulled back.",
      "The median sale price is $500K, up 1.9%, while price per sq ft fell 3.4%."
     ],
