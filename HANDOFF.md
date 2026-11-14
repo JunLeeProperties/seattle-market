@@ -21,6 +21,7 @@
   - `en`: 위와 같은 구조의 영어 버전
 - `src/template.html` — 페이지 원본 (자리표시 `__LOGO__ __FACE__ __QR__ __DATA__ __WEEKLY__ __NOTES__`)
 - `src/data.json` — 17개 지역 월간 데이터 (카운티 3 + 도시 14). NWMLS 시계열 2024-01~2026-10(34개월, 인덱스 33=2026년 10월), 도시 가격(p)은 NWMLS 3개월 이동(msp roll3, psrc=n3)
+- `src/long.json` — NWMLS 10년 월별 원자료(2016-01~2026-10, 17개 지역, inv/cs/msia/mmt/mplpor/msp; 도시 msp는 roll3). data.json의 `L`에 합쳐 넣되 최근 34개월은 data.json 스냅샷 값으로 덮어씀
 - `src/weekly.json` — 주간 데이터 배열 `[{start,end,King:[신규,펜딩,거래,가격인하,취소],...}]`
 - `src/img.json` — 로고/사진/QR base64
 - 빌드: `python3 src/build.py` → `index.html` 생성 → commit & push → 1~2분 뒤 반영
