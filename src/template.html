@@ -106,15 +106,6 @@ td.cn small{font-weight:400;color:var(--grey);font-size:11px;margin-left:6px}
 .pill{border-color:#999;color:#555}.pill.b{background:var(--gl);border-color:var(--g);color:var(--g)}.pill.s{background:#fff;border-color:var(--ink);color:var(--ink)}
 .pill.by{background:var(--g);border-color:var(--g);color:#fff}
 /* calc */
-.calc{display:grid;grid-template-columns:1fr 1fr;gap:34px;border-top:2px solid var(--ink);padding-top:20px}
-.fld{display:grid;grid-template-columns:1fr 150px;align-items:center;gap:10px;padding:9px 0;border-bottom:1px solid var(--rule);font-size:14px}
-.fld input{font:inherit;padding:8px 10px;border:1px solid #999;width:100%;text-align:right;min-height:40px}
-.res{background:var(--ink);color:#fff;padding:26px 28px}
-.res span{font-size:12px;color:var(--g2);letter-spacing:.1em}
-.res b{display:block;font-size:46px;font-weight:900;letter-spacing:-.02em}
-.res p{font-size:12.5px;color:#cfcfcf;margin-top:8px}
-.res dl{display:grid;grid-template-columns:1fr auto;gap:6px 12px;margin-top:16px;font-size:13.5px;border-top:1px solid #444;padding-top:14px}
-.res dd{text-align:right;font-weight:700}
 /* contact */
 .contact{background:var(--g);color:#fff;padding:48px 0;margin-top:20px}
 .cgrid{display:grid;grid-template-columns:1fr auto;gap:30px;align-items:center}
@@ -134,7 +125,7 @@ footer b{color:var(--ink)}
  .kpis{grid-template-columns:repeat(2,minmax(0,1fr))}
  .kpi,.kpi+.kpi{padding:14px 10px 14px 0;border-left:0;border-bottom:1px solid var(--rule)}
  .kpi:first-child{grid-column:1/-1}
- .charts,.calc,.jn,.cgrid{grid-template-columns:1fr}
+ .charts,.jn,.cgrid{grid-template-columns:1fr}
  .jun{grid-template-columns:1fr;padding:22px 20px}
  .pg em{width:100%}
  .clist{grid-template-columns:1fr}
@@ -142,7 +133,7 @@ footer b{color:var(--ink)}
 #weekly{margin:8px 0 34px;padding:26px 0 30px;border-top:2px solid var(--ink);border-bottom:1px solid var(--rule)}
 .wkhead{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;flex-wrap:wrap;margin-bottom:18px}
 .wkdate{font-size:15px;font-weight:700;margin-top:2px}
-.wknote{font-size:12px;color:var(--grey);max-width:360px;text-align:right}
+.wknote{font-size:12px;color:var(--grey);margin:0 0 14px}
 .wkgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
 .wkc{background:var(--gl);padding:18px 18px 14px}
 .wkc h3{font-size:17px;font-weight:900;margin:0 0 12px;display:flex;justify-content:space-between;align-items:baseline}
@@ -151,7 +142,7 @@ footer b{color:var(--ink)}
 .wr .bar{height:12px;background:#fff}.wr .bar i{display:block;height:100%;background:var(--g)}
 .wr b{font-size:15px;font-weight:900;min-width:36px;text-align:right}
 .wr small{display:block;font-size:10.5px;color:var(--grey);font-weight:400;text-align:right}
-@media(max-width:860px){.wkgrid{grid-template-columns:1fr}.wknote{text-align:left}}
+@media(max-width:860px){.wkgrid{grid-template-columns:1fr}}
 .wkread{margin-top:12px;padding-top:12px;border-top:1px solid #c9d6ce;font-size:13px;line-height:1.7;color:#333}
 .wkread b{display:block;font-size:11px;letter-spacing:.14em;color:var(--g);margin-bottom:3px}
 .vsub{font-size:16px;font-weight:700;color:var(--g2);margin:0 0 10px;line-height:1.5;word-break:keep-all}
@@ -188,12 +179,22 @@ footer b{color:var(--ink)}
 .lang button{background:#fff;border:0;padding:7px 11px;font-weight:700;font-size:12.5px;font-family:inherit;cursor:pointer;color:var(--ink)}
 .lang button[aria-pressed="true"]{background:var(--ink);color:#fff}
 @media(max-width:760px){.lang{margin-right:8px}.lang button{padding:6px 9px}}
+.chg{display:inline-block;font-weight:800;font-size:.92em;padding:1px 7px;border-radius:3px;white-space:nowrap}
+.chg.up{color:#c8102e;background:#fde8eb}.chg.dn{color:#1d4fd8;background:#e6eeff}.chg.eq{color:#666;background:#eee}
+.wr small.up{color:#c8102e;font-weight:700}.wr small.dn{color:#1d4fd8;font-weight:700}
+.wktog{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--ink);padding:7px 14px;font-size:13px;font-weight:700;min-height:36px;background:#fff;cursor:pointer}
+.wktog[aria-expanded=true]{background:var(--ink);color:#fff}
+.wktog i{font-style:normal;transition:transform .2s}.wktog[aria-expanded=true] i{transform:rotate(180deg)}
+#weekly.closed .wkgrid,#weekly.closed .wknote{display:none}
+#weekly.closed{padding-bottom:22px}
+.wkmini{display:none;font-size:13px;color:#333;margin-top:6px}
+#weekly.closed .wkmini{display:block}
 </style>
 </head>
 <body>
 <header class="top"><div class="wrap">
   <img src="data:image/png;base64,__LOGO__" alt="Jun Lee Properties">
-  <nav aria-label="페이지 내 이동"><a href="#weekly" data-en="This Week">이번 주</a><a href="#jun" data-en="Analysis">분석·의견</a><a href="#market" data-en="Market">시장 현황</a><a href="#trend" data-en="Trends">추이</a><a href="#compare" data-en="Compare">도시 비교</a><a href="#calc" data-en="Calculator">계산기</a></nav>
+  <nav aria-label="페이지 내 이동"><a href="#weekly" data-en="This Week">이번 주</a><a href="#jun" data-en="Analysis">분석·의견</a><a href="#market" data-en="Market">시장 현황</a><a href="#trend" data-en="Trends">추이</a><a href="#compare" data-en="Compare">도시 비교</a></nav>
   <div class="lang" role="group" aria-label="Language"><button type="button" data-lang="ko">한국어</button><button type="button" data-lang="en">EN</button></div>
   <a class="cta" href="#contact" data-en="Contact">상담 문의</a>
 </div></header>
@@ -209,8 +210,10 @@ footer b{color:var(--ink)}
   <section id="weekly">
     <div class="wkhead">
       <div><div class="eyebrow">WEEKLY MARKET RECAP</div><h2 data-en="This Week&#39;s Market">이번 주 시장</h2><p class="wkdate" id="wk-date"></p></div>
-      <p class="wknote" data-en="Activity by county for the week · Change vs. last week · Source: NWMLS · Canceled includes expired">카운티별 한 주 동안의 거래 활동 · 증감은 지난주 대비 · 출처 NWMLS · 취소에는 만료 매물 포함</p>
+      <button type="button" class="wktog" id="wk-tog" aria-expanded="true" aria-controls="wk-grid"><span id="wk-togl">접기</span><i>▾</i></button>
     </div>
+    <p class="wkmini" id="wk-mini"></p>
+    <p class="wknote" data-en="Activity by county for the week · Change vs. last week · Source: NWMLS · Canceled includes expired">카운티별 한 주 동안의 거래 활동 · 증감은 지난주 대비 · 출처 NWMLS · 취소에는 만료 매물 포함</p>
     <div class="wkgrid" id="wk-grid"></div>
   </section>
 
@@ -250,7 +253,7 @@ footer b{color:var(--ink)}
     <div class="eyebrow">TRENDS</div><h2 id="t-title">추이</h2>
     <p class="sub" data-en="Hover over or tap a chart to see that month&#39;s number.">그래프 위에 마우스를 올리거나 손가락으로 누르면 그 달의 숫자가 보입니다.</p>
     <div class="seg" role="group" aria-label="기간" id="range">
-      <button type="button" data-n="12" aria-pressed="false" data-en="1Y">1년</button><button type="button" data-n="24" aria-pressed="false" data-en="2Y">2년</button><button type="button" data-n="0" aria-pressed="true" data-en="All">전체</button>
+      <button type="button" data-n="12" aria-pressed="false" data-en="1Y">1년</button><button type="button" data-n="60" aria-pressed="true" data-en="5Y">5년</button><button type="button" data-n="120" aria-pressed="false" data-en="10Y">10년</button>
     </div>
     <div class="charts" id="charts"></div>
   </section>
@@ -262,20 +265,6 @@ footer b{color:var(--ink)}
     <div class="tw"><table><thead><tr id="thead"></tr></thead><tbody id="tbody"></tbody></table></div>
   </section>
 
-  <section id="calc">
-    <div class="eyebrow">CALCULATOR</div><h2 data-en="Monthly Payment Calculator">월 납입금 계산기</h2>
-    <p class="sub" data-en="Home price is filled in with the median sale price of the selected area. The rate is just an example, so try entering the rate you were actually quoted.">집값은 선택한 지역의 중간 거래가로 채워집니다. 금리는 예시 값이니 실제로 받으신 금리로 바꿔 넣어 보세요.</p>
-    <div class="calc">
-      <form id="cform" onsubmit="return false">
-        <label class="fld"><span data-en="Home price ($)">집값 ($)</span><input id="c-price" inputmode="numeric" type="number" min="0" step="1000"></label>
-        <label class="fld"><span data-en="Down payment (%)">다운페이 (%)</span><input id="c-down" type="number" min="0" max="100" step="1" value="20"></label>
-        <label class="fld"><span data-en="Interest rate (%, example)">금리 (%, 예시)</span><input id="c-rate" type="number" min="0" max="20" step="0.05" value="6.5"></label>
-        <label class="fld"><span data-en="Term (years)">기간 (년)</span><input id="c-years" type="number" min="1" max="40" step="1" value="30"></label>
-      </form>
-      <div class="res" aria-live="polite"><span data-en="Monthly principal &amp; interest">월 원리금</span><b id="c-out"></b><p data-en="Does not include property tax, homeowners insurance or HOA.">재산세, 주택보험, HOA는 포함하지 않은 금액입니다.</p>
-        <dl><dt data-en="Loan amount">대출금</dt><dd id="c-loan"></dd><dt data-en="Down payment">다운페이</dt><dd id="c-dp"></dd><dt data-en="Total interest (full term)">총 이자 (전체 기간)</dt><dd id="c-int"></dd></dl></div>
-    </div>
-  </section>
 </main>
 
 <div class="contact" id="contact"><div class="wrap cgrid">
@@ -320,11 +309,11 @@ let NOTES = __NOTES__;
 fetch('notes.json',{cache:'no-store'}).then(r=>r.ok?r.json():null).then(j=>{if(j&&j.areas){NOTES=j;renderVerdict();renderJun();renderTable();renderWeekly();}}).catch(()=>{});
 const NM = Array.from({length:34},(_,i)=>`${2024+Math.floor(i/12)}-${String(i%12+1).padStart(2,'0')}`);
 const O=33, OL=21;
-let cur='King', range=0, sortKey='price', sortDir=-1;
+let cur='King', range=60, sortKey='price', sortDir=-1;
 const $=id=>document.getElementById(id);
 const money=v=>v>=999500?`$${(v/1e6).toFixed(2)}M`:`$${Math.round(v/1e3).toLocaleString()}K`;
 const num=v=>Math.round(v).toLocaleString();
-const arrow=(v,d=1)=>Math.abs(v)<0.05?T('변동 없음','No change'):`${v>0?'▲':'▼'} ${Math.abs(v).toFixed(d)}%`;
+const arrow=(v,d=1)=>Math.abs(v)<0.05?`<span class="chg eq">${T('변동 없음','No change')}</span>`:`<span class="chg ${v>0?'up':'dn'}">${v>0?'▲':'▼'} ${Math.abs(v).toFixed(d)}%</span>`;
 const yoy=(s,i,j)=>(s[i]/s[j]-1)*100;
 const byId=id=>A.find(a=>a.id===id);
 function S(a){
@@ -385,7 +374,8 @@ function chart(host,months,vals,fmt,kind,zero){
   let o=`<svg viewBox="0 0 ${w} ${h}" role="img" aria-label="${host.dataset.label} ${T('추이, 최근 값','trend, latest')} ${fmt(vals[n-1])}">`;
   for(const tv of t.slice(1)){o+=`<line x1="${pl}" x2="${w-pr}" y1="${Y(tv)}" y2="${Y(tv)}" stroke="#dedede" stroke-dasharray="2 3"/><text x="${pl}" y="${Y(tv)-4}" class="ax">${fmt(tv)}</text>`}
   o+=`<line x1="${pl}" x2="${w-pr}" y1="${h-pb}" y2="${h-pb}" stroke="#111" stroke-width=".8"/>`;
-  months.forEach((m,i)=>{if(m.endsWith('-01'))o+=`<text x="${X(i)}" y="${h-7}" class="ax">${m.slice(0,4)}</text>`});
+  const yStep=n>72?2:1; months.forEach((m,i)=>{if(m.endsWith('-01')&&(+m.slice(0,4))%yStep===0)o+=`<text x="${X(i)}" y="${h-7}" class="ax" text-anchor="middle">${n>72?m.slice(0,4):m.slice(0,4)}</text>`});
+  if(n<=13)months.forEach((m,i)=>{if(i%3===0&&!m.endsWith('-01'))o+=`<text x="${X(i)}" y="${h-7}" class="ax" text-anchor="middle">${+m.slice(5)}${T('월','')}</text>`});
   if(kind==='bar'){vals.forEach((v,i)=>{o+=`<rect x="${X(i)-bw*.36}" y="${Y(v)}" width="${bw*.72}" height="${h-pb-Y(v)}" fill="${i===n-1?'#1f4d3a':'#cfd8d2'}"/>`})}
   else{const pts=vals.map((v,i)=>`${X(i).toFixed(1)},${Y(v).toFixed(1)}`).join(' ');
     o+=`<polygon points="${X(0)},${h-pb} ${pts} ${X(n-1)},${h-pb}" fill="#e9f0eb"/><polyline points="${pts}" fill="none" stroke="#111" stroke-width="2.2" stroke-linejoin="round"/><circle cx="${X(n-1)}" cy="${Y(vals[n-1])}" r="3.6" fill="#111"/>`}
@@ -401,15 +391,21 @@ function chart(host,months,vals,fmt,kind,zero){
     tx.textContent=`${months[i].replace('-','.')}  ${fmt(vals[i])}`;tip.setAttribute('visibility','visible')};
   svg.addEventListener('pointermove',move);svg.addEventListener('pointerdown',move);svg.addEventListener('pointerleave',()=>tip.setAttribute('visibility','hidden'));
 }
+function LM(a){const L=a.L;if(!L)return null;const [y,m]=L.s.split('-').map(Number);return Array.from({length:L.inv.length},(_,i)=>{const k=(m-1)+i;return `${y+Math.floor(k/12)}-${String(k%12+1).padStart(2,'0')}`})}
 function renderCharts(){
-  const a=byId(cur);
+  const a=byId(cur), L=a.L, lm=LM(a);
   $('t-title').textContent=T(`${a.ko} 추이`,`${a.en} Trends`);
   const pm=NM.slice(0,a.p.length);
+  const G=(k)=>L?[lm,L[k]]:[NM,a[k]];
+  const P=L&&L.p?[lm.slice(-L.p.length),L.p]:[pm,a.p];
+  const pct=v=>v.toFixed(1)+'%';
   const defs=[
-    [T('중간 거래가','Median sale price'), a.psrc==='n3'?T('NWMLS · 3개월 기준','NWMLS · 3-month basis'):T('NWMLS · 월별','NWMLS · monthly'), pm, a.p, money,'line',false],
-    [T('현재 매물','Active listings'),T('NWMLS · 월말 기준','NWMLS · end of month'),NM,a.inv,v=>num(v),'bar',true],
-    [T('거래 건수','Closed sales'),T('NWMLS · 월별','NWMLS · monthly'),NM,a.cs,v=>num(v),'bar',true],
-    [T('재고 소진 기간','Months of inventory'),T('NWMLS · 개월','NWMLS · months'),NM,a.msi,v=>v.toFixed(1),'line',true]];
+    [T('중간 거래가','Median sale price'), a.psrc==='n3'?T('NWMLS · 3개월 이동 기준','NWMLS · 3-month rolling'):T('NWMLS · 월별','NWMLS · monthly'), ...P, money,'line',false],
+    [T('현재 매물','Active listings'),T('NWMLS · 월말 기준','NWMLS · end of month'),...G('inv'),v=>num(v),'bar',true],
+    [T('거래 건수','Closed sales'),T('NWMLS · 월별','NWMLS · monthly'),...G('cs'),v=>num(v),'bar',true],
+    [T('재고 소진 기간','Months of inventory'),T('NWMLS · 개월','NWMLS · months'),...G('msi'),v=>v.toFixed(1),'line',true],
+    [T('판매 소요일','Days on market'),T('NWMLS · 중간값, 일','NWMLS · median, days'),...G('dom'),v=>Math.round(v)+T('일',''),'line',true],
+    [T('최초 리스팅가 대비','Sale-to-original-list'),T('NWMLS · %','NWMLS · %'),G('po')[0],G('po')[1].map(v=>v*100),pct,'line',false]];
   $('charts').innerHTML=defs.map((d,i)=>`<div class="card"><h3>${d[0]}<small>${d[1]}</small></h3><div id="ch${i}" data-label="${d[0]}"></div></div>`).join('');
   defs.forEach((d,i)=>chart($('ch'+i),d[2],d[3],d[4],d[5],d[6]));
 }
@@ -438,16 +434,9 @@ function renderTable(){
   rows.sort((x,y)=>sortKey==='ko'?x.ko.localeCompare(y.ko,LANG)*sortDir:(x[sortKey]-y[sortKey])*sortDir);
   $('tbody').innerHTML=rows.map(r=>{const [,v,c]=verdict(r.a);return `<tr data-id="${r.a.id}" class="${r.a.id===cur?'on':''}" tabindex="0"><td class="cn">${nm(r.a)}${LANG==="en"?"":`<small>${r.a.en}</small>`}</td><td>${money(r.price)}</td><td>${arrow(r.priceY)}</td><td>${num(r.inv)}</td><td>${arrow(r.invY,0)}</td><td>${r.msi.toFixed(1)}${T('개월','')}</td><td>${r.dom}${T('일','')}</td><td>${r.po.toFixed(1)}%</td><td><span class="pill ${c}">${v}</span></td></tr>`}).join('');
 }
-function calc(){
-  const P=+$('c-price').value||0, d=(+$('c-down').value||0)/100, r=(+$('c-rate').value||0)/100/12, n=(+$('c-years').value||30)*12;
-  const L=P*(1-d), m=r?L*r/(1-Math.pow(1+r,-n)):L/n;
-  const f=v=>'$'+Math.round(v).toLocaleString();
-  $('c-out').textContent=f(m); $('c-loan').textContent=f(L); $('c-dp').textContent=f(P*d); $('c-int').textContent=f(m*n-L);
-}
 function select(id,scroll){
   cur=id; document.querySelectorAll('.chip').forEach(b=>b.setAttribute('aria-pressed',b.dataset.id===id));
   renderVerdict();renderKpis();renderCharts();renderJun();renderTable();
-  $('c-price').value=Math.round(S(byId(id)).price/1000)*1000; calc();
   if(scroll)$('jun').scrollIntoView({behavior:'smooth',block:'start'});
 }
 applyStatic();
@@ -458,23 +447,27 @@ $('range').addEventListener('click',e=>{const b=e.target.closest('button');if(!b
 $('thead').addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;const k=b.dataset.k;if(sortKey===k)sortDir*=-1;else{sortKey=k;sortDir=k==='ko'?1:-1}renderTable()});
 $('tbody').addEventListener('click',e=>{const tr=e.target.closest('tr');if(tr)select(tr.dataset.id,true)});
 $('tbody').addEventListener('keydown',e=>{if(e.key==='Enter'){const tr=e.target.closest('tr');if(tr)select(tr.dataset.id,true)}});
-$('cform').addEventListener('input',calc);
 select('King');
 
 function renderWeekly(){
   const w=WEEKLY[WEEKLY.length-1], pw=WEEKLY.length>1?WEEKLY[WEEKLY.length-2]:null;
   const f=d=>{const [y,m,dd]=d.split('-');return LANG==='en'?`${MON[+m-1]} ${+dd}`:`${+m}월 ${+dd}일`};
   $('wk-date').textContent=`${f(w.start)} ${T('~','–')} ${f(w.end)}, ${w.end.slice(0,4)}`;
+  $('wk-mini').innerHTML=['King','Snohomish','Pierce'].map(id=>`<b>${nm(byId(id))}</b> ${T('펜딩','pending')} ${w[id][1]}`).join(' · ')+` <span style="color:var(--grey)">${T('· 눌러서 자세히 보기','· tap to see more')}</span>`;
+  if(typeof setWk==='function')setWk();
   $('wk-grid').innerHTML=['King','Snohomish','Pierce'].map(id=>{
     const v=w[id], mx=Math.max(...v), a=byId(id);
     return `<div class="wkc"><h3>${nm(a)}${LANG==='en'?'':`<small>${a.en.toUpperCase()}</small>`}</h3>`+v.map((x,i)=>{
       let ch='';
       if(pw){const o=pw[id][i], d=x-o, pc=o?d/o*100:0;
-        ch=`<small>${d===0?T('지난주와 같음','Same as last week'):`${d>0?'▲':'▼'} ${Math.abs(pc).toFixed(1)}% (${d>0?'+':'−'}${Math.abs(d)})`}</small>`;}
+        ch=`<small class="${d>0?'up':d<0?'dn':''}">${d===0?T('지난주와 같음','Same as last week'):`${d>0?'▲':'▼'} ${Math.abs(pc).toFixed(1)}% (${d>0?'+':'−'}${Math.abs(d)})`}</small>`;}
       return `<div class="wr"><span>${WKL()[i]}</span><span class="bar"><i style="width:${(x/mx*100).toFixed(1)}%"></i></span><b>${x}${ch}</b></div>`;
     }).join('')+((()=>{const W=LANG==='en'&&NOTES.en?NOTES.en.weekly:NOTES.weekly;return W&&W[id]?`<p class="wkread"><b>${T('이번 주 읽기','This week')}</b>${W[id]}</p>`:''})())+'</div>';
   }).join('');
 }
+let WKOPEN=(()=>{try{const v=localStorage.getItem('wkopen');if(v!==null)return v==='1'}catch(e){}return window.matchMedia('(min-width:861px)').matches})();
+function setWk(){ $('weekly').classList.toggle('closed',!WKOPEN); $('wk-tog').setAttribute('aria-expanded',WKOPEN); $('wk-togl').textContent=WKOPEN?T('접기','Hide'):T('펼쳐 보기','Show'); }
+$('wk-tog').addEventListener('click',()=>{WKOPEN=!WKOPEN;try{localStorage.setItem('wkopen',WKOPEN?'1':'0')}catch(e){}setWk()});
 renderWeekly();
 </script>
 </body>
