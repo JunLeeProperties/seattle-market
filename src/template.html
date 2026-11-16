@@ -28,6 +28,12 @@ header.top{border-bottom:1px solid var(--rule);position:sticky;top:0;background:
 .hero p{color:var(--grey);font-size:15px;max-width:620px}
 .hero .upd{margin-top:14px;font-size:12px;color:var(--grey)}
 .hero .upd b{color:var(--ink)}
+.hero-meta{display:flex;align-items:center;flex-wrap:wrap;gap:12px 18px;margin-bottom:14px}
+.report-period{display:inline-flex;align-items:center;flex-wrap:wrap;gap:5px 10px;background:var(--g);color:#fff;padding:8px 14px;border-radius:4px}
+.report-period span{font-size:11px;font-weight:500;letter-spacing:.02em;opacity:.85}
+.report-period strong{font-size:20px;font-weight:900;line-height:1.35;letter-spacing:-.02em}
+.month-label{display:inline-block;background:var(--gl);color:var(--g);padding:2px 9px;border-radius:4px;font-size:.85em;vertical-align:baseline}
+@media(max-width:600px){.hero-meta{gap:10px}.report-period{padding:7px 12px}.report-period strong{font-size:19px}}
 .picker{border-top:2px solid var(--ink);padding:16px 0 4px}
 .pg{display:flex;flex-wrap:wrap;gap:6px 6px;align-items:center;padding:6px 0;border-bottom:1px solid var(--rule)}
 .pg em{font-style:normal;font-size:11px;color:var(--grey);width:128px;flex:none}
@@ -210,7 +216,7 @@ footer b{color:var(--ink)}
 
 <main class="wrap">
   <div class="hero">
-    <div class="eyebrow">SEATTLE MARKET INDEX · 2026 OCTOBER</div>
+    <div class="hero-meta"><div class="eyebrow">SEATTLE MARKET INDEX</div><div class="report-period" data-en="<span>MONTHLY DATA</span><strong>OCTOBER 2026</strong>"><span>월간 데이터 기준</span><strong>2026년 10월</strong></div></div>
     <h1 data-en="Seattle Real Estate:<br>Who Has the Edge Right Now?">한눈에 보는<br>시애틀 부동산 시장</h1>
     <p data-en="Home prices, inventory and sales pace across King, Snohomish and Pierce counties and 14 cities, updated every month. Pick an area and every number and chart below will update.">킹 · 스노호미시 · 피어스 3개 카운티와 14개 도시의 집값, 매물, 거래 속도를 매달 정리합니다. 지역을 고르시면 아래 숫자와 그래프가 모두 바뀝니다.</p>
     <div class="upd" data-en="Data: <b>NWMLS October 2026</b> · city prices <b>Aug–Oct 2026</b> · Weekly figures updated weekly, everything else monthly">기준: <b>NWMLS 2026년 10월</b> · 도시 가격 <b>2026년 8~10월</b> · 주간 지표는 매주, 나머지는 매달 업데이트</div>
@@ -229,7 +235,7 @@ footer b{color:var(--ink)}
 
   <div class="chap" id="monthly">
     <div class="eyebrow" data-en="PART 2 · MONTHLY ANALYSIS">PART 2 · MONTHLY ANALYSIS</div>
-    <h2 data-en="Monthly Analysis by Area">지역별 월간 분석</h2>
+    <h2 data-en="<span class='month-label'>October</span> Monthly Analysis by Area"><span class="month-label">10월</span> 지역별 월간 분석</h2>
     <p class="sub" data-en="NWMLS, October 2026 · Pick an area and the analysis, numbers and charts below all switch to it.">NWMLS 2026년 10월 기준 · 지역을 고르시면 아래 분석, 숫자, 그래프가 모두 그 지역으로 바뀝니다.</p>
   </div>
   <div class="picker" id="picker" role="group" aria-label="지역 선택"></div>
