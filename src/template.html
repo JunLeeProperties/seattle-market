@@ -28,6 +28,8 @@ header.top{border-bottom:1px solid var(--rule);position:sticky;top:0;background:
 .hero p{color:var(--grey);font-size:15px;max-width:620px}
 .hero .upd{margin-top:14px;font-size:12px;color:var(--grey)}
 .hero .upd b{color:var(--ink)}
+.wk-title{display:flex;align-items:center;flex-wrap:wrap;gap:8px 12px}
+.wk-period{display:inline-block;background:var(--gl);color:var(--g);padding:4px 9px;border-radius:4px;font-size:15px;font-weight:700;line-height:1.5;letter-spacing:-.02em}
 .hero-meta{display:flex;align-items:center;flex-wrap:wrap;gap:12px 18px;margin-bottom:14px}
 .report-period{display:inline-flex;align-items:center;flex-wrap:wrap;gap:5px 10px;background:var(--g);color:#fff;padding:8px 14px;border-radius:4px}
 .report-period span{font-size:11px;font-weight:500;letter-spacing:.02em;opacity:.85}
@@ -224,7 +226,7 @@ footer b{color:var(--ink)}
 
   <section id="weekly">
     <div class="wkhead">
-      <div><div class="eyebrow" data-en="PART 1 · WEEKLY MARKET RECAP">PART 1 · WEEKLY MARKET RECAP</div><h2 data-en="Weekly Report">주간 리포트</h2><p class="wkdate" id="wk-date"></p></div>
+      <div><div class="eyebrow" data-en="PART 1 · WEEKLY MARKET RECAP">PART 1 · WEEKLY MARKET RECAP</div><h2 class="wk-title"><span data-en="Weekly Report">주간 리포트</span><span class="wk-period" id="wk-period"></span></h2><p class="wkdate" id="wk-date"></p></div>
       <button type="button" class="wktog" id="wk-tog" aria-expanded="true" aria-controls="wk-grid"><span id="wk-togl">접기</span><i>▾</i></button>
     </div>
     <p class="wkmini" id="wk-mini"></p>
@@ -478,6 +480,8 @@ select('King');
 
 function renderWeekly(){
   const w=WEEKLY[WEEKLY.length-1], pw=WEEKLY.length>1?WEEKLY[WEEKLY.length-2]:null;
+  const [,month,day]=w.start.split('-').map(Number), week=Math.ceil(day/7);
+  $('wk-period').textContent=T(`${month}월 ${week}주차`,`${MON[month-1]} · Week ${week}`);
   const f=d=>{const [y,m,dd]=d.split('-');return LANG==='en'?`${MON[+m-1]} ${+dd}`:`${+m}월 ${+dd}일`};
   $('wk-date').textContent=`${f(w.start)} ${T('~','–')} ${f(w.end)}, ${w.end.slice(0,4)}`;
   $('wk-mini').innerHTML=['King','Snohomish','Pierce'].map(id=>`<b>${nm(byId(id))}</b> ${T('펜딩','pending')} ${w[id][1]}`).join(' · ')
