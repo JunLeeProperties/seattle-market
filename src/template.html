@@ -92,10 +92,6 @@ h2{font-size:26px;font-weight:900;letter-spacing:-.02em;margin:6px 0 4px}
 .jun{display:grid;grid-template-columns:auto 1fr;gap:26px;background:var(--gl);padding:28px 30px;align-items:start}
 .jun img{width:84px;height:84px;border-radius:50%;object-fit:cover;display:block}
 .jun h2{margin-top:0}
-.jn{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:14px}
-.jn div{background:#fff;padding:16px 18px;border-top:3px solid var(--g)}
-.jn b{display:block;font-size:11px;letter-spacing:.2em;color:var(--g);margin-bottom:6px}
-.jn p{font-size:14.5px;line-height:1.7}
 /* table */
 .tw{overflow-x:auto;border-top:2px solid var(--ink)}
 table{width:100%;border-collapse:collapse;font-size:13.5px;min-width:720px}
@@ -133,7 +129,7 @@ footer b{color:var(--ink)}
  .kpis{grid-template-columns:repeat(2,minmax(0,1fr))}
  .kpi,.kpi+.kpi{padding:14px 10px 14px 0;border-left:0;border-bottom:1px solid var(--rule)}
  .kpi:first-child{grid-column:1/-1}
- .charts,.jn,.cgrid{grid-template-columns:1fr}
+ .charts,.cgrid{grid-template-columns:1fr}
  .jun{grid-template-columns:1fr;padding:22px 20px}
  .pg em{width:100%}
  .clist{grid-template-columns:1fr}
@@ -176,9 +172,14 @@ footer b{color:var(--ink)}
 .col.data ol{list-style:none;counter-reset:d;margin:0;padding:0;display:grid;gap:14px}
 .col.data li{counter-increment:d;position:relative;padding-left:32px;font-size:14.5px;line-height:1.8;color:#222;word-break:keep-all}
 .col.data li::before{content:counter(d,decimal-leading-zero);position:absolute;left:0;top:2px;font-weight:900;color:var(--g);font-size:13px}
-.memo{font-size:15px;line-height:1.8;margin:0 0 14px;padding:14px 16px;background:#fff;border-left:3px solid var(--g);word-break:keep-all}
-.col.jv .jn{display:grid;grid-template-columns:1fr;gap:12px}
-.col.jv .jn p{font-size:14.5px;line-height:1.8;word-break:keep-all}
+.memo{font-size:15px;line-height:1.8;margin:0 0 14px;padding:14px 16px;background:#fff;border-left:3px solid var(--g);word-break:keep-all;white-space:pre-line}
+.memo:empty{min-height:110px}
+.op-overview{margin:18px 0 24px;background:var(--gl);border:1px solid var(--g3);border-radius:4px}
+.op-overview summary{display:flex;justify-content:space-between;align-items:center;gap:16px;list-style:none;padding:17px 20px;color:var(--g);font-size:15px;font-weight:700;cursor:pointer}
+.op-overview summary::-webkit-details-marker{display:none}
+.op-toggle{font-size:24px;line-height:1;flex:none;font-weight:400}
+.op-overview[open] .op-toggle{transform:rotate(45deg)}
+.op-body{padding:0 20px 22px;font-size:15px;line-height:1.9;white-space:pre-line;word-break:keep-all;max-width:880px}
 .jask{display:block;margin-top:16px;font-size:13.5px;font-weight:700;color:var(--g);text-decoration:none}
 @media(max-width:860px){.two{grid-template-columns:1fr}}
 #jun{margin-bottom:30px}
@@ -240,6 +241,10 @@ footer b{color:var(--ink)}
     <h2 data-en="<span class='month-label'>October</span> Monthly Analysis by Area"><span class="month-label">10월</span> 지역별 월간 분석</h2>
     <p class="sub" data-en="NWMLS, October 2026 · Pick an area and the analysis, numbers and charts below all switch to it.">NWMLS 2026년 10월 기준 · 지역을 고르시면 아래 분석, 숫자, 그래프가 모두 그 지역으로 바뀝니다.</p>
   </div>
+  <details class="op-overview" id="j-overview">
+    <summary><span data-en="Jun's Perspective · Overall Market">현장에서 보는 Jun의 의견 · 전체 시장</span><span class="op-toggle" aria-hidden="true">+</span></summary>
+    <div class="op-body" id="j-overview-body"></div>
+  </details>
   <div class="picker" id="picker" role="group" aria-label="지역 선택"></div>
 
   <section id="jun">
@@ -253,8 +258,7 @@ footer b{color:var(--ink)}
       </div>
       <div class="col jv">
         <div class="colh"><img src="data:image/jpeg;base64,__FACE__" alt="Jun Lee"><div><b data-en="Jun&#39;s View">현장에서 보는 Jun의 의견</b><small>Jun Lee · Compass</small></div></div>
-        <p class="memo" id="j-memo" hidden></p>
-        <div class="jn"><div><b data-en="If you&#39;re buying">집을 사실 분께</b><p id="j-buy"></p></div><div><b data-en="If you&#39;re selling">집을 파실 분께</b><p id="j-sell"></p></div></div>
+        <p class="memo" id="j-memo"></p>
         <a class="jask" href="#contact" data-en="Curious about your home or neighborhood? Feel free to reach out →">우리 집, 우리 동네 이야기가 궁금하시면 편하게 연락 주세요 →</a>
       </div>
     </div>
@@ -328,7 +332,7 @@ function applyStatic(){
 }
 const WEEKLY = __WEEKLY__;
 const WKL=()=>LANG==='en'?['New listings','Pending','Sold','Price cuts','Canceled']:['신규 매물','펜딩','거래 완료','가격 인하','취소·만료'];
-// 직접 쓴 한마디가 있으면 여기에 넣는다. 없으면 숫자로 만든 초안이 나온다.
+// 직접 작성한 전체 시장 의견과 지역별 의견만 표시한다. 미작성 지역은 빈칸으로 둔다.
 let NOTES = __NOTES__;
 fetch('notes.json',{cache:'no-store'}).then(r=>r.ok?r.json():null).then(j=>{if(j&&j.areas){NOTES=j;renderVerdict();renderJun();renderTable();renderWeekly();}}).catch(()=>{});
 const NM = Array.from({length:34},(_,i)=>`${2024+Math.floor(i/12)}-${String(i%12+1).padStart(2,'0')}`);
@@ -438,21 +442,15 @@ function renderCharts(){
   $('charts').innerHTML=defs.map((d,i)=>`<div class="card"><h3>${d[0]}<small>${d[1]}</small></h3><div id="ch${i}" data-label="${d[0]}"></div></div>`).join('');
   defs.forEach((d,i)=>chart($('ch'+i),d[2],d[3],d[4],d[5],d[6]));
 }
-function draftNote(a){
-  const s=S(a);
-  if(LANG==='en') return {buy:`There are ${num(s.inv)} listings, ${Math.abs(s.invY).toFixed(0)}% ${s.invY>=0?'more':'fewer'} than last year. Homes are selling at about ${s.po.toFixed(1)}% of the first price, so on a home that's been sitting, it's worth starting a price conversation.`,
-    sell:`Homes are taking about ${s.dom} days to sell. With ${num(s.inv)} competing listings nearby, the first price and how the home is prepared really matter.`};
-  const buy=`매물이 작년보다 ${Math.abs(s.invY).toFixed(0)}% ${s.invY>=0?'늘어':'줄어'} ${num(s.inv)}채예요. 처음 가격의 ${s.po.toFixed(1)}% 정도에 거래되고 있어서, 오래 나와 있는 집이라면 가격 이야기를 해 보셔도 좋아요.`;
-  const sell=`팔리기까지 ${s.dom}일 정도 걸리고 있어요. 주변 매물 ${num(s.inv)}채와 함께 경쟁하는 만큼, 처음 가격과 집 준비에 신경 써 주시면 좋겠어요.`;
-  return {buy,sell};
-}
 function renderJun(){
-  const a=byId(cur), N=NA(cur)||{}, d=draftNote(a);
+  const a=byId(cur), N=NA(cur)||{};
   $('j-title').textContent=T(`${a.ko}, 시장 분석과 현장에서 보는 Jun의 의견`,`${a.en}: Market Analysis & Jun's View`);
   $('d-read').innerHTML=(N.read||[]).map(t=>`<li>${t}</li>`).join('');
   $('d-watch').textContent=N.watch||'';
-  $('j-buy').textContent=N.jun_buy||d.buy; $('j-sell').textContent=N.jun_sell||d.sell;
-  const m=$('j-memo'); m.hidden=!N.jun_memo; m.textContent=N.jun_memo||'';
+  $('j-memo').textContent=N.jun_memo||'';
+  const overview=LANG==='en'?(NOTES.en&&NOTES.en.overview)||'':NOTES.overview||'';
+  $('j-overview').hidden=!overview;
+  $('j-overview-body').textContent=overview;
 }
 
 const COLS=()=>LANG==='en'?[['ko','City'],['price','Median price'],['priceY','YoY'],['inv','Listings'],['invY','YoY'],['msi','Months of inv.'],['dom','Days on mkt'],['po','Sale-to-orig. list'],['sc','Direction']]:[['ko','도시'],['price','중간 거래가'],['priceY','작년 대비'],['inv','현재 매물'],['invY','작년 대비'],['msi','재고 소진 기간'],['dom','판매 소요일'],['po','최초 리스팅가 대비'],['sc','시장 방향']];

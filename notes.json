@@ -1,5 +1,5 @@
 {
- "_안내": "따옴표(\") 안의 글만 고치면 웹페이지에 그대로 반영됩니다. areas 안의 jun_buy, jun_sell, jun_memo가 Jun의 의견 칸입니다. jun_memo에 현장 이야기를 쓰면 의견 칸 맨 위에 나옵니다(비워 두면 안 보여요). 영어 버전은 맨 아래 en 안에 같은 구조로 있습니다.",
+ "_안내": "따옴표(\") 안의 글을 고치면 웹페이지에 반영됩니다. overview는 전체 시장 의견이며, areas.<도시ID>.jun_memo는 지역별 자유 형식 의견입니다. 매수·매도 구분 없이 문단을 쓰고, 문단 사이는 줄을 두 번 바꿉니다. 아직 작성하지 않은 지역의 jun_memo는 빈 문자열(\"\")로 둡니다. 빈칸에는 자동 초안을 표시하지 않습니다. 영어는 en.overview와 en.areas 안에 같은 구조로 있습니다.",
  "weekly": {
   "King": "새 매물(434건)과 펜딩(433건)이 거의 같습니다. 가격을 내린 매물(488건)이 펜딩보다 많아, 셀러들이 가격을 시장에 맞춰 가는 흐름이 이어지고 있습니다. 거래 완료가 21% 줄었지만 지난주에 10월 말 클로징이 몰렸던 영향이 커서, 한 주 숫자만으로 판단하기는 이릅니다.",
   "Snohomish": "새 매물은 12% 늘었는데 펜딩은 190건으로 지난주와 비슷합니다. 가격을 내린 매물(257건)이 펜딩보다 많아 바이어가 고를 수 있는 폭이 넓습니다. 거래 완료 39% 감소도 월말 클로징 효과를 감안해서 보시는 게 좋습니다.",
@@ -19,9 +19,7 @@
     "현재 매물은 9월 10,002채에서 10월 9,509채로 줄었습니다. 다만 이맘때는 원래 매물이 줄어드는 시기라 흐름이 바뀌었다고 보기는 아직 이릅니다."
    ],
    "watch": "11~12월에 매물이 작년보다 더 빨리 줄어드는지, 최초 리스팅가 대비가 97% 아래로 내려가는지",
-   "jun_memo": "",
-   "jun_buy": "2024년 이후로 고를 수 있는 집이 가장 많은 편이에요. 나온 지 3주가 넘은 집이라면 가격 이야기를 꺼내 보셔도 좋아요. 다만 조건 좋은 집은 여전히 2~3주 안에 팔리니까, 마음에 드는 집이 보이면 망설이지 않으셨으면 해요.",
-   "jun_sell": "처음 2~3주 안에 팔리지 않으면 가격을 내리게 되는 경우가 많아요. 주변에 경쟁 매물이 많은 만큼, 처음부터 시세에 맞는 가격과 깔끔한 집 상태로 시작하시는 게 가장 좋은 방법이에요."
+   "jun_memo": "지금 이스트사이드를 중심으로 많은 도시의 매물이 2년 전 같은 시기보다 2배 가까이 많습니다. 다만 새로 나오는 매물이 크게 늘어난 것은 아닙니다. 나온 집들이 예전보다 천천히 팔리면서 쌓이고 있다고 보시면 됩니다.\n\n사우스 킹카운티는 계속 주목하는 곳입니다. 켄트와 메이플밸리는 가격이 작년보다 오히려 올랐고, 렌튼과 페더럴웨이도 2~3% 내외로 소폭 조정에 그쳤습니다. 렌튼, 켄트, 페더럴웨이의 펜딩은 작년 10월과 5% 안팎 차이로 거의 비슷합니다."
   },
   "Snohomish": {
    "name": "스노호미시카운티",
@@ -36,9 +34,7 @@
     "중간 거래가는 68만 달러로 작년보다 4.5% 내렸습니다. 세 카운티 중 가장 많이 내린 곳입니다."
    ],
    "watch": "거래 건수 감소가 멈추는지, 판매 소요일이 25일을 넘어서는지",
-   "jun_memo": "",
-   "jun_buy": "작년보다 매물이 37% 많고 가격도 내려와 있어서, 지금은 바이어에게 여유가 있는 시기예요. 3주 넘게 나와 있는 집이라면 가격뿐 아니라 수리나 클로징 비용 같은 조건도 함께 이야기해 보세요.",
-   "jun_sell": "팔리는 데 걸리는 시간이 매달 길어지고 있어요. 작년 가격을 기준으로 잡으시면 오래 걸릴 수 있어서, 최근 한두 달 사이에 실제로 팔린 집을 기준으로 가격을 정하시길 권해 드려요."
+   "jun_memo": ""
   },
   "Pierce": {
    "name": "피어스카운티",
@@ -53,9 +49,7 @@
     "중간 거래가는 55만 달러로 작년보다 0.9% 올랐습니다. 세 카운티 중 가격이 내리지 않은 유일한 곳입니다."
    ],
    "watch": "새 매물 감소가 이어져 재고 소진 기간이 4개월 아래로 내려가는지",
-   "jun_memo": "",
-   "jun_buy": "지금은 협상할 여지가 있어요. 처음 가격의 96.8% 정도에 거래되고, 팔리기까지 한 달 넘게 걸리고 있거든요. 다만 새 매물이 줄고 있어서 이런 여유가 오래가지는 않을 수도 있어요.",
-   "jun_sell": "경쟁 매물이 줄어드는 건 셀러에게 반가운 소식이에요. 그래도 아직은 팔리기까지 한 달 정도 걸리니까, 처음 가격을 너무 높게 잡지 않으시는 게 결과적으로 더 좋아요."
+   "jun_memo": "무엇보다 계속 주목하는 곳은 사우스 킹카운티와 피어스카운티입니다. 타코마는 가격이 작년보다 오히려 올랐습니다. 매물도 이스트사이드처럼 2~3배가 아니라 조금 늘어난 수준입니다. 조정이 마무리되고 멈추는 모습도 그래프에서 보입니다."
   },
   "Seattle": {
    "name": "시애틀",
@@ -70,9 +64,7 @@
     "시애틀은 콘도 비중이 높아서 콘도 재고가 전체 숫자를 끌어올렸을 가능성이 있습니다. 이 자료는 주택 유형을 합친 것이라, 다음 업데이트에서 유형별로 나눠 확인해 보려고 합니다."
    ],
    "watch": "단독주택과 콘도를 나눈 재고, 거래 건수가 654건에서 더 줄어드는지",
-   "jun_memo": "",
-   "jun_buy": "시애틀은 집마다 상황이 많이 달라요. 나온 지 한 달이 넘은 집, 특히 콘도는 협상 여지가 꽤 있어요. 반대로 상태 좋은 단독주택은 지금도 2주 안에 팔리니까, 같은 전략으로 접근하시면 놓칠 수 있어요.",
-   "jun_sell": "가격과 집 상태가 잘 맞으면 지금도 12일 안에 팔려요. 대신 처음 2주를 놓치면 3,500채가 넘는 매물 사이에 묻히기 쉬워요. 시애틀에서는 첫 가격이 정말 중요해요."
+   "jun_memo": "시애틀은 펜딩이 작년보다 줄어 아직 바이어들이 지켜보는 분위기지만, 좋은 신호도 함께 보입니다. 판매 소요일이 12일로 가장 빠르고, 처음 내놓은 가격의 98%에 거래되고 있습니다. 매물은 많지만, 가격과 상태가 맞는 집은 지금도 2주 안에 거의 제값에 팔리는, 집마다 결과가 갈리는 시장입니다."
   },
   "Bellevue": {
    "name": "벨뷰",
@@ -87,9 +79,7 @@
     "현재 매물은 7월 727채에서 석 달 연속 줄어 642채가 됐습니다. 매물은 정점을 지났지만, 아직 작년보다 43% 많습니다."
    ],
    "watch": "매물 감소가 계속되는지, 최초 리스팅가 대비가 95% 선에서 멈추는지",
-   "jun_memo": "",
-   "jun_buy": "14개 도시 중에서 바이어 협상력이 가장 큰 곳 중 하나예요. 평균적으로 처음 가격보다 5% 정도 낮게 거래되고 있으니, 오래 나와 있는 집이라면 그보다 더 과감하게 제안해 보셔도 괜찮아요.",
-   "jun_sell": "sqft당 가격이 작년보다 9% 정도 낮아요. 작년에 이웃집이 팔린 가격을 기준으로 생각하시면 시장과 차이가 날 수 있어요. 최근 석 달 동안의 거래를 기준으로 함께 가격을 잡아 보시면 좋겠어요."
+   "jun_memo": "이스트사이드는 펜딩이 작년보다 줄어 아직 바이어들이 지켜보는 분위기지만, 좋은 신호도 함께 보입니다. 벨뷰의 매물은 7월 이후 꾸준히 줄며 정점을 지나고 있습니다."
   },
   "Kirkland": {
    "name": "커클랜드",
@@ -104,9 +94,7 @@
     "10월 거래는 101건으로 예년(130건)보다 22% 적습니다."
    ],
    "watch": "중간 거래가 하락이 멈추는지, 판매 소요일이 예년 수준을 유지하는지",
-   "jun_memo": "",
-   "jun_buy": "작년보다 가격이 10% 가까이 내려와 있어요. 가격을 내린 집은 금방 팔리는 편이라, 가격을 막 조정한 매물을 눈여겨보시면 좋아요.",
-   "jun_sell": "시세에 맞춘 집은 지금도 예년처럼 3주 안에 팔려요. 높게 시작해서 나중에 내리는 것보다, 처음부터 맞춰서 시작하시는 편이 최종 가격에도 더 유리해요."
+   "jun_memo": ""
   },
   "Redmond": {
    "name": "레드몬드",
@@ -121,9 +109,7 @@
     "10월 거래는 63건으로 예년(93건)보다 32% 적습니다. 거래 건수가 적어 달마다 숫자가 크게 출렁입니다(8월 판매 소요일 36일, 10월 14일)."
    ],
    "watch": "거래 건수가 회복되는지, 최초 리스팅가 대비가 96% 위로 돌아오는지",
-   "jun_memo": "",
-   "jun_buy": "매물이 작년보다 50% 많아서 고를 수 있는 폭이 넓어요. 오래 나와 있는 집은 가격이 꽤 조정되는 편이에요. 다만 새로 나온 좋은 집에는 여전히 경쟁이 있다는 점도 함께 기억해 주세요.",
-   "jun_sell": "처음 2주가 가장 중요해요. 그 안에 팔리지 않은 집은 결국 큰 폭으로 가격을 내린 경우가 많았어요."
+   "jun_memo": ""
   },
   "Sammamish": {
    "name": "사마미시",
@@ -138,9 +124,7 @@
     "중간 거래가는 10.8%, sqft당 가격은 10.1% 내렸습니다. 한 달 거래가 58건 정도라 월별 숫자의 변동은 큰 편입니다."
    ],
    "watch": "매물 감소가 이어지는지, 최초 리스팅가 대비가 95% 위로 회복되는지",
-   "jun_memo": "",
-   "jun_buy": "처음 가격보다 평균 5% 넘게 낮게 거래되고 있어서 협상 여지가 큰 편이에요. 다만 매물이 석 달째 줄고 있어서, 여름만큼 선택지가 많지는 않아요.",
-   "jun_sell": "가격이 작년보다 10% 정도 내려왔어요. 처음 가격이 시세보다 높으면 내린 뒤에도 더 낮게 팔리는 경우가 많아서, 시작 가격을 신중하게 정하시는 게 좋아요."
+   "jun_memo": "사마미시의 매물은 7월 이후 꾸준히 줄며 정점을 지나고 있고, 10월 펜딩은 오히려 작년보다 늘었습니다."
   },
   "Issaquah": {
    "name": "이사콰",
@@ -155,9 +139,7 @@
     "10월 거래 37건은 예년(52건)보다 29% 적고, 7월(71건)의 절반 수준입니다."
    ],
    "watch": "판매 소요일 33일이 일시적인지, 거래 건수가 40건대를 회복하는지",
-   "jun_memo": "",
-   "jun_buy": "거래가 줄면서 기다리는 셀러가 늘었어요. sqft당 가격으로 보면 작년보다 8% 정도 낮으니까, 중간가가 올랐다는 숫자만 보지 마시고 sqft당 가격으로 비교해 보세요.",
-   "jun_sell": "한 달에 37건 정도만 거래되는 시장이라 바이어 한 분 한 분이 소중해요. 첫 오퍼가 들어오면 가볍게 넘기지 마시고 꼭 같이 검토해 보셨으면 해요."
+   "jun_memo": "이사콰는 10월 펜딩이 오히려 작년보다 늘었습니다."
   },
   "Renton": {
    "name": "렌튼",
@@ -172,9 +154,7 @@
     "중간 거래가는 3.4%, sqft당 가격은 4.0% 내렸습니다. 이스트사이드보다는 가격 조정 폭이 작습니다."
    ],
    "watch": "판매 소요일이 30일을 넘어서는지, 거래 건수(96건)가 더 줄어드는지",
-   "jun_memo": "",
-   "jun_buy": "팔리기까지 한 달 가까이 걸리고, 처음 가격보다 4% 가까이 낮게 거래되고 있어요. 서두르실 필요가 적은 시장이라 인스펙션이나 수리 요청 같은 조건도 편하게 넣어 보실 수 있어요.",
-   "jun_sell": "한 달 정도는 걸린다고 생각하고 준비하시면 마음이 편해요. 가격을 내린 매물이 많아서, 인하 없이 팔려면 처음 가격이 주변보다 확실히 합리적이어야 해요."
+   "jun_memo": "계속 주목하는 곳은 사우스 킹카운티입니다. 렌튼의 가격은 작년보다 2~3% 내외로 소폭 조정에 그쳤습니다. 매물도 이스트사이드처럼 2~3배가 아니라 조금 늘어난 수준입니다. 펜딩도 작년 10월과 5% 안팎 차이로 거의 비슷합니다. 조정이 마무리되고 멈추는 모습도 그래프에서 보입니다."
   },
   "Kent": {
    "name": "켄트",
@@ -189,9 +169,7 @@
     "10월 펜딩은 작년 10월보다 5% 적어, 계약 흐름은 작년과 비슷합니다."
    ],
    "watch": "새 매물 감소가 이어지는지, sqft당 가격이 다시 오르는지",
-   "jun_memo": "",
-   "jun_buy": "팔리기까지 한 달 가까이 걸려서 충분히 고민하실 시간이 있어요. 다만 비교적 가격대가 낮아 수요가 꾸준하고 새 매물도 줄고 있어서, 큰 폭의 할인을 기대하기는 어려워요.",
-   "jun_sell": "가격은 잘 버티고 있지만 팔리는 데 시간은 더 걸려요. 처음 가격의 97% 정도에 거래된다는 점을 생각해서 가격을 잡으시면 좋아요."
+   "jun_memo": "계속 주목하는 곳은 사우스 킹카운티입니다. 켄트는 가격이 작년보다 오히려 올랐습니다. 매물도 이스트사이드처럼 2~3배가 아니라 조금 늘어난 수준입니다. 펜딩도 작년 10월과 5% 안팎 차이로 거의 비슷합니다. 조정이 마무리되고 멈추는 모습도 그래프에서 보입니다."
   },
   "Federal-Way": {
    "name": "페더럴웨이",
@@ -206,9 +184,7 @@
     "가격은 크게 내리지 않았습니다. 중간 거래가는 2.3% 내렸고, sqft당 가격은 작년과 같습니다. sqft당 가격이 내리지 않은 곳은 14개 도시 중 이곳과 메이플밸리뿐입니다."
    ],
    "watch": "재고 소진 기간이 5개월 아래로 내려오는지, 가격이 지금 수준을 지키는지",
-   "jun_memo": "",
-   "jun_buy": "매물이 많고 처음 가격보다 4% 정도 낮게 거래되고 있어서 협상은 충분히 해 보실 수 있어요. 다만 실제 거래 가격은 작년과 큰 차이가 없어요. 60만 달러 안팎 가격대의 수요가 꾸준해서, 가격이 크게 떨어지길 기다리시기는 어려울 것 같아요.",
-   "jun_sell": "가격은 유지되고 있지만, 처음 가격을 높게 잡은 집은 결국 가격을 내리고 있어요. 경쟁 매물이 작년보다 절반 가까이 늘었으니 사진과 집 상태로 차이를 만들어 보세요."
+   "jun_memo": "계속 주목하는 곳은 사우스 킹카운티입니다. 페더럴웨이의 가격은 작년보다 2~3% 내외로 소폭 조정에 그쳤습니다. 매물도 이스트사이드처럼 2~3배가 아니라 조금 늘어난 수준입니다. 펜딩도 작년 10월과 5% 안팎 차이로 거의 비슷합니다. 조정이 마무리되고 멈추는 모습도 그래프에서 보입니다."
   },
   "Maple-Valley": {
    "name": "메이플밸리",
@@ -223,9 +199,7 @@
     "10월 거래가 31건이라 집 몇 채에 따라 숫자가 크게 움직입니다. 흐름은 2~3개월을 묶어서 보시는 게 정확합니다."
    ],
    "watch": "판매 소요일이 40일대에 머무는지, 겨울에 새 매물이 얼마나 줄어드는지",
-   "jun_memo": "",
-   "jun_buy": "매물 수는 적지만 서두르실 필요는 없는 시장이에요. 한 달 넘게 나와 있는 집이 많거든요. 다만 최종 가격은 처음 가격의 97% 정도라서, 큰 폭의 할인은 드문 편이에요.",
-   "jun_sell": "집은 팔리지만 시간이 걸려요. 6주 정도는 여유 있게 잡고 계획하시면 좋겠어요. 가격을 크게 내리실 필요는 없지만, 처음부터 높게 잡으시면 그 기간이 더 길어질 수 있어요."
+   "jun_memo": "계속 주목하는 곳은 사우스 킹카운티입니다. 메이플밸리는 가격이 작년보다 오히려 올랐습니다. 매물도 이스트사이드처럼 2~3배가 아니라 조금 늘어난 수준입니다. 조정이 마무리되고 멈추는 모습도 그래프에서 보입니다."
   },
   "Everett": {
    "name": "에버렛",
@@ -240,9 +214,7 @@
     "10월 새 매물은 211건으로 예년(184건)보다 많습니다. 매물은 꾸준히 나오는데 사려는 사람이 줄어든 모습입니다."
    ],
    "watch": "거래 건수 감소가 멈추는지, sqft당 가격 하락이 완만해지는지",
-   "jun_memo": "",
-   "jun_buy": "가격이 작년보다 확실히 내려와 있고 새 매물도 꾸준히 나오고 있어요. 50만 달러대에서 고르실 수 있는 집이 많아졌어요.",
-   "jun_sell": "거래가 넉 달째 줄고 있어서, 기다리면 나아진다는 신호는 아직 보이지 않아요. 파실 계획이 있으시다면 최근 거래가를 기준으로 가격을 잡으시는 게 좋겠어요."
+   "jun_memo": ""
   },
   "Lynnwood": {
    "name": "린우드",
@@ -257,9 +229,7 @@
     "거래는 줄었는데 가격 협상은 거의 없는 상태입니다. 셀러는 가격을 지키고, 바이어는 기다리며 지켜보는 모습으로 읽힙니다."
    ],
    "watch": "10월 거래 감소가 일시적인지, 최초 리스팅가 대비가 98% 아래로 내려가는지",
-   "jun_memo": "",
-   "jun_buy": "매물은 작년보다 46% 많은데, 셀러들이 가격을 잘 내리지 않고 있어요. 그래도 sqft당 가격은 작년보다 7% 정도 낮아졌으니, 가격 조정을 시작한 집부터 살펴보시면 좋아요.",
-   "jun_sell": "팔린 집은 제값을 받았지만, 팔린 집 자체가 크게 줄었어요. 거래가 계속 줄면 가격 조정이 뒤따르는 경우가 많아서, 시장 분위기를 같이 지켜보시면 좋겠어요."
+   "jun_memo": "린우드도 특별한데요. 집들이 처음 내놓은 가격의 98% 이상에 거래되고 있어, 시애틀 다음으로 셀러가 제값을 받는 지역입니다. 가격도 작년 수준을 그대로 지키고 있어서 조정이 이어지는 시장 속에서도 비교적 강한 모습을 보여 주고 있습니다."
   },
   "Bothell": {
    "name": "보텔",
@@ -273,9 +243,7 @@
     "중간 거래가는 7.6%, sqft당 가격은 10.8% 내려 sqft당 가격 하락 폭이 14개 도시 중 가장 큽니다. 보텔은 킹·스노호미시 두 카운티에 걸쳐 있고 신축 비중이 높다는 점도 함께 보셔야 합니다."
    ],
    "watch": "최초 리스팅가 대비가 97% 위로 돌아오는지, sqft당 가격 하락이 멈추는지",
-   "jun_memo": "",
-   "jun_buy": "처음 가격보다 평균 4% 가까이 낮게 거래되고 있어요. sqft당 가격으로 보면 작년보다 10% 넘게 낮은 가격에 살 수 있고, 신축이라면 빌더 인센티브도 꼭 같이 확인해 보세요.",
-   "jun_sell": "처음 가격보다 낮게 팔리는 집이 많은 시장이에요. 주변에서 가격을 내린 매물들과 비교해서 처음 가격을 정하시면, 같은 길을 피하실 수 있어요."
+   "jun_memo": ""
   },
   "Tacoma": {
    "name": "타코마",
@@ -290,9 +258,7 @@
     "중간 거래가는 50만 달러로 1.9% 올랐고, sqft당 가격은 3.4% 내렸습니다."
    ],
    "watch": "판매 소요일 증가가 계절 영향인지, 새 매물 감소가 이어지는지",
-   "jun_memo": "",
-   "jun_buy": "여름보다 협상하기가 훨씬 좋아졌어요. 다만 새 매물이 줄고 있고 매물 자체도 다른 도시보다 적어서, 좋은 집을 오래 기다리기는 어려울 수 있어요.",
-   "jun_sell": "여름 가격을 기준으로 생각하시면 안 돼요. 석 달 사이에 팔리는 기간이 두 배가 됐어요. 그래도 경쟁 매물이 줄고 있다는 건 셀러에게 좋은 소식이에요."
+   "jun_memo": "계속 주목하는 곳은 피어스카운티입니다. 타코마는 가격이 작년보다 오히려 올랐습니다. 매물도 이스트사이드처럼 2~3배가 아니라 조금 늘어난 수준입니다. 조정이 마무리되고 멈추는 모습도 그래프에서 보입니다."
   }
  },
  "en": {
@@ -313,9 +279,7 @@
      "Active listings dipped from 10,002 in September to 9,509 in October. Inventory normally falls at this time of year, so it is too early to call a turn."
     ],
     "watch": "Whether inventory falls faster than last year in Nov–Dec, and whether sale-to-original-list drops below 97%",
-    "jun_buy": "Buyers have more homes to choose from than at any point since 2024. If a home has been listed for more than three weeks, it's worth starting a price conversation. Well-priced homes still sell within two to three weeks, though, so don't wait too long on one you love.",
-    "jun_sell": "Homes that don't sell in the first two to three weeks usually end up with a price cut. With so much competition nearby, starting with a market-based price and a well-prepared home is your best strategy.",
-    "jun_memo": ""
+    "jun_memo": "Across many cities, especially on the Eastside, there are nearly twice as many homes on the market as at the same time two years ago. This does not mean that new listings have surged. Homes are taking longer to sell and are accumulating on the market.\n\nSouth King County remains an area I am watching closely. Prices in Kent and Maple Valley have actually risen from last year, while Renton and Federal Way have seen only modest adjustments of around 2–3%. Pending sales in Renton, Kent and Federal Way are all within about 5% of last October."
    },
    "Snohomish": {
     "label": "Clearly leaning toward buyers",
@@ -328,8 +292,6 @@
      "The median sale price is $680K, down 4.5% from last year, the largest drop of the three counties."
     ],
     "watch": "Whether the decline in closed sales stops, and whether days on market goes past 25",
-    "jun_buy": "There are 37% more listings than last year and prices have come down, so buyers have breathing room right now. On homes listed for three weeks or more, negotiate not just price but also repairs and closing costs.",
-    "jun_sell": "Homes are taking longer to sell every month. Pricing off last year's numbers can mean a long wait, so I'd recommend pricing based on homes that actually sold in the last one to two months.",
     "jun_memo": ""
    },
    "Pierce": {
@@ -343,9 +305,7 @@
      "The median sale price is $550K, up 0.9% from last year, the only one of the three counties where prices did not fall."
     ],
     "watch": "Whether shrinking new listings push months of inventory below 4",
-    "jun_buy": "There is room to negotiate right now. Homes are selling at about 96.8% of the original price and taking over a month to sell. With fewer new listings coming, though, this window may not stay open for long.",
-    "jun_sell": "Less competition is good news for sellers. It still takes about a month to sell, so not starting too high usually leads to a better result.",
-    "jun_memo": ""
+    "jun_memo": "The areas I continue to watch most closely are South King County and Pierce County. Prices in Tacoma have actually risen from last year. Listings have increased a little, rather than doubling or tripling as on the Eastside. The charts also show signs that the adjustment is winding down and leveling off."
    },
    "Seattle": {
     "label": "Mixed signals",
@@ -358,9 +318,7 @@
      "Seattle has a high share of condos, so condo inventory may be driving the overall numbers up. This data combines all home types, so we'll split it by type in the next update."
     ],
     "watch": "Inventory split by houses vs. condos, and whether closed sales fall below 654",
-    "jun_buy": "Every home in Seattle is a different story. Homes listed for over a month, especially condos, have real room to negotiate. On the other hand, a well-kept single-family home can still sell within two weeks, so the same strategy won't work for both.",
-    "jun_sell": "If the price and condition are right, homes still sell within 12 days. Miss those first two weeks and it's easy to get lost among 3,500+ listings. In Seattle, the first price really matters.",
-    "jun_memo": ""
+    "jun_memo": "Pending sales in Seattle are lower than last year, suggesting that buyers are still watching and waiting, but there are encouraging signs as well. Homes are selling fastest here at 12 days and for 98% of their original list price. Inventory is high, yet homes with the right price and condition are still selling in about two weeks at close to their asking price. Results vary from home to home."
    },
    "Bellevue": {
     "label": "Clearly leaning toward buyers",
@@ -373,9 +331,7 @@
      "Active listings have fallen three months in a row, from 727 in July to 642. Inventory has peaked but is still 43% above last year."
     ],
     "watch": "Whether listings keep falling, and whether sale-to-original-list holds around 95%",
-    "jun_buy": "Bellevue is one of the strongest negotiating positions for buyers among the 14 cities. Homes are selling about 5% below the first price on average, so on a home that's been sitting, you can feel comfortable offering more boldly.",
-    "jun_sell": "Price per sq ft is about 9% lower than last year. If you think in terms of what your neighbor sold for last year, you may be out of step with the market. Let's price based on the last three months of sales together.",
-    "jun_memo": ""
+    "jun_memo": "Pending sales on the Eastside are lower than last year, suggesting that buyers are still watching and waiting, but there are encouraging signs as well. Listings in Bellevue have been steadily declining since July and appear to be past their peak."
    },
    "Kirkland": {
     "label": "Leaning toward buyers",
@@ -388,8 +344,6 @@
      "October closed sales were 101, 22% below normal (130)."
     ],
     "watch": "Whether the drop in median price stops, and whether days on market stays near normal",
-    "jun_buy": "Prices are down close to 10% from last year. Homes that cut their price tend to sell quickly, so keep an eye on listings that just adjusted.",
-    "jun_sell": "Homes priced to the market still sell within three weeks, like usual. Starting at the right price tends to get you a better final number than starting high and cutting later.",
     "jun_memo": ""
    },
    "Redmond": {
@@ -403,8 +357,6 @@
      "October closed sales were 63, 32% below normal (93). With so few sales, monthly numbers swing a lot (days on market was 36 in August, 14 in October)."
     ],
     "watch": "Whether closed sales recover, and whether sale-to-original-list returns above 96%",
-    "jun_buy": "With 50% more listings than last year, you have plenty of choice. Homes that have been sitting tend to adjust their price quite a bit. Just keep in mind that great new listings still draw competition.",
-    "jun_sell": "The first two weeks matter most. Homes that didn't sell in that window often ended up with big price cuts.",
     "jun_memo": ""
    },
    "Sammamish": {
@@ -418,9 +370,7 @@
      "The median sale price fell 10.8% and price per sq ft fell 10.1%. With only about 58 sales a month, monthly numbers can swing."
     ],
     "watch": "Whether listings keep falling, and whether sale-to-original-list recovers above 95%",
-    "jun_buy": "Homes are selling more than 5% below the first price on average, so there's good room to negotiate. That said, listings have been falling for three months, so there isn't as much choice as in the summer.",
-    "jun_sell": "Prices are down about 10% from last year. If the starting price is above market, homes often sell even lower after the cut, so it's worth setting the first price carefully.",
-    "jun_memo": ""
+    "jun_memo": "Listings in Sammamish have been steadily declining since July and appear to be past their peak. October pending sales have actually risen from last year."
    },
    "Issaquah": {
     "label": "Clearly leaning toward buyers",
@@ -433,9 +383,7 @@
      "October's 37 sales are 29% below normal (52) and about half of July (71)."
     ],
     "watch": "Whether 33 days on market is a one-off, and whether sales recover to the 40s",
-    "jun_buy": "With fewer sales, more sellers are waiting. Price per sq ft is about 8% lower than last year, so instead of looking at the rising median, compare homes by price per sq ft.",
-    "jun_sell": "With only about 37 sales a month, every buyer counts. If you get a first offer, please don't brush it off. Let's review it carefully together.",
-    "jun_memo": ""
+    "jun_memo": "October pending sales in Issaquah have actually risen from last year."
    },
    "Renton": {
     "label": "Clearly leaning toward buyers",
@@ -448,9 +396,7 @@
      "The median sale price fell 3.4% and price per sq ft fell 4.0%, a smaller adjustment than the Eastside."
     ],
     "watch": "Whether days on market passes 30, and whether closed sales (96) fall further",
-    "jun_buy": "Homes are taking close to a month to sell, at nearly 4% below the first price. There's little reason to rush, so you can comfortably ask for things like inspection repairs.",
-    "jun_sell": "Plan on about a month and you'll feel more at ease. With so many price cuts around you, selling without a reduction means your first price needs to be clearly reasonable compared to nearby homes.",
-    "jun_memo": ""
+    "jun_memo": "South King County remains an area I am watching closely. Prices in Renton have seen only a modest adjustment of around 2–3% from last year. Listings have increased a little, rather than doubling or tripling as on the Eastside. Pending sales are within about 5% of last October. The charts also show signs that the adjustment is winding down and leveling off."
    },
    "Kent": {
     "label": "Leaning toward buyers",
@@ -463,9 +409,7 @@
      "October pending sales were 5% below last October, so contract activity is close to last year."
     ],
     "watch": "Whether new listings keep shrinking, and whether price per sq ft turns back up",
-    "jun_buy": "Homes take nearly a month to sell, so you have time to think. But prices here are relatively affordable, demand is steady, and new listings are shrinking, so big discounts are hard to expect.",
-    "jun_sell": "Prices are holding up, but homes take longer to sell. Homes are trading at about 97% of the first price, so keep that in mind when setting yours.",
-    "jun_memo": ""
+    "jun_memo": "South King County remains an area I am watching closely. Prices in Kent have actually risen from last year. Listings have increased a little, rather than doubling or tripling as on the Eastside. Pending sales are within about 5% of last October. The charts also show signs that the adjustment is winding down and leveling off."
    },
    "Federal-Way": {
     "label": "Mixed signals",
@@ -478,9 +422,7 @@
      "Prices have held up fairly well: the median sale price is down 2.3% and price per sq ft is flat. Federal Way and Maple Valley are the only two of the 14 cities where price per sq ft did not fall."
     ],
     "watch": "Whether months of inventory falls below 5, and whether prices hold at this level",
-    "jun_buy": "There are lots of listings and homes sell about 4% below the first price, so you can definitely negotiate. But actual sale prices are close to last year's. Demand around the $600K range is steady, so waiting for a big price drop may not pay off.",
-    "jun_sell": "Prices are holding, but homes that started high are ending up with cuts. Competition is up almost 50% from last year, so make your home stand out with great photos and condition.",
-    "jun_memo": ""
+    "jun_memo": "South King County remains an area I am watching closely. Prices in Federal Way have seen only a modest adjustment of around 2–3% from last year. Listings have increased a little, rather than doubling or tripling as on the Eastside. Pending sales are within about 5% of last October. The charts also show signs that the adjustment is winding down and leveling off."
    },
    "Maple-Valley": {
     "label": "Leaning toward buyers",
@@ -493,9 +435,7 @@
      "With only 31 sales in October, a few homes can move the numbers a lot. It's more accurate to look at two to three months together."
     ],
     "watch": "Whether days on market stays in the 40s, and how much new listings drop over the winter",
-    "jun_buy": "There aren't many listings, but there's no need to rush. Many homes have been on the market for over a month. Final prices are around 97% of the first price, though, so large discounts are rare.",
-    "jun_sell": "Homes do sell, but it takes time. Plan for about six weeks. You don't need a big price cut, but starting high can make that wait even longer.",
-    "jun_memo": ""
+    "jun_memo": "South King County remains an area I am watching closely. Prices in Maple Valley have actually risen from last year. Listings have increased a little, rather than doubling or tripling as on the Eastside. The charts also show signs that the adjustment is winding down and leveling off."
    },
    "Everett": {
     "label": "Clearly leaning toward buyers",
@@ -508,8 +448,6 @@
      "October new listings were 211, above normal (184). Homes keep coming on the market while fewer people are buying."
     ],
     "watch": "Whether the decline in sales stops, and whether the drop in price per sq ft slows",
-    "jun_buy": "Prices are clearly lower than last year and new listings keep coming. There are many more homes to choose from in the $500Ks.",
-    "jun_sell": "Sales have been falling for four months, and there's no sign yet that waiting will help. If you're planning to sell, pricing based on recent sales is the way to go.",
     "jun_memo": ""
    },
    "Lynnwood": {
@@ -523,9 +461,7 @@
      "Sales are down but there's almost no price negotiation. Sellers are holding firm on price while buyers wait and watch."
     ],
     "watch": "Whether October's drop in sales is temporary, and whether sale-to-original-list falls below 98%",
-    "jun_buy": "There are 46% more listings than last year, but sellers aren't cutting prices much. Still, price per sq ft is about 7% lower than last year, so start with homes that have begun adjusting.",
-    "jun_sell": "Homes that sold got full price, but far fewer homes sold. When sales keep falling, price adjustments often follow, so let's keep an eye on the market together.",
-    "jun_memo": ""
+    "jun_memo": "Lynnwood also stands out. Homes are selling for more than 98% of their original list price, making it second to Seattle in how close sellers get to their original asking price. Prices are also holding at last year's level, showing relative strength in a market that is still adjusting."
    },
    "Bothell": {
     "label": "Clearly leaning toward buyers",
@@ -537,8 +473,6 @@
      "The median sale price fell 7.6% and price per sq ft fell 10.8%, the largest price per sq ft drop of the 14 cities. Bothell spans King and Snohomish counties and has a lot of new construction, which is worth keeping in mind."
     ],
     "watch": "Whether sale-to-original-list returns above 97%, and whether the price per sq ft decline stops",
-    "jun_buy": "Homes are selling nearly 4% below the first price on average. On a price-per-sq-ft basis you can buy at more than 10% below last year, and for new construction, be sure to ask about builder incentives too.",
-    "jun_sell": "Many homes here sell below their first price. Set your first price by comparing it with nearby homes that already cut, and you can avoid going down the same road.",
     "jun_memo": ""
    },
    "Tacoma": {
@@ -552,10 +486,10 @@
      "The median sale price is $500K, up 1.9%, while price per sq ft fell 3.4%."
     ],
     "watch": "Whether longer days on market is seasonal, and whether new listings keep shrinking",
-    "jun_buy": "It's much easier to negotiate than in the summer. But new listings are shrinking and inventory is lower than in other cities, so waiting a long time for the right home may be hard.",
-    "jun_sell": "Don't price based on summer. Time to sell has doubled in three months. The good news is that competing listings are shrinking.",
-    "jun_memo": ""
+    "jun_memo": "Pierce County remains an area I am watching closely. Prices in Tacoma have actually risen from last year. Listings have increased a little, rather than doubling or tripling as on the Eastside. The charts also show signs that the adjustment is winding down and leveling off."
    }
-  }
- }
+  },
+  "overview": "Across many cities, especially on the Eastside, there are nearly twice as many homes on the market as at the same time two years ago. This does not mean that new listings have surged. Homes are taking longer to sell and are accumulating on the market.\n\nThe areas I continue to watch most closely are South King County and Pierce County. Prices in Kent, Maple Valley and Tacoma have actually risen from last year, while Renton and Federal Way have seen only modest adjustments of around 2–3%. Listings have increased a little, rather than doubling or tripling as on the Eastside. Pending sales in Renton, Kent and Federal Way are all within about 5% of last October. The charts also show signs that the adjustment is winding down and leveling off.\n\nPending sales in Seattle and the Eastside are lower than last year, suggesting that buyers are still watching and waiting, but there are encouraging signs as well. Seattle has the fastest selling pace at 12 days, and homes are selling for 98% of their original list price. Inventory is high, yet homes with the right price and condition are still selling in about two weeks at close to their asking price. Results vary from home to home. On the Eastside, listings in Bellevue and Sammamish have been steadily declining since July and appear to be past their peak. October pending sales in Sammamish and Issaquah have actually risen from last year.\n\nLynnwood also stands out. Homes are selling for more than 98% of their original list price, making it second to Seattle in how close sellers get to their original asking price. Prices are also holding at last year's level, showing relative strength in a market that is still adjusting.\n\nIf transactions continue at their current pace, my cautious expectation is that prices may hold around today's levels rather than see another substantial adjustment.\n\nAs I often say, more buyers are now taking a conservative view of prices. For sellers, setting the initial asking price matters more than ever. For buyers, rather than simply expecting a discount, I hope you will look carefully at whether a seller has already adjusted the asking price, so you do not miss a good home when it comes along."
+ },
+ "overview": "지금 이스트사이드를 중심으로 많은 도시의 매물이 2년 전 같은 시기보다 2배 가까이 많습니다. 다만 새로 나오는 매물이 크게 늘어난 것은 아닙니다. 나온 집들이 예전보다 천천히 팔리면서 쌓이고 있다고 보시면 됩니다.\n\n무엇보다 계속 주목하는 곳은 사우스 킹카운티와 피어스카운티입니다. 켄트, 메이플밸리, 타코마는 가격이 작년보다 오히려 올랐고, 렌튼과 페더럴웨이도 2~3% 내외로 소폭 조정에 그쳤습니다. 매물도 이스트사이드처럼 2~3배가 아니라 조금 늘어난 수준입니다. 펜딩도 렌튼, 켄트, 페더럴웨이 모두 작년 10월과 5% 안팎 차이로 거의 비슷합니다. 조정이 마무리되고 멈추는 모습도 그래프에서 보입니다.\n\n시애틀과 이스트사이드는 펜딩이 작년보다 줄어 아직 바이어들이 지켜보는 분위기지만, 좋은 신호도 함께 보입니다. 시애틀은 판매 소요일이 12일로 가장 빠르고, 처음 내놓은 가격의 98%에 거래되고 있습니다. 매물은 많지만, 가격과 상태가 맞는 집은 지금도 2주 안에 거의 제값에 팔리는, 집마다 결과가 갈리는 시장입니다. 이스트사이드는 벨뷰와 사마미시의 매물이 7월 이후 꾸준히 줄며 정점을 지나고 있고, 사마미시와 이사콰는 10월 펜딩이 오히려 작년보다 늘었습니다.\n\n린우드도 특별한데요. 집들이 처음 내놓은 가격의 98% 이상에 거래되고 있어, 시애틀 다음으로 셀러가 제값을 받는 지역입니다. 가격도 작년 수준을 그대로 지키고 있어서 조정이 이어지는 시장 속에서도 비교적 강한 모습을 보여 주고 있습니다.\n\n지금 수준의 거래가 유지된다면 큰 폭의 추가 조정보다는 현재 가격대에서 버티는 흐름이 이어지지 않을까 조심스럽게 예상해 봅니다.\n\n늘 말씀드리지만 지금은 가격을 보수적으로 보는 바이어가 많아진 시장입니다. 셀러분들께는 처음 가격을 어떻게 정하느냐가 그 어느 때보다 중요합니다. 바이어분들은 막연한 네고보다는 셀러가 이미 가격을 조정해서 내놓은 집인지 정확히 파악하셔서, 좋은 집이 나왔을 때 놓치지 않으셨으면 좋겠습니다."
 }

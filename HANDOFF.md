@@ -16,7 +16,8 @@
 ## 파일 구조
 - `index.html` — 빌드 결과(직접 고치지 말 것). `src/build.py` 실행으로 생성
 - `notes.json` — **모든 분석·의견 문장**. 페이지가 실행 중에도 이 파일을 읽어 반영
-  - `areas.<도시ID>`: `label/tag/cls`(판정), `sub`(한 줄 요약), `read`(데이터 분석 4문장, 합니다체), `watch`(다음 달 볼 것), `jun_buy/jun_sell/jun_memo`(Jun의 의견, 해요체 — 현재는 Claude 초안, Jun이 직접 바꿀 예정)
+  - `areas.<도시ID>`: `label/tag/cls`(판정), `sub`(한 줄 요약), `read`(데이터 분석 4문장, 합니다체), `watch`(다음 달 볼 것), `jun_memo`(현장에서 보는 Jun의 의견, 자유 형식 문단 — Jun이 직접 제공한 내용만 사용, 미작성 지역은 빈 문자열)
+  - `overview`: 전체 시장 의견 전문. 월간 분석 위의 펼침 영역에 표시. `en.overview`는 영어 번역
   - `weekly.<King|Snohomish|Pierce>`: 이번 주 읽기
   - `en`: 위와 같은 구조의 영어 버전
 - `src/template.html` — 페이지 원본 (자리표시 `__LOGO__ __FACE__ __QR__ __DATA__ __WEEKLY__ __NOTES__`)
@@ -40,10 +41,10 @@
 
 ## Jun의 요청 스타일
 - 리포트는 데이터 중심, AI 평가 금지. 의견은 "Jun의 의견" 칸에만, Jun 본인 말로
-- 한국어: 데이터 설명은 따뜻한 "~합니다", Jun 의견은 "~해요". 딱딱하거나 번역투 금지
+- 한국어: 데이터 설명은 따뜻한 "~합니다". Jun 의견은 본인이 제공한 문체와 의미를 유지하고, 명백한 띄어쓰기·문장부호만 정리. 딱딱하거나 번역투 금지
 - 메기(seattlemaggiesun) 리포트 참고하되 베끼지 말 것
 
 ## 남은 일
-- Jun의 의견 17개를 Jun 본인 말로 교체 (현재 초안)
+- Jun의 의견은 본인이 제공한 내용만 사용. 2026-11-16 전체 글 및 언급한 10개 도시·King/Pierce 의견 반영 완료. Kirkland, Redmond, Everett, Bothell 및 Snohomish 카운티는 빈칸 유지. 매수/매도 구분과 자동 생성 초안은 제거했으며, 이후 `jun_memo`를 지역별로 갱신
 - (선택) market.junleeproperties.com 연결: DNS CNAME `market` → `junleeproperties.github.io` 추가 후 저장소에 `CNAME` 파일
 - NWMLS 데이터 공개 게시 규정 확인
