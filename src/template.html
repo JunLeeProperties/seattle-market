@@ -203,7 +203,7 @@ footer b{color:var(--ink)}
 <body>
 <header class="top"><div class="wrap">
   <img src="data:image/png;base64,__LOGO__" alt="Jun Lee Properties">
-  <nav aria-label="페이지 내 이동"><a href="#weekly" data-en="Weekly">주간</a><a href="#monthly" data-en="Monthly">월간</a><a href="#jun" data-en="Analysis">분석·의견</a><a href="#market" data-en="Market">시장 현황</a><a href="#trend" data-en="Trends">추이</a><a href="#compare" data-en="Compare">도시 비교</a></nav>
+  <nav aria-label="페이지 내 이동"><a href="#weekly" data-en="Weekly">주간</a><a href="#monthly" data-en="Monthly">월간</a><a href="#jun" data-en="Analysis">분석·의견</a><a href="#market" data-en="Market">시장 현황</a><a href="#trend" data-en="Trends">트랜드</a><a href="#compare" data-en="Compare">도시 비교</a></nav>
   <div class="lang" role="group" aria-label="Language"><button type="button" data-lang="ko">한국어</button><button type="button" data-lang="en">EN</button></div>
   <a class="cta" href="#contact" data-en="Contact">상담 문의</a>
 </div></header>
@@ -265,7 +265,7 @@ footer b{color:var(--ink)}
   </section>
 
   <section id="trend">
-    <div class="eyebrow">TRENDS</div><h2 id="t-title">추이</h2>
+    <div class="eyebrow">TRENDS</div><h2 id="t-title">트랜드</h2>
     <p class="sub" data-en="Hover over or tap a chart to see that month&#39;s number.">그래프 위에 마우스를 올리거나 손가락으로 누르면 그 달의 숫자가 보입니다.</p>
     <div class="seg" role="group" aria-label="기간" id="range">
       <button type="button" data-n="12" aria-pressed="false" data-en="1Y">1년</button><button type="button" data-n="60" aria-pressed="true" data-en="5Y">5년</button><button type="button" data-n="120" aria-pressed="false" data-en="10Y">10년</button>
@@ -387,7 +387,7 @@ function chart(host,months,vals,fmt,kind,zero){
   const t=ticks(zero?0:lo-pad,hi+pad);lo=t[0];hi=t[t.length-1];
   const bw=(w-pl-pr)/(kind==='bar'?n:(n-1));
   const X=i=>kind==='bar'?pl+i*bw+bw/2:pl+i*bw, Y=v=>pt+(hi-v)*(h-pt-pb)/(hi-lo);
-  let o=`<svg viewBox="0 0 ${w} ${h}" role="img" aria-label="${host.dataset.label} ${T('추이, 최근 값','trend, latest')} ${fmt(vals[n-1])}">`;
+  let o=`<svg viewBox="0 0 ${w} ${h}" role="img" aria-label="${host.dataset.label} ${T('트랜드, 최근 값','trend, latest')} ${fmt(vals[n-1])}">`;
   for(const tv of t.slice(1)){o+=`<line x1="${pl}" x2="${w-pr}" y1="${Y(tv)}" y2="${Y(tv)}" stroke="#dedede" stroke-dasharray="2 3"/><text x="${pl}" y="${Y(tv)-4}" class="ax">${fmt(tv)}</text>`}
   o+=`<line x1="${pl}" x2="${w-pr}" y1="${h-pb}" y2="${h-pb}" stroke="#111" stroke-width=".8"/>`;
   const yStep=n>72?2:1; months.forEach((m,i)=>{if(m.endsWith('-01')&&(+m.slice(0,4))%yStep===0)o+=`<text x="${X(i)}" y="${h-7}" class="ax" text-anchor="middle">${n>72?m.slice(0,4):m.slice(0,4)}</text>`});
@@ -413,7 +413,7 @@ function chart(host,months,vals,fmt,kind,zero){
 function LM(a){const L=a.L;if(!L)return null;const [y,m]=L.s.split('-').map(Number);return Array.from({length:L.inv.length},(_,i)=>{const k=(m-1)+i;return `${y+Math.floor(k/12)}-${String(k%12+1).padStart(2,'0')}`})}
 function renderCharts(){
   const a=byId(cur), L=a.L, lm=LM(a);
-  $('t-title').textContent=T(`${a.ko} 추이`,`${a.en} Trends`);
+  $('t-title').textContent=T(`${a.ko} 트랜드`,`${a.en} Trends`);
   const pm=NM.slice(0,a.p.length);
   const G=(k)=>L?[lm,L[k]]:[NM,a[k]];
   const P=L&&L.p?[lm.slice(-L.p.length),L.p]:[pm,a.p];
