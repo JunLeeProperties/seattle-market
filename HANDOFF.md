@@ -16,7 +16,7 @@
 ## 파일 구조
 - `index.html` — 빌드 결과(직접 고치지 말 것). `src/build.py` 실행으로 생성
 - `notes.json` — **모든 분석·의견 문장**. 페이지가 실행 중에도 이 파일을 읽어 반영
-  - `areas.<도시ID>`: `label/tag/cls`(판정), `sub`(한 줄 요약), `read`(데이터 분석 4문장, 합니다체), `watch`(다음 달 볼 것), `jun_memo`(현장에서 보는 Jun의 의견, 자유 형식 문단 — Jun이 직접 제공한 내용만 사용, 미작성 지역은 빈 문자열)
+  - `areas.<도시ID>`: `label/tag/cls`(판정), `sub`(한 줄 요약), `read`(데이터 분석 4문장, 합니다체), `watch`(다음 달 볼 것), `jun_memo`(현장에서 보는 Jun의 의견, 자유 형식 문단 — Jun이 직접 제공하거나 작성을 요청한 내용만 사용, 미작성 지역은 빈 문자열)
   - `overview`: 전체 시장 의견 전문. 월간 분석 위의 펼침 영역에 표시. `en.overview`는 영어 번역
   - `weekly.<King|Snohomish|Pierce>`: 이번 주 읽기
   - `en`: 위와 같은 구조의 영어 버전
@@ -45,6 +45,12 @@
 - 메기(seattlemaggiesun) 리포트 참고하되 베끼지 말 것
 
 ## 남은 일
-- Jun의 의견은 본인이 제공한 내용만 사용. 2026-11-16 전체 글 및 언급한 10개 도시·King/Pierce 의견 반영 완료. Kirkland, Redmond, Everett, Bothell 및 Snohomish 카운티는 빈칸 유지. 매수/매도 구분과 자동 생성 초안은 제거했으며, 이후 `jun_memo`를 지역별로 갱신
+- Jun의 의견은 지역별 자유 형식 문단으로 관리. Jun이 명시적으로 요청한 지역은 데이터에 근거해 의견을 작성할 수 있음. 2026-11-16 스노호미시·페더럴웨이·타코마의 의견 작성 요청을 반영했고, 벨뷰·커클랜드·린우드와 피어스 문구를 수정. Renton, Kent, Maple-Valley, Redmond, Everett, Bothell은 빈칸 유지. 매수/매도 구분과 자동 생성 초안은 사용하지 않음.
 - (선택) market.junleeproperties.com 연결: DNS CNAME `market` → `junleeproperties.github.io` 추가 후 저장소에 `CNAME` 파일
 - NWMLS 데이터 공개 게시 규정 확인
+
+## 2026-11-16 지역 의견 수정 근거
+- 스노호미시·페더럴웨이·타코마: `src/data.json`의 2026년 10월 지표와 시계열을 바탕으로 Jun의 요청에 따라 작성. 스노호미시는 조정 중이라는 점과 긍정적인 신호를 함께 설명. 페더럴웨이는 셀러 우세가 아닌 지표 간 차이로 혼조세를 설명. 타코마는 중간가 상승과 sqft당 가격 하락을 구분.
+- 벨뷰의 최근 펜딩 소폭 증가 및 커클랜드 98034의 $1M 이하 매물 증가·펜딩 유지: Jun이 직접 제공한 관찰. 저장된 월간 데이터에는 펜딩·ZIP별 가격대 데이터가 없으므로 임의의 증가율이나 비교 기간을 덧붙이지 않음.
+- 린우드 라이트레일의 가격 방어 효과는 Jun이 요청한 가설이며 인과관계로 확정하지 않음. 교통 연결 사실 확인: https://www.soundtransit.org/get-to-know-us/news-events/news-releases/light-rail-to-lynnwood-opens (2024-08-30 개통).
+- Renton/Kent/Maple-Valley 개별 의견은 비우되, 전체 시장 의견과 King 카운티 내 지역 관련 내용은 유지.
