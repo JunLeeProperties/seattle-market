@@ -4,10 +4,16 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>한눈에 보는 시애틀 부동산 시장 · Jun Lee Properties</title>
+<meta name="description" content="킹·스노호미시·피어스 카운티와 시애틀 주변 14개 도시의 부동산 시장 데이터, 주간 업데이트와 Jun Lee의 의견을 확인하세요.">
+<meta property="og:title" content="시애틀 부동산 시장 · Jun Lee">
+<meta property="og:description" content="주간·월간 시장 데이터와 현장에서 보는 Jun의 의견">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://junleeproperties.github.io/seattle-market/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
 <style>
 :root{--ink:#111;--g:#1f4d3a;--gl:#e9f0eb;--g2:#8fb3a0;--g3:#cfd8d2;--grey:#6b6b6b;--rule:#dedede;--bg:#fff}
+html{scroll-padding-top:80px}
 *{box-sizing:border-box;margin:0;padding:0}
 body{font-family:'Noto Sans KR',system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.5;-webkit-font-smoothing:antialiased}
 button{font:inherit;color:inherit;cursor:pointer;background:none;border:0}
@@ -178,6 +184,7 @@ footer b{color:var(--ink)}
 .colh img{width:56px;height:56px;border-radius:50%;object-fit:cover}
 .badge{font-size:10.5px;letter-spacing:.16em;font-weight:700;padding:3px 8px;border:1px solid var(--ink)}
 .badge.g{background:var(--g);border-color:var(--g);color:#fff}
+.data-period{font-size:11.5px;line-height:1.7;color:var(--grey);margin:0 0 16px}
 .col.data ol{list-style:none;counter-reset:d;margin:0;padding:0;display:grid;gap:14px}
 .col.data li{counter-increment:d;position:relative;padding-left:32px;font-size:14.5px;line-height:1.8;color:#222;word-break:keep-all}
 .col.data li::before{content:counter(d,decimal-leading-zero);position:absolute;left:0;top:2px;font-weight:900;color:var(--g);font-size:13px}
@@ -216,12 +223,19 @@ footer b{color:var(--ink)}
 .wkmini{cursor:pointer}
 .chap{margin:6px 0 10px;padding-top:26px;border-top:2px solid var(--ink)}
 .chap h2{margin-bottom:2px}
+@media(max-width:600px){
+ .top .wrap{padding:0 16px;gap:8px}
+ .top img{width:126px;height:auto;max-width:35%;flex-shrink:1}
+ .lang{margin-right:0}
+ .lang button{font-size:11px;padding:7px 8px;white-space:nowrap}
+ .top .cta{white-space:nowrap;flex-shrink:0;font-size:12px;padding:9px 10px}
+}
 </style>
 </head>
 <body>
 <header class="top"><div class="wrap">
   <img src="data:image/png;base64,__LOGO__" alt="Jun Lee Properties">
-  <nav aria-label="페이지 내 이동"><a href="#weekly" data-en="Weekly">주간</a><a href="#monthly" data-en="Monthly">월간</a><a href="#jun" data-en="Analysis">분석·의견</a><a href="#market" data-en="Market">시장 현황</a><a href="#trend" data-en="Trends">트랜드</a><a href="#compare" data-en="Compare">도시 비교</a></nav>
+  <nav aria-label="페이지 내 이동"><a href="#weekly" data-en="Weekly">주간</a><a href="#monthly" data-en="Monthly">월간</a><a href="#jun" data-en="Analysis">분석·의견</a><a href="#market" data-en="Market">시장 현황</a><a href="#trend" data-en="Trends">트렌드</a><a href="#compare" data-en="Compare">도시 비교</a></nav>
   <div class="lang" role="group" aria-label="Language"><button type="button" data-lang="ko">한국어</button><button type="button" data-lang="en">EN</button></div>
   <a class="cta" href="#contact" data-en="Contact">상담 문의</a>
 </div></header>
@@ -229,9 +243,9 @@ footer b{color:var(--ink)}
 <main class="wrap">
   <div class="hero">
     <div class="hero-meta"><div class="eyebrow">SEATTLE MARKET INDEX</div><div class="report-period" data-en="<span>MONTHLY DATA</span><strong>OCTOBER 2026</strong>"><span>월간 데이터 기준</span><strong>2026년 10월</strong></div></div>
-    <h1 data-en="Seattle Real Estate:<br>Who Has the Edge Right Now?">한눈에 보는<br>시애틀 부동산 시장</h1>
-    <p data-en="Home prices, inventory and sales pace across King, Snohomish and Pierce counties and 14 cities, updated every month. Pick an area and every number and chart below will update.">킹 · 스노호미시 · 피어스 3개 카운티와 14개 도시의 집값, 매물, 거래 속도를 매달 정리합니다. 지역을 고르시면 아래 숫자와 그래프가 모두 바뀝니다.</p>
-    <div class="upd" data-en="Data: <b>NWMLS October 2026</b> · city prices <b>Aug–Oct 2026</b> · Weekly figures updated weekly, everything else monthly">기준: <b>NWMLS 2026년 10월</b> · 도시 가격 <b>2026년 8~10월</b> · 주간 지표는 매주, 나머지는 매달 업데이트</div>
+    <h1 data-en="Seattle Real Estate<br>Market at a Glance">한눈에 보는<br>시애틀 부동산 시장</h1>
+    <p data-en="Home prices, inventory and sales pace across King, Snohomish and Pierce counties and 14 cities, updated every month. Choose an area to update its monthly analysis, figures and charts.">킹 · 스노호미시 · 피어스 3개 카운티와 14개 도시의 집값, 매물, 거래 속도를 매달 정리합니다. 지역을 고르시면 해당 지역의 월간 분석과 숫자, 그래프를 보실 수 있습니다.</p>
+    <div class="upd" data-en="Data: <b>NWMLS October 2026</b> · city prices <b>Aug–Oct 2026</b> · Market data updated weekly and monthly; commentary refreshed as needed">기준: <b>NWMLS 2026년 10월</b> · 도시 가격 <b>2026년 8~10월</b> · 시장 데이터는 주간·월간으로, 의견은 수시로 업데이트</div>
   </div>
 
   <section id="weekly">
@@ -240,7 +254,7 @@ footer b{color:var(--ink)}
       <button type="button" class="wktog" id="wk-tog" aria-expanded="true" aria-controls="wk-grid wk-brief"><span id="wk-togl">접기</span><i>▾</i></button>
     </div>
     <p class="wkmini" id="wk-mini"></p>
-    <button type="button" class="wkopen" id="wk-open" aria-controls="wk-grid wk-brief"><span><b data-en="Open this week&#39;s report">이번 주 주간 리포트 펼쳐 보기</b><small data-en="New listings · Pending · Sold · Price cuts · Canceled, by county, vs. last week">카운티별 신규 매물 · 펜딩 · 거래 · 가격 인하 · 취소, 지난주와 비교</small></span><i>▾</i></button>
+    <button type="button" class="wkopen" id="wk-open" aria-controls="wk-grid wk-brief"><span><b data-en="Open this week&#39;s report">이번 주 주간 리포트 펼쳐 보기</b><small data-en="New listings · Pending · Closed sales · Price reductions · Canceled / expired, by county, vs. last week">카운티별 신규 매물 · 펜딩 · 거래 완료 · 가격 인하 · 취소·만료, 지난주와 비교</small></span><i>▾</i></button>
     <p class="wknote" data-en="Activity by county for the week · Change vs. last week · Source: NWMLS · New listings: Active only (First Look excluded) · Canceled includes expired">카운티별 한 주 동안의 거래 활동 · 증감은 지난주 대비 · 출처 NWMLS · 신규 매물은 Active 기준 (First Look 제외) · 취소에는 만료 매물 포함</p>
     <div class="wkgrid" id="wk-grid"></div>
     <article class="wkbrief" id="wk-brief" aria-labelledby="wk-brief-title">
@@ -267,10 +281,11 @@ footer b{color:var(--ink)}
 
   <section id="jun">
     <div class="eyebrow">ANALYSIS &amp; OPINION</div><h2 id="j-title">시장 분석과 현장에서 보는 Jun의 의견</h2>
-    <p class="jlead" data-en="On the left is the market as seen through NWMLS data. On the right is Jun&#39;s take, from working with clients every day.">왼쪽은 NWMLS 데이터로 본 시장이고, 오른쪽은 현장에서 손님들과 함께하는 Jun의 생각입니다.</p>
+    <p class="jlead" data-en="Explore the NWMLS data alongside Jun&#39;s perspective, informed by client work and discussions with colleagues.">NWMLS 데이터 분석과 함께, 현장 경험과 동료들과 나눈 이야기를 바탕으로 정리한 Jun의 의견을 담았습니다.</p>
     <div class="two">
       <div class="col data">
         <div class="colh"><span class="badge">DATA</span><b data-en="What the Data Says">데이터로 본 시장</b><small data-en="Based on NWMLS">NWMLS 기준</small></div>
+        <p class="data-period" data-en="October 2026 · City price measures: Aug–Oct, compared with the same period last year · Seasonal baseline: Sep–Nov 2024 and 2025">2026년 10월 · 도시 가격 지표는 8~10월 기준, 작년 같은 기간과 비교 · 예년은 2024·2025년 9~11월 평균</p>
         <ol id="d-read"></ol>
         <p class="dwatch"><b data-en="Watch next month">다음 달에 지켜볼 것</b><span id="d-watch"></span></p>
       </div>
@@ -295,7 +310,7 @@ footer b{color:var(--ink)}
   </section>
 
   <section id="trend">
-    <div class="eyebrow">TRENDS</div><h2 id="t-title">트랜드</h2>
+    <div class="eyebrow">TRENDS</div><h2 id="t-title">트렌드</h2>
     <p class="sub" data-en="Hover over or tap a chart to see that month&#39;s number.">그래프 위에 마우스를 올리거나 손가락으로 누르면 그 달의 숫자가 보입니다.</p>
     <div class="seg" role="group" aria-label="기간" id="range">
       <button type="button" data-n="12" aria-pressed="false" data-en="1Y">1년</button><button type="button" data-n="60" aria-pressed="true" data-en="5Y">5년</button><button type="button" data-n="120" aria-pressed="false" data-en="10Y">10년</button>
@@ -307,7 +322,7 @@ footer b{color:var(--ink)}
 
   <section id="compare">
     <div class="eyebrow">CITY COMPARISON</div><h2 data-en="City Comparison">도시 비교</h2>
-    <p class="sub" data-en="Tap a column header to sort. Tap a city to switch the sections above to that city.">열 제목을 누르면 정렬됩니다. 도시를 누르시면 위쪽 내용이 그 도시로 바뀝니다.</p>
+    <p class="sub" data-en="City prices: Aug–Oct; other figures: October. Changes are year over year. Tap a column to sort, or a city to view its analysis.">도시 가격은 8~10월, 나머지는 10월 기준이며 증감은 작년 대비입니다. 열 제목을 누르면 정렬되고, 도시를 누르면 해당 지역 분석으로 이동합니다.</p>
     <div class="tw"><table><thead><tr id="thead"></tr></thead><tbody id="tbody"></tbody></table></div>
   </section>
 
@@ -317,7 +332,7 @@ footer b{color:var(--ink)}
   <div>
     <div class="eyebrow" style="color:var(--g2)">CONTACT</div>
     <h2 data-en="Curious what homes in your area are worth?">우리 동네 시세가 궁금하다면</h2>
-    <p data-en="Tell me the neighborhood, home type and price range you&#39;re interested in, and I&#39;ll send you tailored data and this month&#39;s market report (PDF), in English, Korean or Chinese.">관심 있는 동네와 집 종류, 가격대를 알려주시면 맞춤 자료와 이달의 마켓 리포트(PDF)를 한국어로 보내드립니다.</p>
+    <p data-en="Tell me the neighborhood, home type and price range you&#39;re interested in, and I&#39;ll send you tailored data and this month&#39;s market report (PDF), in Korean or English.">관심 있는 동네와 집 종류, 가격대를 알려주시면 맞춤 자료와 이달의 마켓 리포트(PDF)를 한국어 또는 영어로 보내드립니다.</p>
     <div class="clist">
       <div><span>PHONE · TEXT</span><a href="tel:+14257669692">425.766.9692</a></div>
       <div><span>EMAIL</span><a href="mailto:junlee@realestate-junlee.com?subject=%EB%A7%88%EC%BC%93%20%EB%A6%AC%ED%8F%AC%ED%8A%B8%20%EC%9A%94%EC%B2%AD">junlee@realestate-junlee.com</a></div>
@@ -330,7 +345,7 @@ footer b{color:var(--ink)}
 
 <footer><div class="wrap">
   <p data-en="<b>Sources</b> · County figures and city listings, sales, days on market, months of inventory and sale-to-original-list: NWMLS InfoSparks, October 2026, all home types (retrieved Nov 9, 2026). City median sale price and price per sq ft: NWMLS InfoSparks, Aug–Oct 2026, 3-month basis."><b>자료 출처</b> · 카운티 지표와 도시별 매물·거래·판매 소요일·재고 소진 기간·최초 리스팅가 대비: NWMLS InfoSparks, 2026년 10월, 모든 주택 유형 (2026년 11월 9일 조회). 도시별 중간 거래가·sqft당 가격: NWMLS InfoSparks, 2026년 8~10월 3개월 기준.</p>
-  <p data-en="Market direction compares months of inventory, days on market and sale-to-original-list with each area&#39;s usual level (average of Sep–Nov 2024 and 2025), together with sales, new listings and price trends. When signals point in opposite directions, it is shown as &#39;Mixed signals.&#39; This is a reference classification based on all home types combined. &#39;Jun&#39;s View&#39; is Jun Lee&#39;s personal opinion, separate from the data.">시장 방향은 재고 소진 기간, 판매 소요일, 최초 리스팅가 대비 3가지를 그 지역의 예년(2024·2025년 9~11월 평균)과 비교한 뒤, 거래 건수·새 매물·가격 흐름을 함께 보고 정합니다. 신호가 서로 반대 방향이면 '신호 엇갈림'으로 표시합니다. 참고용 분류이며 주택 유형을 합친 자료입니다. '현장에서 보는 Jun의 의견'은 데이터와 별개로 Jun Lee가 직접 쓴 개인 의견입니다.</p>
+  <p data-en="Market direction compares months of inventory, days on market and sale-to-original-list with each area&#39;s usual level (average of Sep–Nov 2024 and 2025), together with sales, new listings and price trends. &#39;Mixed signals&#39; means the indicators do not point consistently in one direction. This is a reference classification based on all home types combined. &#39;Jun&#39;s View&#39; is Jun Lee&#39;s personal opinion, separate from the data.">시장 방향은 재고 소진 기간, 판매 소요일, 최초 리스팅가 대비 3가지를 그 지역의 예년(2024·2025년 9~11월 평균)과 비교한 뒤, 거래 건수·새 매물·가격 흐름을 함께 보고 정합니다. 지표의 방향이나 강도가 일치하지 않으면 '신호 엇갈림'으로 표시합니다. 참고용 분류이며 주택 유형을 합친 자료입니다. 'Jun의 의견'은 Jun Lee의 해석과 현장 경험, 동료들과 나눈 이야기를 바탕으로 정리한 내용입니다.</p>
   <p>Jun Lee · Real Estate Broker · Compass</p>
 </div></footer>
 
@@ -349,7 +364,7 @@ function applyStatic(){
   document.title=T('시애틀 부동산 시장 지표 · Jun Lee Properties','Seattle Real Estate Market Index · Jun Lee Properties');
 }
 const WEEKLY = __WEEKLY__;
-const WKL=()=>LANG==='en'?['New listings','Pending','Sold','Price cuts','Canceled']:['신규 매물','펜딩','거래 완료','가격 인하','취소·만료'];
+const WKL=()=>LANG==='en'?['New listings','Pending','Closed sales','Price reductions','Canceled / expired']:['신규 매물','펜딩','거래 완료','가격 인하','취소·만료'];
 // 직접 작성한 전체 시장 의견과 지역별 의견만 표시한다. 미작성 지역은 빈칸으로 둔다.
 let NOTES = __NOTES__;
 fetch('notes.json',{cache:'no-store'}).then(r=>r.ok?r.json():null).then(j=>{if(j&&j.areas){NOTES=j;renderVerdict();renderJun();renderTable();renderWeekly();}}).catch(()=>{});
@@ -359,7 +374,7 @@ let cur='King', range=60, sortKey='price', sortDir=-1;
 const $=id=>document.getElementById(id);
 const money=v=>v>=999500?`$${(v/1e6).toFixed(2)}M`:`$${Math.round(v/1e3).toLocaleString()}K`;
 const num=v=>Math.round(v).toLocaleString();
-const arrow=(v,d=1)=>Math.abs(v)<0.05?`<span class="chg eq">${T('변동 없음','No change')}</span>`:`<span class="chg ${v>0?'up':'dn'}">${v>0?'▲':'▼'} ${Math.abs(v).toFixed(d)}%</span>`;
+const arrow=(v,d=1)=>Math.abs(v)<0.5*10**(-d)?`<span class="chg eq">${T('변동 없음','No change')}</span>`:`<span class="chg ${v>0?'up':'dn'}">${v>0?'▲':'▼'} ${Math.abs(v).toFixed(d)}%</span>`;
 const yoy=(s,i,j)=>(s[i]/s[j]-1)*100;
 const byId=id=>A.find(a=>a.id===id);
 function S(a){
@@ -374,7 +389,7 @@ function signals(a){
   const sg=[
     {l:T('재고 소진 기간','Months of inventory'), now:s.msi.toFixed(1)+T('개월',' mo'), avg:bm.toFixed(1)+T('개월',' mo'), v: s.msi>bm*1.15?1:s.msi<bm*0.85?-1:0},
     {l:T('판매 소요일','Days on market'), now:s.dom+T('일',' days'), avg:Math.round(bd)+T('일',' days'), v: s.dom>bd*1.15?1:s.dom<bd*0.85?-1:0},
-    {l:T('최초 리스팅가 대비','Sale-to-original-list'), now:s.po.toFixed(1)+'%', avg:bp.toFixed(1)+'%', v: s.po<bp-0.8?1:s.po>bp+0.8?-1:0}];
+    {l:T('최초 리스팅가 대비','Sale-to-original-list ratio'), now:s.po.toFixed(1)+'%', avg:bp.toFixed(1)+'%', v: s.po<bp-0.8?1:s.po>bp+0.8?-1:0}];
   return {sg, score: sg.reduce((t,x)=>t+x.v,0)};
 }
 function verdict(a){ const N=NA(a.id); if(N&&N.label) return [N.label,N.tag,N.cls]; const sc=signals(a).score;
@@ -391,7 +406,7 @@ function renderVerdict(){
   $('v-name').textContent=LANG==='en'?a.en.toUpperCase():`${a.ko.toUpperCase()} · ${a.en.toUpperCase()}`;
   $('v-big').textContent=v;
   const NN=NA(cur); $('v-sub').textContent=NN&&NN.sub?NN.sub:'';
-  $('v-why').textContent=nb===3?T('세 신호 모두 예년보다 바이어에게 유리합니다. 매물이 많고, 팔리는 데 오래 걸리고, 처음 가격보다 낮게 거래되고 있습니다.','All three signals favor buyers compared with the usual level: more listings, longer time to sell, and homes selling below their first price.')
+  $('v-why').textContent=nb===3?T('세 신호 모두 예년보다 바이어에게 유리합니다. 재고 소진 기간과 판매 소요일이 길고, 최초 리스팅가 대비 거래가 비율이 낮습니다.','All three signals favor buyers compared with the seasonal baseline: higher months of inventory, longer selling times, and homes selling further below their original asking prices.')
     : ns===3?T('세 신호 모두 예년보다 셀러에게 유리합니다.','All three signals favor sellers compared with the usual level.')
     : T(`신호 3개 중 바이어 쪽 ${nb}개, 셀러 쪽 ${ns}개, 예년과 비슷한 것 ${3-nb-ns}개입니다.`,`Of the 3 signals, ${nb} favor buyers, ${ns} favor sellers, and ${3-nb-ns} are near the usual level.`);
   const tag=x=>x.v>0?`<span class="tag by">${T('바이어 쪽','Buyers')}</span>`:x.v<0?`<span class="tag se">${T('셀러 쪽','Sellers')}</span>`:`<span class="tag">${T('예년 수준','Usual')}</span>`;
@@ -417,7 +432,7 @@ function chart(host,months,vals,fmt,kind,zero){
   const t=ticks(zero?0:lo-pad,hi+pad);lo=t[0];hi=t[t.length-1];
   const bw=(w-pl-pr)/(kind==='bar'?n:(n-1));
   const X=i=>kind==='bar'?pl+i*bw+bw/2:pl+i*bw, Y=v=>pt+(hi-v)*(h-pt-pb)/(hi-lo);
-  let o=`<svg viewBox="0 0 ${w} ${h}" role="img" aria-label="${host.dataset.label} ${T('트랜드, 최근 값','trend, latest')} ${fmt(vals[n-1])}">`;
+  let o=`<svg viewBox="0 0 ${w} ${h}" role="img" aria-label="${host.dataset.label} ${T('트렌드, 최근 값','trend, latest')} ${fmt(vals[n-1])}">`;
   for(const tv of t.slice(1)){o+=`<line x1="${pl}" x2="${w-pr}" y1="${Y(tv)}" y2="${Y(tv)}" stroke="#dedede" stroke-dasharray="2 3"/><text x="${pl}" y="${Y(tv)-4}" class="ax">${fmt(tv)}</text>`}
   o+=`<line x1="${pl}" x2="${w-pr}" y1="${h-pb}" y2="${h-pb}" stroke="#111" stroke-width=".8"/>`;
   const yStep=n>72?2:1; months.forEach((m,i)=>{if(m.endsWith('-01')&&(+m.slice(0,4))%yStep===0)o+=`<text x="${X(i)}" y="${h-7}" class="ax" text-anchor="middle">${n>72?m.slice(0,4):m.slice(0,4)}</text>`});
@@ -443,7 +458,7 @@ function chart(host,months,vals,fmt,kind,zero){
 function LM(a){const L=a.L;if(!L)return null;const [y,m]=L.s.split('-').map(Number);return Array.from({length:L.inv.length},(_,i)=>{const k=(m-1)+i;return `${y+Math.floor(k/12)}-${String(k%12+1).padStart(2,'0')}`})}
 function renderCharts(){
   const a=byId(cur), L=a.L, lm=LM(a);
-  $('t-title').textContent=T(`${a.ko} 트랜드`,`${a.en} Trends`);
+  $('t-title').textContent=T(`${a.ko} 트렌드`,`${a.en} Trends`);
   const pm=NM.slice(0,a.p.length);
   const G=(k)=>L?[lm,L[k]]:[NM,a[k]];
   const P=L&&L.p?[lm.slice(-L.p.length),L.p]:[pm,a.p];
@@ -454,7 +469,7 @@ function renderCharts(){
     [T('거래 건수','Closed sales'),T('NWMLS · 월별','NWMLS · monthly'),...G('cs'),v=>num(v),'bar',true],
     [T('재고 소진 기간','Months of inventory'),T('NWMLS · 개월','NWMLS · months'),...G('msi'),v=>v.toFixed(1),'line',true],
     [T('판매 소요일','Days on market'),T('NWMLS · 중간값, 일','NWMLS · median, days'),...G('dom'),v=>Math.round(v)+T('일',''),'line',true],
-    [T('최초 리스팅가 대비','Sale-to-original-list'),T('NWMLS · %','NWMLS · %'),G('po')[0],G('po')[1].map(v=>v*100),pct,'line',false]];
+    [T('최초 리스팅가 대비','Sale-to-original-list ratio'),T('NWMLS · %','NWMLS · %'),G('po')[0],G('po')[1].map(v=>v*100),pct,'line',false]];
   const lm0=(L?lm:NM).slice(-1)[0], mi=+lm0.slice(5);
   $('samelg').innerHTML=range>12?`<span style="display:inline-block;width:10px;height:10px;background:#e8a33d;margin-right:6px"></span>${T(`주황색은 해마다 ${mi}월 (같은 달끼리 비교)`,`Orange marks ${MON[mi-1]} of each year (same-month comparison)`)} · <span style="display:inline-block;width:10px;height:10px;background:#1f4d3a;margin:0 6px"></span>${T('최신 달','Latest month')}`:'';
   $('charts').innerHTML=defs.map((d,i)=>`<div class="card"><h3>${d[0]}<small>${d[1]}</small></h3><div id="ch${i}" data-label="${d[0]}"></div></div>`).join('');
@@ -471,11 +486,11 @@ function renderJun(){
   $('j-overview-body').textContent=overview;
 }
 
-const COLS=()=>LANG==='en'?[['ko','City'],['price','Median price'],['priceY','YoY'],['inv','Listings'],['invY','YoY'],['msi','Months of inv.'],['dom','Days on mkt'],['po','Sale-to-orig. list'],['sc','Direction']]:[['ko','도시'],['price','중간 거래가'],['priceY','작년 대비'],['inv','현재 매물'],['invY','작년 대비'],['msi','재고 소진 기간'],['dom','판매 소요일'],['po','최초 리스팅가 대비'],['sc','시장 방향']];
+const COLS=()=>LANG==='en'?[['ko','City'],['price','Median price'],['priceY','YoY'],['inv','Listings'],['invY','YoY'],['msi','Months of inv.'],['dom','Days on mkt'],['po','Sale/orig. list'],['sc','Direction']]:[['ko','도시'],['price','중간 거래가'],['priceY','작년 대비'],['inv','현재 매물'],['invY','작년 대비'],['msi','재고 소진 기간'],['dom','판매 소요일'],['po','최초 리스팅가 대비'],['sc','시장 방향']];
 function renderTable(){
-  $('thead').innerHTML=COLS().map((c,i)=>`<th scope="col"><button type="button" data-k="${c[0]}" data-i="${i}">${c[1]}${sortKey===c[0]&&i!==8?(sortDir<0?' ↓':' ↑'):''}</button></th>`).join('');
+  $('thead').innerHTML=COLS().map((c,i)=>`<th scope="col" aria-sort="${sortKey===c[0]?(sortDir<0?'descending':'ascending'):'none'}"><button type="button" data-k="${c[0]}" data-i="${i}">${c[1]}${sortKey===c[0]?(sortDir<0?' ↓':' ↑'):''}</button></th>`).join('');
   const rows=A.filter(a=>a.kind==='city').map(a=>({a,...S(a),ko:nm(a)}));
-  rows.forEach(r=>r.sc=signals(r.a).score);
+  rows.forEach(r=>{const cls=verdict(r.a)[2];r.sc=({s:-2,'':0,mix:1,b:2,by:3})[cls]??0;});
   rows.sort((x,y)=>sortKey==='ko'?x.ko.localeCompare(y.ko,LANG)*sortDir:(x[sortKey]-y[sortKey])*sortDir);
   $('tbody').innerHTML=rows.map(r=>{const [,v,c]=verdict(r.a);return `<tr data-id="${r.a.id}" class="${r.a.id===cur?'on':''}" tabindex="0"><td class="cn">${nm(r.a)}${LANG==="en"?"":`<small>${r.a.en}</small>`}</td><td>${money(r.price)}</td><td>${arrow(r.priceY)}</td><td>${num(r.inv)}</td><td>${arrow(r.invY,0)}</td><td>${r.msi.toFixed(1)}${T('개월','')}</td><td>${r.dom}${T('일','')}</td><td>${r.po.toFixed(1)}%</td><td><span class="pill ${c}">${v}</span></td></tr>`}).join('');
 }
@@ -496,20 +511,20 @@ select('King');
 
 function renderWeekly(){
   const w=WEEKLY[WEEKLY.length-1], pw=WEEKLY.length>1?WEEKLY[WEEKLY.length-2]:null;
-  const [,month,day]=w.start.split('-').map(Number), week=Math.ceil(day/7);
-  $('wk-period').textContent=T(`${month}월 ${week}주차`,`${MON[month-1]} · Week ${week}`);
+  const [,month,day]=w.start.split('-').map(Number);
+  $('wk-period').textContent=T(`${month}월 ${day}일 시작 주간`,`Week of ${MON[month-1]} ${day}`);
   const f=d=>{const [y,m,dd]=d.split('-');return LANG==='en'?`${MON[+m-1]} ${+dd}`:`${+m}월 ${+dd}일`};
-  $('wk-date').textContent=`${f(w.start)} ${T('~','–')} ${f(w.end)}, ${w.end.slice(0,4)}`;
+  $('wk-date').textContent=T(`${w.end.slice(0,4)}년 ${f(w.start)} ~ ${f(w.end)}`,`${f(w.start)} – ${f(w.end)}, ${w.end.slice(0,4)}`);
   $('wk-mini').innerHTML=['King','Snohomish','Pierce'].map(id=>`<b>${nm(byId(id))}</b> ${T('펜딩','pending')} ${w[id][1]}`).join(' · ')
   if(typeof setWk==='function')setWk();
   $('wk-grid').innerHTML=['King','Snohomish','Pierce'].map(id=>{
     const v=w[id], mx=Math.max(...v), a=byId(id);
     return `<div class="wkc"><h3>${nm(a)}${LANG==='en'?'':`<small>${a.en.toUpperCase()}</small>`}</h3>`+v.map((x,i)=>{
       let ch='';
-      if(pw){const o=pw[id][i], d=x-o, pc=o?d/o*100:0;
+      if(pw){const o=pw[id][i], d=x-o, pc=o?d/o*100:null;
         const provisional=id==='Pierce'&&i===3&&pw.end==='2026-11-09';
-        ch=`<small class="${d>0?'up':d<0?'dn':''}">${d===0?T('지난주와 같음','Same as last week'):`${d>0?'▲':'▼'} ${Math.abs(pc).toFixed(1)}% (${d>0?'+':'−'}${Math.abs(d)})`}${provisional?T(' · 확인 중',' · provisional'):''}</small>`;}
-      return `<div class="wr"><span>${WKL()[i]}</span><span class="bar"><i style="width:${(x/mx*100).toFixed(1)}%"></i></span><b>${x}${ch}</b></div>`;
+        ch=`<small class="${d>0?'up':d<0?'dn':''}">${d===0?T('지난주와 같음','Same as last week'):`${pc===null?T('비교 불가','N/A'):`${d>0?'▲':'▼'} ${Math.abs(pc).toFixed(1)}%`} (${d>0?'+':'−'}${Math.abs(d)})`}${provisional?T(' · 확인 중',' · provisional'):''}</small>`;}
+      return `<div class="wr"><span>${WKL()[i]}</span><span class="bar"><i style="width:${((mx?x/mx:0)*100).toFixed(1)}%"></i></span><b>${x}${ch}</b></div>`;
     }).join('')+'</div>';
   }).join('');
   const brief=LANG==='en'&&NOTES.en?NOTES.en.weekly:NOTES.weekly;
@@ -522,7 +537,7 @@ function renderWeekly(){
   }));
 }
 let WKOPEN=(()=>{try{const v=localStorage.getItem('wkopen');if(v!==null)return v==='1'}catch(e){}return window.matchMedia('(min-width:861px)').matches})();
-function setWk(){ $('weekly').classList.toggle('closed',!WKOPEN); $('wk-tog').setAttribute('aria-expanded',WKOPEN); $('wk-togl').textContent=WKOPEN?T('접기','Hide'):T('펼쳐 보기','Show'); }
+function setWk(){ $('weekly').classList.toggle('closed',!WKOPEN); $('wk-tog').setAttribute('aria-expanded',WKOPEN); $('wk-open').setAttribute('aria-expanded',WKOPEN); $('wk-togl').textContent=WKOPEN?T('접기','Hide'):T('펼쳐 보기','Show'); }
 const wkFlip=()=>{WKOPEN=!WKOPEN;try{localStorage.setItem('wkopen',WKOPEN?'1':'0')}catch(e){}setWk()};
 $('wk-tog').addEventListener('click',wkFlip);$('wk-open').addEventListener('click',wkFlip);$('wk-mini').addEventListener('click',wkFlip);
 renderWeekly();

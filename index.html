@@ -4,10 +4,16 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>한눈에 보는 시애틀 부동산 시장 · Jun Lee Properties</title>
+<meta name="description" content="킹·스노호미시·피어스 카운티와 시애틀 주변 14개 도시의 부동산 시장 데이터, 주간 업데이트와 Jun Lee의 의견을 확인하세요.">
+<meta property="og:title" content="시애틀 부동산 시장 · Jun Lee">
+<meta property="og:description" content="주간·월간 시장 데이터와 현장에서 보는 Jun의 의견">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://junleeproperties.github.io/seattle-market/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
 <style>
 :root{--ink:#111;--g:#1f4d3a;--gl:#e9f0eb;--g2:#8fb3a0;--g3:#cfd8d2;--grey:#6b6b6b;--rule:#dedede;--bg:#fff}
+html{scroll-padding-top:80px}
 *{box-sizing:border-box;margin:0;padding:0}
 body{font-family:'Noto Sans KR',system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.5;-webkit-font-smoothing:antialiased}
 button{font:inherit;color:inherit;cursor:pointer;background:none;border:0}
@@ -178,6 +184,7 @@ footer b{color:var(--ink)}
 .colh img{width:56px;height:56px;border-radius:50%;object-fit:cover}
 .badge{font-size:10.5px;letter-spacing:.16em;font-weight:700;padding:3px 8px;border:1px solid var(--ink)}
 .badge.g{background:var(--g);border-color:var(--g);color:#fff}
+.data-period{font-size:11.5px;line-height:1.7;color:var(--grey);margin:0 0 16px}
 .col.data ol{list-style:none;counter-reset:d;margin:0;padding:0;display:grid;gap:14px}
 .col.data li{counter-increment:d;position:relative;padding-left:32px;font-size:14.5px;line-height:1.8;color:#222;word-break:keep-all}
 .col.data li::before{content:counter(d,decimal-leading-zero);position:absolute;left:0;top:2px;font-weight:900;color:var(--g);font-size:13px}
@@ -216,12 +223,19 @@ footer b{color:var(--ink)}
 .wkmini{cursor:pointer}
 .chap{margin:6px 0 10px;padding-top:26px;border-top:2px solid var(--ink)}
 .chap h2{margin-bottom:2px}
+@media(max-width:600px){
+ .top .wrap{padding:0 16px;gap:8px}
+ .top img{width:126px;height:auto;max-width:35%;flex-shrink:1}
+ .lang{margin-right:0}
+ .lang button{font-size:11px;padding:7px 8px;white-space:nowrap}
+ .top .cta{white-space:nowrap;flex-shrink:0;font-size:12px;padding:9px 10px}
+}
 </style>
 </head>
 <body>
 <header class="top"><div class="wrap">
   <img src="data:image/png;base64,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" alt="Jun Lee Properties">
-  <nav aria-label="페이지 내 이동"><a href="#weekly" data-en="Weekly">주간</a><a href="#monthly" data-en="Monthly">월간</a><a href="#jun" data-en="Analysis">분석·의견</a><a href="#market" data-en="Market">시장 현황</a><a href="#trend" data-en="Trends">트랜드</a><a href="#compare" data-en="Compare">도시 비교</a></nav>
+  <nav aria-label="페이지 내 이동"><a href="#weekly" data-en="Weekly">주간</a><a href="#monthly" data-en="Monthly">월간</a><a href="#jun" data-en="Analysis">분석·의견</a><a href="#market" data-en="Market">시장 현황</a><a href="#trend" data-en="Trends">트렌드</a><a href="#compare" data-en="Compare">도시 비교</a></nav>
   <div class="lang" role="group" aria-label="Language"><button type="button" data-lang="ko">한국어</button><button type="button" data-lang="en">EN</button></div>
   <a class="cta" href="#contact" data-en="Contact">상담 문의</a>
 </div></header>
@@ -229,9 +243,9 @@ footer b{color:var(--ink)}
 <main class="wrap">
   <div class="hero">
     <div class="hero-meta"><div class="eyebrow">SEATTLE MARKET INDEX</div><div class="report-period" data-en="<span>MONTHLY DATA</span><strong>OCTOBER 2026</strong>"><span>월간 데이터 기준</span><strong>2026년 10월</strong></div></div>
-    <h1 data-en="Seattle Real Estate:<br>Who Has the Edge Right Now?">한눈에 보는<br>시애틀 부동산 시장</h1>
-    <p data-en="Home prices, inventory and sales pace across King, Snohomish and Pierce counties and 14 cities, updated every month. Pick an area and every number and chart below will update.">킹 · 스노호미시 · 피어스 3개 카운티와 14개 도시의 집값, 매물, 거래 속도를 매달 정리합니다. 지역을 고르시면 아래 숫자와 그래프가 모두 바뀝니다.</p>
-    <div class="upd" data-en="Data: <b>NWMLS October 2026</b> · city prices <b>Aug–Oct 2026</b> · Weekly figures updated weekly, everything else monthly">기준: <b>NWMLS 2026년 10월</b> · 도시 가격 <b>2026년 8~10월</b> · 주간 지표는 매주, 나머지는 매달 업데이트</div>
+    <h1 data-en="Seattle Real Estate<br>Market at a Glance">한눈에 보는<br>시애틀 부동산 시장</h1>
+    <p data-en="Home prices, inventory and sales pace across King, Snohomish and Pierce counties and 14 cities, updated every month. Choose an area to update its monthly analysis, figures and charts.">킹 · 스노호미시 · 피어스 3개 카운티와 14개 도시의 집값, 매물, 거래 속도를 매달 정리합니다. 지역을 고르시면 해당 지역의 월간 분석과 숫자, 그래프를 보실 수 있습니다.</p>
+    <div class="upd" data-en="Data: <b>NWMLS October 2026</b> · city prices <b>Aug–Oct 2026</b> · Market data updated weekly and monthly; commentary refreshed as needed">기준: <b>NWMLS 2026년 10월</b> · 도시 가격 <b>2026년 8~10월</b> · 시장 데이터는 주간·월간으로, 의견은 수시로 업데이트</div>
   </div>
 
   <section id="weekly">
@@ -240,7 +254,7 @@ footer b{color:var(--ink)}
       <button type="button" class="wktog" id="wk-tog" aria-expanded="true" aria-controls="wk-grid wk-brief"><span id="wk-togl">접기</span><i>▾</i></button>
     </div>
     <p class="wkmini" id="wk-mini"></p>
-    <button type="button" class="wkopen" id="wk-open" aria-controls="wk-grid wk-brief"><span><b data-en="Open this week&#39;s report">이번 주 주간 리포트 펼쳐 보기</b><small data-en="New listings · Pending · Sold · Price cuts · Canceled, by county, vs. last week">카운티별 신규 매물 · 펜딩 · 거래 · 가격 인하 · 취소, 지난주와 비교</small></span><i>▾</i></button>
+    <button type="button" class="wkopen" id="wk-open" aria-controls="wk-grid wk-brief"><span><b data-en="Open this week&#39;s report">이번 주 주간 리포트 펼쳐 보기</b><small data-en="New listings · Pending · Closed sales · Price reductions · Canceled / expired, by county, vs. last week">카운티별 신규 매물 · 펜딩 · 거래 완료 · 가격 인하 · 취소·만료, 지난주와 비교</small></span><i>▾</i></button>
     <p class="wknote" data-en="Activity by county for the week · Change vs. last week · Source: NWMLS · New listings: Active only (First Look excluded) · Canceled includes expired">카운티별 한 주 동안의 거래 활동 · 증감은 지난주 대비 · 출처 NWMLS · 신규 매물은 Active 기준 (First Look 제외) · 취소에는 만료 매물 포함</p>
     <div class="wkgrid" id="wk-grid"></div>
     <article class="wkbrief" id="wk-brief" aria-labelledby="wk-brief-title">
@@ -267,10 +281,11 @@ footer b{color:var(--ink)}
 
   <section id="jun">
     <div class="eyebrow">ANALYSIS &amp; OPINION</div><h2 id="j-title">시장 분석과 현장에서 보는 Jun의 의견</h2>
-    <p class="jlead" data-en="On the left is the market as seen through NWMLS data. On the right is Jun&#39;s take, from working with clients every day.">왼쪽은 NWMLS 데이터로 본 시장이고, 오른쪽은 현장에서 손님들과 함께하는 Jun의 생각입니다.</p>
+    <p class="jlead" data-en="Explore the NWMLS data alongside Jun&#39;s perspective, informed by client work and discussions with colleagues.">NWMLS 데이터 분석과 함께, 현장 경험과 동료들과 나눈 이야기를 바탕으로 정리한 Jun의 의견을 담았습니다.</p>
     <div class="two">
       <div class="col data">
         <div class="colh"><span class="badge">DATA</span><b data-en="What the Data Says">데이터로 본 시장</b><small data-en="Based on NWMLS">NWMLS 기준</small></div>
+        <p class="data-period" data-en="October 2026 · City price measures: Aug–Oct, compared with the same period last year · Seasonal baseline: Sep–Nov 2024 and 2025">2026년 10월 · 도시 가격 지표는 8~10월 기준, 작년 같은 기간과 비교 · 예년은 2024·2025년 9~11월 평균</p>
         <ol id="d-read"></ol>
         <p class="dwatch"><b data-en="Watch next month">다음 달에 지켜볼 것</b><span id="d-watch"></span></p>
       </div>
@@ -295,7 +310,7 @@ footer b{color:var(--ink)}
   </section>
 
   <section id="trend">
-    <div class="eyebrow">TRENDS</div><h2 id="t-title">트랜드</h2>
+    <div class="eyebrow">TRENDS</div><h2 id="t-title">트렌드</h2>
     <p class="sub" data-en="Hover over or tap a chart to see that month&#39;s number.">그래프 위에 마우스를 올리거나 손가락으로 누르면 그 달의 숫자가 보입니다.</p>
     <div class="seg" role="group" aria-label="기간" id="range">
       <button type="button" data-n="12" aria-pressed="false" data-en="1Y">1년</button><button type="button" data-n="60" aria-pressed="true" data-en="5Y">5년</button><button type="button" data-n="120" aria-pressed="false" data-en="10Y">10년</button>
@@ -307,7 +322,7 @@ footer b{color:var(--ink)}
 
   <section id="compare">
     <div class="eyebrow">CITY COMPARISON</div><h2 data-en="City Comparison">도시 비교</h2>
-    <p class="sub" data-en="Tap a column header to sort. Tap a city to switch the sections above to that city.">열 제목을 누르면 정렬됩니다. 도시를 누르시면 위쪽 내용이 그 도시로 바뀝니다.</p>
+    <p class="sub" data-en="City prices: Aug–Oct; other figures: October. Changes are year over year. Tap a column to sort, or a city to view its analysis.">도시 가격은 8~10월, 나머지는 10월 기준이며 증감은 작년 대비입니다. 열 제목을 누르면 정렬되고, 도시를 누르면 해당 지역 분석으로 이동합니다.</p>
     <div class="tw"><table><thead><tr id="thead"></tr></thead><tbody id="tbody"></tbody></table></div>
   </section>
 
@@ -317,7 +332,7 @@ footer b{color:var(--ink)}
   <div>
     <div class="eyebrow" style="color:var(--g2)">CONTACT</div>
     <h2 data-en="Curious what homes in your area are worth?">우리 동네 시세가 궁금하다면</h2>
-    <p data-en="Tell me the neighborhood, home type and price range you&#39;re interested in, and I&#39;ll send you tailored data and this month&#39;s market report (PDF), in English, Korean or Chinese.">관심 있는 동네와 집 종류, 가격대를 알려주시면 맞춤 자료와 이달의 마켓 리포트(PDF)를 한국어로 보내드립니다.</p>
+    <p data-en="Tell me the neighborhood, home type and price range you&#39;re interested in, and I&#39;ll send you tailored data and this month&#39;s market report (PDF), in Korean or English.">관심 있는 동네와 집 종류, 가격대를 알려주시면 맞춤 자료와 이달의 마켓 리포트(PDF)를 한국어 또는 영어로 보내드립니다.</p>
     <div class="clist">
       <div><span>PHONE · TEXT</span><a href="tel:+14257669692">425.766.9692</a></div>
       <div><span>EMAIL</span><a href="mailto:junlee@realestate-junlee.com?subject=%EB%A7%88%EC%BC%93%20%EB%A6%AC%ED%8F%AC%ED%8A%B8%20%EC%9A%94%EC%B2%AD">junlee@realestate-junlee.com</a></div>
@@ -330,7 +345,7 @@ footer b{color:var(--ink)}
 
 <footer><div class="wrap">
   <p data-en="<b>Sources</b> · County figures and city listings, sales, days on market, months of inventory and sale-to-original-list: NWMLS InfoSparks, October 2026, all home types (retrieved Nov 9, 2026). City median sale price and price per sq ft: NWMLS InfoSparks, Aug–Oct 2026, 3-month basis."><b>자료 출처</b> · 카운티 지표와 도시별 매물·거래·판매 소요일·재고 소진 기간·최초 리스팅가 대비: NWMLS InfoSparks, 2026년 10월, 모든 주택 유형 (2026년 11월 9일 조회). 도시별 중간 거래가·sqft당 가격: NWMLS InfoSparks, 2026년 8~10월 3개월 기준.</p>
-  <p data-en="Market direction compares months of inventory, days on market and sale-to-original-list with each area&#39;s usual level (average of Sep–Nov 2024 and 2025), together with sales, new listings and price trends. When signals point in opposite directions, it is shown as &#39;Mixed signals.&#39; This is a reference classification based on all home types combined. &#39;Jun&#39;s View&#39; is Jun Lee&#39;s personal opinion, separate from the data.">시장 방향은 재고 소진 기간, 판매 소요일, 최초 리스팅가 대비 3가지를 그 지역의 예년(2024·2025년 9~11월 평균)과 비교한 뒤, 거래 건수·새 매물·가격 흐름을 함께 보고 정합니다. 신호가 서로 반대 방향이면 '신호 엇갈림'으로 표시합니다. 참고용 분류이며 주택 유형을 합친 자료입니다. '현장에서 보는 Jun의 의견'은 데이터와 별개로 Jun Lee가 직접 쓴 개인 의견입니다.</p>
+  <p data-en="Market direction compares months of inventory, days on market and sale-to-original-list with each area&#39;s usual level (average of Sep–Nov 2024 and 2025), together with sales, new listings and price trends. &#39;Mixed signals&#39; means the indicators do not point consistently in one direction. This is a reference classification based on all home types combined. &#39;Jun&#39;s View&#39; is Jun Lee&#39;s personal opinion, separate from the data.">시장 방향은 재고 소진 기간, 판매 소요일, 최초 리스팅가 대비 3가지를 그 지역의 예년(2024·2025년 9~11월 평균)과 비교한 뒤, 거래 건수·새 매물·가격 흐름을 함께 보고 정합니다. 지표의 방향이나 강도가 일치하지 않으면 '신호 엇갈림'으로 표시합니다. 참고용 분류이며 주택 유형을 합친 자료입니다. 'Jun의 의견'은 Jun Lee의 해석과 현장 경험, 동료들과 나눈 이야기를 바탕으로 정리한 내용입니다.</p>
   <p>Jun Lee · Real Estate Broker · Compass</p>
 </div></footer>
 
@@ -470,18 +485,18 @@ const WEEKLY = [
  }
 ]
 ;
-const WKL=()=>LANG==='en'?['New listings','Pending','Sold','Price cuts','Canceled']:['신규 매물','펜딩','거래 완료','가격 인하','취소·만료'];
+const WKL=()=>LANG==='en'?['New listings','Pending','Closed sales','Price reductions','Canceled / expired']:['신규 매물','펜딩','거래 완료','가격 인하','취소·만료'];
 // 직접 작성한 전체 시장 의견과 지역별 의견만 표시한다. 미작성 지역은 빈칸으로 둔다.
 let NOTES = {
  "_안내": "따옴표(\") 안의 글을 고치면 웹페이지에 반영됩니다. overview는 전체 시장 의견이며, areas.<도시ID>.jun_memo는 지역별 자유 형식 의견입니다. 매수·매도 구분 없이 문단을 쓰고, 문단 사이는 줄을 두 번 바꿉니다. 아직 작성하지 않은 지역의 jun_memo는 빈 문자열(\"\")로 둡니다. 빈칸에는 자동 초안을 표시하지 않습니다. 영어는 en.overview와 en.areas 안에 같은 구조로 있습니다.",
  "weekly": {
-  "title": "매물은 줄고 있지만, 가격을 맞춰 가는 과정은 계속되고 있습니다",
+  "title": "신규 매물은 줄고 있지만, 가격을 맞춰 가는 과정은 계속되고 있습니다",
   "paragraphs": [
    "이번 주에는 세 카운티 모두 신규 매물이 줄었고, 펜딩은 신규 매물보다 많았습니다. 킹카운티는 펜딩이 지난주보다 4.8% 늘었고, 스노호미시는 같았으며, 피어스는 10.6% 줄었습니다. 지역마다 차이는 있지만, 새로 나오는 매물이 줄어드는 가운데 계약은 계속 이뤄지고 있습니다.",
    "이번 회사 브리핑에서도 금리와 고용에 대한 불확실성 속에서 펜딩이 비교적 잘 버티고 있다는 점을 짚었습니다. 다만 이를 모든 지역의 계약이 늘고 있다는 뜻으로 보기는 어렵습니다. 바이어들이 가격과 조건을 더 꼼꼼히 비교하면서, 맞는 집에는 움직이고 있다고 보는 편이 좋겠습니다.",
    "연말로 접어들면 매물을 거두는 셀러가 늘기 마련인데, 회사에서는 올해 재등록과 가격 조정을 통해 판매를 이어가려는 움직임에 주목했습니다. 매물이 다시 나왔다면 처음 가격부터 지금까지 얼마나 조정됐는지, 전체 시장 노출 기간은 어느 정도인지 함께 살펴볼 필요가 있습니다.",
    "이스트사이드는 회사 브리핑에서 신규 매물 감소가 재고 부담을 덜어 주는 흐름으로 설명됐습니다. 스노호미시는 노동절 이후 비교적 안정적인 흐름이라는 평가가 있었고, 이번 주 펜딩도 지난주 수준을 유지했습니다. 피어스는 회사에서 가격 인하 추세가 둔화된다고 봤지만, 이번에 받은 건수는 지난주 입력값보다 늘었습니다. 비교 기간과 집계 기준이 확인되기 전까지는 같은 흐름으로 단정하지 않겠습니다.",
-   "지금은 바이어가 가격과 조건을 충분히 이야기해 볼 수 있는 시장이라고 생각합니다. 다만 모든 셀러가 크게 양보하는 것은 아닙니다. 이미 가격을 조정한 집인지, 비슷한 집은 얼마에 계약되고 있는지 확인한 뒤 접근하시면 좋겠습니다. 셀러분들께는 처음 가격을 정하는 것과 함께, 나온 뒤의 반응에 맞춰 대응하는 것이 중요해 보입니다."
+   "지금은 바이어가 가격과 조건을 충분히 이야기해 볼 수 있는 시장이라고 생각합니다. 다만 모든 셀러가 크게 양보하는 것은 아닙니다. 이미 가격을 조정한 집인지, 비슷한 집의 최근 거래가와 현재 경쟁 매물은 어떤지 확인한 뒤 접근하시면 좋겠습니다. 셀러분들께는 처음 가격을 정하는 것과 함께, 나온 뒤의 반응에 맞춰 대응하는 것이 중요해 보입니다."
   ],
   "source": "11월 9~16일 카운티별 주간 수치와 공유받은 회사 브리핑을 함께 정리했습니다. 회사 브리핑의 비교 기간·대상은 주간 표와 다를 수 있습니다."
  },
@@ -495,11 +510,11 @@ let NOTES = {
    "read": [
     "재고 소진 기간이 4.9개월로, 예년 이맘때(3.1개월)보다 60% 가까이 길어졌습니다. 새 매물은 예년보다 15% 많이 나왔고 거래는 18% 줄어 매물이 쌓이는 흐름입니다.",
     "그런데 집이 팔리기까지 걸리는 기간은 18일로 예년(17일)과 거의 같습니다. 팔릴 집은 예전처럼 팔리고, 그렇지 않은 집이 남으면서 재고가 늘어난 것으로 보입니다.",
-    "거래 가격은 처음 내놓은 가격의 97.1% 수준입니다(예년 98.4%). 중간 거래가는 2.0% 내렸지만 sqft당 가격은 6.8% 내려, 실제 가격 조정은 중간가에서 보이는 것보다 큽니다.",
+    "거래가는 최초 리스팅가의 97.1% 수준입니다(예년 98.4%). 중간 거래가는 작년보다 2.0%, sqft당 가격은 6.8% 내렸습니다. 두 가격 지표의 하락 폭이 달라 함께 살펴볼 필요가 있습니다.",
     "현재 매물은 9월 10,002채에서 10월 9,509채로 줄었습니다. 다만 이맘때는 원래 매물이 줄어드는 시기라 흐름이 바뀌었다고 보기는 아직 이릅니다."
    ],
    "watch": "11~12월에 매물이 작년보다 더 빨리 줄어드는지, 최초 리스팅가 대비가 97% 아래로 내려가는지",
-   "jun_memo": "킹카운티는 아직 바이어가 비교하고 가격을 이야기해 볼 여지가 있는 시장이라고 봅니다. 이스트사이드를 중심으로 매물이 예년보다 많지만, 최근에는 새로 나오는 매물이 줄고 이번 주 펜딩은 조금 늘었습니다. 회사 브리핑에서 재등록 매물이 늘고 있다고 짚은 점도 눈에 들어와요. 매물이 다시 나왔다면 이전 가격과 전체 판매 기간을 함께 보는 게 좋겠습니다.\n\n사우스 킹카운티는 계속 주목하고 있습니다. 10월 자료에서 켄트와 메이플밸리의 중간 거래가는 작년보다 높았고, 렌튼과 페더럴웨이의 조정 폭도 비교적 작았습니다. 카운티 전체 분위기보다는 동네와 가격대별로 계약이 얼마나 유지되는지 살펴보려고 합니다."
+   "jun_memo": "킹카운티는 아직 바이어가 비교하고 가격을 이야기해 볼 여지가 있는 시장이라고 봅니다. 이스트사이드를 중심으로 매물이 예년보다 많지만, 최근에는 새로 나오는 매물이 줄고 이번 주 펜딩은 조금 늘었습니다. 회사 브리핑에서 재등록 매물이 늘고 있다고 짚은 점도 눈에 들어와요. 매물이 다시 나왔다면 이전 가격과 전체 판매 기간을 함께 보는 게 좋겠습니다.\n\n사우스 킹카운티는 계속 주목하고 있습니다. 8~10월 가격 자료에서 켄트와 메이플밸리의 중간 거래가는 작년보다 높았고, 렌튼과 페더럴웨이의 조정 폭도 비교적 작았습니다. 카운티 전체 분위기보다는 동네와 가격대별로 계약이 얼마나 유지되는지 살펴보려고 합니다."
   },
   "Snohomish": {
    "name": "스노호미시카운티",
@@ -529,7 +544,7 @@ let NOTES = {
     "중간 거래가는 55만 달러로 작년보다 0.9% 올랐습니다. 세 카운티 중 가격이 내리지 않은 유일한 곳입니다."
    ],
    "watch": "새 매물 감소가 이어져 재고 소진 기간이 4개월 아래로 내려가는지",
-   "jun_memo": "피어스카운티와 사우스 킹카운티는 계속 주목하고 있습니다. 10월 자료에서 타코마의 중간 거래가는 작년보다 조금 높았고, 피어스의 매물 증가 폭도 이스트사이드보다는 작았습니다. 이번 주에도 펜딩이 신규 매물보다 많았어요. 다만 펜딩 자체는 지난주보다 줄어서, 바이어가 더 많아졌다고 해석하지는 않으려고 합니다.\n\n회사에서는 가격 인하 추세가 둔화되는 점을 짚었지만, 이번 주 건수와는 비교 기준을 더 확인해야 합니다. 저는 그 한 가지보다 매물이 계속 쌓이는지, 계약이 유지되는지를 함께 보고 있어요. 지금 정도의 거래가 이어진다면 현재 가격대에서 버티는 흐름도 기대해 볼 수 있지 않을까 생각합니다."
+   "jun_memo": "피어스카운티와 사우스 킹카운티는 계속 주목하고 있습니다. 8~10월 가격 자료에서 타코마의 중간 거래가는 작년보다 조금 높았고, 피어스의 매물 증가 폭도 이스트사이드보다는 작았습니다. 이번 주에도 펜딩이 신규 매물보다 많았어요. 다만 펜딩 자체는 지난주보다 줄어서, 바이어가 더 많아졌다고 해석하지는 않으려고 합니다.\n\n회사에서는 가격 인하 추세가 둔화되는 점을 짚었지만, 이번 주 건수와는 비교 기준을 더 확인해야 합니다. 저는 그 한 가지보다 매물이 계속 쌓이는지, 계약이 유지되는지를 함께 보고 있어요. 지금 정도의 거래가 이어진다면 현재 가격대에서 버티는 흐름도 기대해 볼 수 있지 않을까 생각합니다."
   },
   "Seattle": {
    "name": "시애틀",
@@ -540,11 +555,11 @@ let NOTES = {
    "read": [
     "재고 소진 기간은 4.9개월로 예년(3.5개월)보다 40% 깁니다. 현재 매물 3,541채도 예년보다 30% 많습니다.",
     "그런데 판매 소요일은 12일로 14개 도시 중 가장 짧고, 예년(16일)보다도 빠릅니다. 최초 리스팅가 대비도 98.4%로 14개 도시 중 가장 높습니다.",
-    "두 숫자를 함께 보면, 팔리는 집은 2주 안에 거의 제값에 팔리고 나머지 집들은 팔리지 않은 채 남아 있다는 뜻으로 읽힙니다.",
+    "판매 소요일 12일은 거래된 주택의 중간값으로, 모든 집이 2주 안에 팔린다는 뜻은 아닙니다. 매물이 많은 가운데서도 일부 주택은 비교적 빠르게 계약되고 있다는 점을 함께 볼 수 있습니다.",
     "시애틀은 콘도 비중이 높아서 콘도 재고가 전체 숫자를 끌어올렸을 가능성이 있습니다. 이 자료는 주택 유형을 합친 것이라, 다음 업데이트에서 유형별로 나눠 확인해 보려고 합니다."
    ],
    "watch": "단독주택과 콘도를 나눈 재고, 거래 건수가 654건에서 더 줄어드는지",
-   "jun_memo": "시애틀은 매물이 많아졌어도 가격과 상태가 맞는 집에는 바이어가 움직이는 시장이라고 봅니다. 10월 월간 자료에서는 판매 소요일 중간값이 12일이고, 처음 내놓은 가격의 약 98%에 거래됐습니다. 최근 회사 브리핑에서도 시애틀의 거래 움직임이 이어지고 있다는 점을 짚었어요.\n\n다만 모든 집이 빨리 팔리는 것은 아닙니다. 바이어분들은 오래 남아 있거나 재등록된 집의 가격 이력을 살펴보시면 좋겠고, 셀러분들은 비슷한 집이 실제로 어떤 가격에 계약되는지에 맞춰 준비하셨으면 합니다."
+   "jun_memo": "시애틀은 매물이 많아졌어도 가격과 상태가 맞는 집에는 바이어가 움직이는 시장이라고 봅니다. 10월 월간 자료에서는 판매 소요일 중간값이 12일이고, 처음 내놓은 가격의 약 98%에 거래됐습니다. 최근 회사 브리핑에서도 시애틀의 거래 움직임이 이어지고 있다는 점을 짚었어요.\n\n다만 모든 집이 빨리 팔리는 것은 아닙니다. 바이어분들은 오래 남아 있거나 재등록된 집의 가격 이력을 살펴보시면 좋겠고, 셀러분들은 비슷한 집의 최근 거래가와 현재 경쟁 매물에 맞춰 준비하셨으면 합니다."
   },
   "Bellevue": {
    "name": "벨뷰",
@@ -554,8 +569,8 @@ let NOTES = {
    "sub": "재고 소진 기간이 14개 도시 중 가장 깁니다",
    "read": [
     "재고 소진 기간이 5.8개월로 예년(2.9개월)의 두 배입니다. 14개 도시 중 가장 깁니다.",
-    "판매 소요일은 23일(예년 14일), 최초 리스팅가 대비는 95.0%(예년 98.0%)입니다. 평균적으로 처음 가격보다 5% 정도 낮게 거래되고 있습니다.",
-    "중간 거래가는 144만 달러로 4.0% 내렸고, sqft당 가격은 9.2% 내렸습니다. 큰 집이 상대적으로 많이 팔리면서 중간가 하락 폭이 작게 보이는 것이라, 실제 가격 조정은 sqft당 가격 쪽에 더 가깝습니다.",
+    "판매 소요일은 23일(예년 14일), 최초 리스팅가 대비 거래가 비율은 95.0%(예년 98.0%)입니다. 이 비율로 보면 거래가는 처음 가격보다 약 5% 낮은 수준입니다.",
+    "8~10월 중간 거래가는 약 144만 달러로 작년 같은 기간보다 4.0% 내렸고, sqft당 가격은 9.2% 내렸습니다. 거래된 집의 크기나 유형 구성이 영향을 줄 수 있지만, 이 자료만으로 차이의 원인을 확정할 수는 없습니다.",
     "현재 매물은 7월 727채에서 석 달 연속 줄어 642채가 됐습니다. 매물은 정점을 지났지만, 아직 작년보다 43% 많습니다."
    ],
    "watch": "매물 감소가 계속되는지, 최초 리스팅가 대비가 95% 선에서 멈추는지",
@@ -569,7 +584,7 @@ let NOTES = {
    "sub": "팔리는 속도는 예년 수준이고, 조정은 가격에서 일어나고 있습니다",
    "read": [
     "재고 소진 기간이 5.0개월로 예년(2.8개월)의 1.8배입니다.",
-    "판매 소요일은 19일로 예년(17일)과 큰 차이가 없습니다. 집이 팔리는 속도 자체는 느려지지 않았습니다.",
+    "판매 소요일은 19일로 예년 약 17일보다 조금 길지만, 비교적 비슷한 수준입니다.",
     "대신 가격이 움직였습니다. 중간 거래가는 9.4%, sqft당 가격은 10.5% 내렸습니다. sqft당 가격 하락 폭은 14개 도시 중 보텔 다음으로 큽니다. 최초 리스팅가 대비도 95.7%(예년 98.0%)입니다.",
     "10월 거래는 101건으로 예년(130건)보다 22% 적습니다."
    ],
@@ -581,11 +596,11 @@ let NOTES = {
    "label": "바이어 쪽으로 기우는 중",
    "tag": "바이어 쪽",
    "cls": "b",
-   "sub": "매물은 예년의 2.5배인데, 팔리는 집은 2주 만에 팔립니다",
+   "sub": "재고 소진 기간은 예년의 2.5배지만, 판매 소요일은 14일입니다",
    "read": [
     "재고 소진 기간이 5.0개월로 예년(2.0개월)의 2.5배입니다. 현재 매물도 작년보다 50% 많습니다.",
     "판매 소요일은 14일로 예년과 같습니다. 그런데 최초 리스팅가 대비는 95.7%로 예년(98.7%)보다 3%p 낮습니다.",
-    "절반은 2주 안에 팔리는데 거래 가격은 처음 가격보다 4% 넘게 낮다는 뜻입니다. 빨리 팔리는 집과, 오래 남았다가 가격을 크게 내린 뒤 팔리는 집이 섞여 있습니다.",
+    "판매 소요일 중간값은 14일이지만 거래가는 최초 리스팅가의 95.7% 수준입니다. 판매 속도와 가격 조정은 서로 다른 지표이므로, 빠르게 팔린 집에도 가격 조정이 있었는지는 개별 이력을 확인해야 합니다.",
     "10월 거래는 63건으로 예년(93건)보다 32% 적습니다. 거래 건수가 적어 달마다 숫자가 크게 출렁입니다(8월 판매 소요일 36일, 10월 14일)."
    ],
    "watch": "거래 건수가 회복되는지, 최초 리스팅가 대비가 96% 위로 돌아오는지",
@@ -601,7 +616,7 @@ let NOTES = {
     "재고 소진 기간이 5.1개월로 예년(1.8개월)의 2.8배입니다. 예년과 비교한 변화 폭이 14개 도시 중 가장 큽니다.",
     "최초 리스팅가 대비는 94.6%로 14개 도시 중 가장 낮습니다(예년 98.1%).",
     "다만 매물은 줄고 있습니다. 현재 매물이 7월 321채에서 10월 254채로, 재고 소진 기간도 6.1개월에서 5.1개월로 내려왔습니다.",
-    "중간 거래가는 10.8%, sqft당 가격은 10.1% 내렸습니다. 한 달 거래가 58건 정도라 월별 숫자의 변동은 큰 편입니다."
+    "8~10월 중간 거래가는 작년 같은 기간보다 10.8%, sqft당 가격은 10.1% 내렸습니다. 10월 거래는 58건으로, 거래 구성에 따라 월별 지표가 달라질 수 있습니다."
    ],
    "watch": "매물 감소가 이어지는지, 최초 리스팅가 대비가 95% 위로 회복되는지",
    "jun_memo": "사마미시의 매물은 7월 이후 꾸준히 줄며 정점을 지나고 있고, 10월 펜딩은 오히려 작년보다 늘었습니다."
@@ -615,7 +630,7 @@ let NOTES = {
    "read": [
     "재고 소진 기간 4.7개월(예년 2.6개월), 최초 리스팅가 대비 96.0%(예년 97.9%)입니다.",
     "판매 소요일은 33일로 예년(19일)보다 깁니다. 다만 8~9월에는 15일이었고 10월 거래가 37건뿐이라, 한 달 숫자만으로 흐름을 말하기는 어렵습니다.",
-    "중간 거래가는 11.9% 올랐지만 sqft당 가격은 7.6% 내렸습니다. 큰 집 거래 비중이 높아지면서 중간가가 오른 것으로 보입니다.",
+    "8~10월 중간 거래가는 작년 같은 기간보다 11.9% 올랐지만 sqft당 가격은 7.6% 내렸습니다. 가격 지표의 방향이 달라, 집값이 전반적으로 올랐다고 단정하기보다는 거래된 주택의 구성을 함께 살펴봐야 합니다.",
     "10월 거래 37건은 예년(52건)보다 29% 적고, 7월(71건)의 절반 수준입니다."
    ],
    "watch": "판매 소요일 33일이 일시적인지, 거래 건수가 40건대를 회복하는지",
@@ -641,10 +656,10 @@ let NOTES = {
    "label": "바이어 쪽으로 기우는 중",
    "tag": "바이어 쪽",
    "cls": "b",
-   "sub": "속도와 재고는 바이어 쪽인데, 가격은 아직 오르고 있습니다",
+   "sub": "판매는 느려졌지만, 중간 거래가는 작년보다 높습니다",
    "read": [
     "재고 소진 기간 4.5개월(예년 2.8개월), 판매 소요일 29일(예년 20일), 최초 리스팅가 대비 97.4%(예년 98.8%)입니다.",
-    "그런데 중간 거래가는 65만 달러로 작년보다 3.2% 올랐습니다. sqft당 가격은 4.2% 내려, 큰 집 거래가 늘어난 영향도 섞여 있습니다.",
+    "8~10월 중간 거래가는 65만 달러로 작년 같은 기간보다 3.2% 올랐습니다. 반면 sqft당 가격은 4.2% 내려, 두 지표가 서로 다른 방향을 보입니다.",
     "10월 새 매물은 125건으로 작년 10월(150건)보다 17% 적습니다. 현재 매물도 석 달간 제자리였다가 10월에 431채로 줄었습니다.",
     "10월 펜딩은 작년 10월보다 5% 적어, 계약 흐름은 작년과 비슷합니다."
    ],
@@ -671,7 +686,7 @@ let NOTES = {
    "label": "바이어 쪽으로 기우는 중",
    "tag": "바이어 쪽",
    "cls": "b",
-   "sub": "매물은 적은 편인데, 팔리기까지는 가장 오래 걸립니다",
+   "sub": "재고 소진 기간은 짧은 편이지만, 판매 소요일은 가장 깁니다",
    "read": [
     "재고 소진 기간은 3.8개월로 14개 도시 중 타코마와 함께 가장 짧습니다. 그래도 예년(2.0개월)보다는 1.9배 깁니다.",
     "판매 소요일은 43일로 14개 도시 중 가장 깁니다. 7월 16일에서 매달 길어졌습니다(예년 30일).",
@@ -690,7 +705,7 @@ let NOTES = {
    "read": [
     "재고 소진 기간 4.1개월(예년 2.5개월), 판매 소요일 25일(예년 20일), 최초 리스팅가 대비 97.0%(예년 98.0%)입니다.",
     "거래 건수가 6월 이후 넉 달 연속 줄어, 7월 158건에서 10월 108건이 됐습니다. 예년(141건)보다 23% 적습니다.",
-    "중간 거래가는 11.6% 내려 14개 도시 중 하락 폭이 가장 큽니다. sqft당 가격은 3.5% 내려, 작은 집 거래가 늘어난 영향도 섞여 있습니다.",
+    "8~10월 중간 거래가는 작년 같은 기간보다 11.6% 내려 14개 도시 중 하락 폭이 가장 큽니다. sqft당 가격은 3.5% 내려, 중간 거래가 하락률만으로 모든 주택의 가치 변화를 판단하기는 어렵습니다.",
     "10월 새 매물은 211건으로 예년(184건)보다 많습니다. 매물은 꾸준히 나오는데 사려는 사람이 줄어든 모습입니다."
    ],
    "watch": "거래 건수 감소가 멈추는지, sqft당 가격 하락이 완만해지는지",
@@ -705,8 +720,8 @@ let NOTES = {
    "read": [
     "재고 소진 기간은 4.2개월로 예년(2.2개월)의 1.9배이고, 판매 소요일은 21일(예년 16일)입니다.",
     "10월 거래는 62건으로 예년(110건)보다 44% 적습니다. 9월 99건에서 한 달 만에 크게 줄었습니다.",
-    "그런데 최초 리스팅가 대비는 98.2%로 예년(98.3%)과 같고, 14개 도시 중 시애틀 다음으로 높습니다. 중간 거래가도 작년과 같은 수준(+0.2%)입니다.",
-    "거래는 줄었는데 가격 협상은 거의 없는 상태입니다. 셀러는 가격을 지키고, 바이어는 기다리며 지켜보는 모습으로 읽힙니다."
+    "최초 리스팅가 대비 거래가 비율은 98.2%로 예년(98.3%)과 거의 같고, 14개 도시 중 시애틀 다음으로 높습니다. 8~10월 중간 거래가도 작년 같은 기간과 비슷한 수준(+0.2%)입니다.",
+    "거래는 줄었지만, 거래된 주택의 가격은 최초 리스팅가에 비교적 가깝습니다. 다만 이 비율만으로 셀러 크레딧이나 개별 거래의 협상 조건까지 알 수는 없습니다."
    ],
    "watch": "10월 거래 감소가 일시적인지, 최초 리스팅가 대비가 98% 아래로 내려가는지",
    "jun_memo": "린우드도 특별한데요. 집들이 처음 내놓은 가격의 98% 이상에 거래되고 있어, 시애틀 다음으로 셀러가 제값을 받는 지역입니다. 가격도 작년 수준을 그대로 지키고 있어서 조정이 이어지는 시장 속에서도 비교적 강한 모습을 보여 주고 있습니다.\n\n아직 단정하기는 이르지만, 라이트레일로 출퇴근이 편해진 점도 이런 흐름에 영향을 주고 있는 건 아닐까 하는 생각이 들어요. 거래 자체는 줄어든 상황이라 가격이 버티는 이유를 라이트레일 하나로 설명하기는 어렵지만, 앞으로도 관심 있게 보고 싶은 부분입니다."
@@ -716,11 +731,11 @@ let NOTES = {
    "label": "바이어 쪽으로 뚜렷하게 기움",
    "tag": "바이어 쪽 (뚜렷)",
    "cls": "by",
-   "sub": "14개 도시 중 가격 조정이 가장 큽니다",
+   "sub": "14개 도시 중 sqft당 가격 하락 폭이 가장 큽니다",
    "read": [
     "재고 소진 기간은 4.9개월로 예년(2.3개월)의 2.1배이고, 판매 소요일은 23일로 예년(14일)보다 70% 가까이 깁니다.",
     "최초 리스팅가 대비는 96.2%로 예년(99.0%)보다 2.8%p 낮습니다. 예년에는 거의 처음 가격 그대로 팔리던 곳입니다.",
-    "중간 거래가는 7.6%, sqft당 가격은 10.8% 내려 sqft당 가격 하락 폭이 14개 도시 중 가장 큽니다. 보텔은 킹·스노호미시 두 카운티에 걸쳐 있고 신축 비중이 높다는 점도 함께 보셔야 합니다."
+    "8~10월 중간 거래가는 작년 같은 기간보다 7.6%, sqft당 가격은 10.8% 내렸습니다. sqft당 가격 하락 폭이 14개 도시 중 가장 큽니다. 보텔은 킹·스노호미시 두 카운티에 걸쳐 있어 지역과 주택 유형을 나눠 보는 것이 좋겠습니다."
    ],
    "watch": "최초 리스팅가 대비가 97% 위로 돌아오는지, sqft당 가격 하락이 멈추는지",
    "jun_memo": ""
@@ -743,13 +758,13 @@ let NOTES = {
  },
  "en": {
   "weekly": {
-   "title": "Fewer new listings, with sellers still working toward the market",
+   "title": "Fewer new listings, while sellers continue adjusting prices",
    "paragraphs": [
     "New listings fell in all three counties this week, and pending sales exceeded new listings in each. Pending sales rose 4.8% in King County, held steady in Snohomish County and fell 10.6% in Pierce County. Conditions vary, but homes are still going under contract as fewer listings come onto the market.",
     "The company briefing also highlighted relatively resilient pending activity despite uncertainty around interest rates and employment. That does not mean contracts are increasing in every area. Buyers appear to be comparing prices and terms carefully, then moving when a home fits.",
     "Sellers often take homes off the market as the holidays approach. This year's company briefing instead drew attention to sellers continuing to pursue a sale through relisting and price adjustments. For a relisted home, it helps to review the full pricing history and total time exposed to the market.",
     "The briefing described fewer new listings as easing inventory pressure on the Eastside. It also characterized Snohomish as relatively steady since Labor Day; this week's pending count was unchanged. For Pierce, the briefing described a slowing trend in price reductions, while the newly supplied count is above last week's recorded figure. Those observations should not be treated as directly comparable until their periods and definitions are confirmed.",
-    "I see this as a market where buyers have room to discuss price and terms, although not every seller will make a large concession. Look at whether a home has already been repriced and what comparable homes are going under contract for. For sellers, the initial price matters, as does responding to the feedback that follows."
+    "I see this as a market where buyers have room to discuss price and terms, although not every seller will make a large concession. Look at whether a home has already been repriced and recent comparable sale prices and competing listings. For sellers, the initial price matters, as does responding to the feedback that follows."
    ],
    "source": "Based on Nov 9–16 county activity and the company briefing shared with Jun. The briefing may cover different periods or groups of properties from the weekly figures."
   },
@@ -761,11 +776,11 @@ let NOTES = {
     "read": [
      "Months of inventory is 4.9, nearly 60% above the usual level for this time of year (3.1). New listings are 15% above normal and sales are 18% below, so homes are piling up.",
      "Yet the median home still sells in 18 days, almost the same as usual (17). Homes that are priced right sell as before, while the rest stay on the market and push inventory up.",
-     "Homes are selling at 97.1% of their original list price (usually 98.4%). The median sale price is down 2.0%, but price per sq ft is down 6.8%, so the real price adjustment is larger than the median suggests.",
+     "The sale-to-original-list price ratio is 97.1%, compared with a seasonal baseline of 98.4%. The median sale price fell 2.0% year over year, while price per square foot fell 6.8%. The two measures show different degrees of adjustment and are best considered together.",
      "Active listings dipped from 10,002 in September to 9,509 in October. Inventory normally falls at this time of year, so it is too early to call a turn."
     ],
     "watch": "Whether inventory falls faster than last year in Nov–Dec, and whether sale-to-original-list drops below 97%",
-    "jun_memo": "King County still offers buyers room to compare homes and discuss price. Inventory remains elevated, especially on the Eastside, but fewer new listings came onto the market this week and pending sales rose a little. The company briefing also drew attention to increased relisting. For a relisted home, it helps to review earlier prices and the full time on the market.\n\nI continue to watch South King County. October median sale prices in Kent and Maple Valley were above last year, while Renton and Federal Way saw relatively modest adjustments. I am looking at contract activity by neighborhood and price range, rather than relying only on the countywide picture."
+    "jun_memo": "King County still offers buyers room to compare homes and discuss price. Inventory remains elevated, especially on the Eastside, but fewer new listings came onto the market this week and pending sales rose a little. The company briefing also drew attention to increased relisting. For a relisted home, it helps to review earlier prices and the full time on the market.\n\nI continue to watch South King County. August–October median sale prices in Kent and Maple Valley were above last year, while Renton and Federal Way saw relatively modest adjustments. I am looking at contract activity by neighborhood and price range, rather than relying only on the countywide picture."
    },
    "Snohomish": {
     "label": "Clearly leaning toward buyers",
@@ -791,7 +806,7 @@ let NOTES = {
      "The median sale price is $550K, up 0.9% from last year, the only one of the three counties where prices did not fall."
     ],
     "watch": "Whether shrinking new listings push months of inventory below 4",
-    "jun_memo": "Pierce County and South King County remain areas I am watching. Tacoma's October median sale price was a little above last year, and Pierce's inventory growth was smaller than on the Eastside. Pending sales again exceeded new listings this week. Pending sales themselves fell from the prior week, though, so I would not read this as an increase in buyers.\n\nThe company highlighted a slowing trend in price reductions, but its comparison needs to be reconciled with this week's counts. I am looking at whether inventory keeps building and whether contracts hold up together. If transactions continue around these levels, prices may be able to hold around today's range."
+    "jun_memo": "Pierce County and South King County remain areas I am watching. Tacoma's August–October median sale price was a little above last year, and Pierce's inventory growth was smaller than on the Eastside. Pending sales again exceeded new listings this week. Pending sales themselves fell from the prior week, though, so I would not read this as an increase in buyers.\n\nThe company highlighted a slowing trend in price reductions, but its comparison needs to be reconciled with this week's counts. I am looking at whether inventory keeps building and whether contracts hold up together. If transactions continue around these levels, prices may be able to hold around today's range."
    },
    "Seattle": {
     "label": "Mixed signals",
@@ -800,11 +815,11 @@ let NOTES = {
     "read": [
      "Months of inventory is 4.9, 40% above normal (3.5). The 3,541 active listings are also 30% above normal.",
      "Yet the median home sells in just 12 days, the fastest of all 14 cities and quicker than usual (16). Sale-to-original-list is 98.4%, also the highest of the 14 cities.",
-     "Taken together, the homes that sell go within two weeks at nearly full price, while the rest remain unsold.",
+     "The 12-day figure is the median for homes that sold, not a guarantee that every home sells within two weeks. Relatively quick sales can coexist with elevated inventory.",
      "Seattle has a high share of condos, so condo inventory may be driving the overall numbers up. This data combines all home types, so we'll split it by type in the next update."
     ],
     "watch": "Inventory split by houses vs. condos, and whether closed sales fall below 654",
-    "jun_memo": "I see Seattle as a market where buyers still act on homes with the right price and condition, even with more inventory. October's monthly figures show median days on market of 12 and sales at about 98% of original asking prices. The recent company briefing also highlighted continued activity in Seattle.\n\nThat does not mean every home sells quickly. Buyers can benefit from reviewing the pricing history of homes that have lingered or been relisted. Sellers should prepare around the prices at which comparable homes are actually going under contract."
+    "jun_memo": "I see Seattle as a market where buyers still act on homes with the right price and condition, even with more inventory. October's monthly figures show median days on market of 12 and sales at about 98% of original asking prices. The recent company briefing also highlighted continued activity in Seattle.\n\nThat does not mean every home sells quickly. Buyers can benefit from reviewing the pricing history of homes that have lingered or been relisted. Sellers should prepare around recent comparable sale prices and the current competition."
    },
    "Bellevue": {
     "label": "Clearly leaning toward buyers",
@@ -812,8 +827,8 @@ let NOTES = {
     "sub": "The longest months of inventory of all 14 cities",
     "read": [
      "Months of inventory is 5.8, double the usual level (2.9) and the longest of all 14 cities.",
-     "Days on market is 23 (usually 14) and sale-to-original-list is 95.0% (usually 98.0%). On average, homes sell about 5% below their first asking price.",
-     "The median sale price is $1.44M, down 4.0%, while price per sq ft is down 9.2%. More large homes selling makes the median drop look smaller, so the real adjustment is closer to the price per sq ft figure.",
+     "Median days on market is 23, compared with a seasonal baseline of 14. The sale-to-original-list price ratio is 95.0%, versus 98.0% historically, placing sale prices about 5% below original asking prices by this measure.",
+     "The August–October median sale price was about $1.44 million, down 4.0% from the same period last year. Price per square foot fell 9.2%. Differences in the size or mix of homes sold may play a role, but these figures alone do not establish the cause.",
      "Active listings have fallen three months in a row, from 727 in July to 642. Inventory has peaked but is still 43% above last year."
     ],
     "watch": "Whether listings keep falling, and whether sale-to-original-list holds around 95%",
@@ -825,7 +840,7 @@ let NOTES = {
     "sub": "Homes sell at the usual pace; the adjustment is happening in price",
     "read": [
      "Months of inventory is 5.0, 1.8 times the usual level (2.8).",
-     "Days on market is 19, not far from normal (17). The pace of sales itself has not slowed.",
+     "Median days on market is 19, slightly longer than the seasonal baseline of about 17 days, but still relatively close.",
      "Instead, prices moved. The median sale price fell 9.4% and price per sq ft fell 10.5%, the second-largest price per sq ft drop of the 14 cities after Bothell. Sale-to-original-list is 95.7% (usually 98.0%).",
      "October closed sales were 101, 22% below normal (130)."
     ],
@@ -835,11 +850,11 @@ let NOTES = {
    "Redmond": {
     "label": "Leaning toward buyers",
     "tag": "Buyers",
-    "sub": "Inventory is 2.5x normal, yet homes that sell go in two weeks",
+    "sub": "Months of inventory is 2.5 times the seasonal baseline; median selling time is 14 days",
     "read": [
      "Months of inventory is 5.0, 2.5 times the usual level (2.0). Active listings are 50% above last year.",
      "Days on market is 14, the same as usual. But sale-to-original-list is 95.7%, 3 points below normal (98.7%).",
-     "Half of homes sell within two weeks, yet sale prices are more than 4% below the first asking price. Fast sellers are mixed with homes that sat and sold after big price cuts.",
+     "Median days on market is 14, while the sale-to-original-list price ratio is 95.7%. Selling time and pricing measure different things; an individual home's history is needed to determine whether a quick sale followed a price adjustment.",
      "October closed sales were 63, 32% below normal (93). With so few sales, monthly numbers swing a lot (days on market was 36 in August, 14 in October)."
     ],
     "watch": "Whether closed sales recover, and whether sale-to-original-list returns above 96%",
@@ -853,7 +868,7 @@ let NOTES = {
      "Months of inventory is 5.1, 2.8 times the usual level (1.8), the biggest change from normal of the 14 cities.",
      "Sale-to-original-list is 94.6%, the lowest of the 14 cities (usually 98.1%).",
      "Listings are falling, though: from 321 in July to 254 in October, and months of inventory came down from 6.1 to 5.1.",
-     "The median sale price fell 10.8% and price per sq ft fell 10.1%. With only about 58 sales a month, monthly numbers can swing."
+     "The August–October median sale price fell 10.8% year over year, and price per square foot fell 10.1%. There were 58 closed sales in October, so changes in the mix of homes sold can affect monthly figures."
     ],
     "watch": "Whether listings keep falling, and whether sale-to-original-list recovers above 95%",
     "jun_memo": "Listings in Sammamish have been steadily declining since July and appear to be past their peak. October pending sales have actually risen from last year."
@@ -865,7 +880,7 @@ let NOTES = {
     "read": [
      "Months of inventory 4.7 (usually 2.6), sale-to-original-list 96.0% (usually 97.9%).",
      "Days on market is 33, longer than usual (19). It was only 15 in August and September, though, and with just 37 sales in October, one month isn't enough to call a trend.",
-     "The median sale price rose 11.9%, but price per sq ft fell 7.6%. A higher share of large homes selling appears to have lifted the median.",
+     "The August–October median sale price rose 11.9% year over year, while price per square foot fell 7.6%. With the two measures moving in opposite directions, the mix of homes sold needs to be considered before concluding that prices rose broadly.",
      "October's 37 sales are 29% below normal (52) and about half of July (71)."
     ],
     "watch": "Whether 33 days on market is a one-off, and whether sales recover to the 40s",
@@ -887,10 +902,10 @@ let NOTES = {
    "Kent": {
     "label": "Leaning toward buyers",
     "tag": "Buyers",
-    "sub": "Pace and inventory favor buyers, but prices are still rising",
+    "sub": "Homes take longer to sell, while the median price remains above last year",
     "read": [
      "Months of inventory 4.5 (usually 2.8), days on market 29 (usually 20), sale-to-original-list 97.4% (usually 98.8%).",
-     "Yet the median sale price is $650K, up 3.2% from last year. Price per sq ft fell 4.2%, so more large-home sales are part of the story.",
+     "The August–October median sale price was $650,000, up 3.2% year over year. Price per square foot fell 4.2%, so the two measures point in different directions.",
      "October new listings were 125, 17% fewer than last October (150). Active listings were flat for three months, then fell to 431 in October.",
      "October pending sales were 5% below last October, so contract activity is close to last year."
     ],
@@ -913,7 +928,7 @@ let NOTES = {
    "Maple-Valley": {
     "label": "Leaning toward buyers",
     "tag": "Buyers",
-    "sub": "Fewer listings than most, yet the longest time to sell",
+    "sub": "Relatively low months of inventory, but the longest median selling time",
     "read": [
      "Months of inventory is 3.8, tied with Tacoma as the shortest of the 14 cities. It's still 1.9 times the usual level (2.0).",
      "Days on market is 43, the longest of the 14 cities, and has grown every month since July (16). Usually it's 30.",
@@ -930,7 +945,7 @@ let NOTES = {
     "read": [
      "Months of inventory 4.1 (usually 2.5), days on market 25 (usually 20), sale-to-original-list 97.0% (usually 98.0%).",
      "Closed sales have fallen four months in a row since June, from 158 in July to 108 in October, 23% below normal (141).",
-     "The median sale price fell 11.6%, the largest drop of the 14 cities. Price per sq ft fell 3.5%, so more sales of smaller homes are part of the story.",
+     "The August–October median sale price fell 11.6% year over year, the largest decline among the 14 cities. Price per square foot fell 3.5%, so the median-price change alone should not be treated as the change in value of every home.",
      "October new listings were 211, above normal (184). Homes keep coming on the market while fewer people are buying."
     ],
     "watch": "Whether the decline in sales stops, and whether the drop in price per sq ft slows",
@@ -943,8 +958,8 @@ let NOTES = {
     "read": [
      "Months of inventory is 4.2, 1.9 times normal (2.2), and days on market is 21 (usually 16).",
      "October closed sales were 62, 44% below normal (110), a sharp drop from 99 in September.",
-     "Yet sale-to-original-list is 98.2%, the same as usual (98.3%) and second only to Seattle among the 14 cities. The median sale price is flat from last year (+0.2%).",
-     "Sales are down but there's almost no price negotiation. Sellers are holding firm on price while buyers wait and watch."
+     "The sale-to-original-list price ratio is 98.2%, almost unchanged from the seasonal baseline of 98.3% and second only to Seattle among the 14 cities. The August–October median sale price was also close to the same period last year (+0.2%).",
+     "Sales have declined, but homes that sold closed relatively close to their original asking prices. This ratio does not capture seller credits or all of the terms negotiated in individual transactions."
     ],
     "watch": "Whether October's drop in sales is temporary, and whether sale-to-original-list falls below 98%",
     "jun_memo": "Lynnwood also stands out. Homes are selling for more than 98% of their original list price, making it second to Seattle in how close sellers get to their original asking price. Prices are also holding at last year's level, showing relative strength in a market that is still adjusting.\n\nIt is too early to draw a firm conclusion, but I wonder whether the easier commute made possible by light rail is also playing a part. With transactions themselves declining, light rail alone cannot explain why prices are holding up, but it is something I will continue to watch."
@@ -952,11 +967,11 @@ let NOTES = {
    "Bothell": {
     "label": "Clearly leaning toward buyers",
     "tag": "Buyers (strong)",
-    "sub": "The biggest price adjustment of the 14 cities",
+    "sub": "The largest decline in price per square foot among the 14 cities",
     "read": [
      "Months of inventory is 4.9, 2.1 times normal (2.3), and days on market is 23, almost 70% longer than usual (14).",
      "Sale-to-original-list is 96.2%, 2.8 points below normal (99.0%). Homes here used to sell at almost exactly their first price.",
-     "The median sale price fell 7.6% and price per sq ft fell 10.8%, the largest price per sq ft drop of the 14 cities. Bothell spans King and Snohomish counties and has a lot of new construction, which is worth keeping in mind."
+     "The August–October median sale price fell 7.6% year over year, while price per square foot fell 10.8%, the largest decline among the 14 cities. Bothell spans King and Snohomish counties, so neighborhood and property type are worth considering separately."
     ],
     "watch": "Whether sale-to-original-list returns above 97%, and whether the price per sq ft decline stops",
     "jun_memo": ""
@@ -975,9 +990,9 @@ let NOTES = {
     "jun_memo": "Tacoma is another area I am continuing to watch. Homes are not selling as quickly as they did in the summer, but fewer new listings are coming onto the market than last year. Transactions have slowed, but so has the flow of new listings. I see some encouragement in the fact that homes are not simply continuing to pile up.\n\nThe median sale price is a little higher than last year, although it is too early to say that home prices are rising across the board. If transactions hold around their current level and inventory does not grow further, I think prices may continue to hold around today's levels rather than see another substantial adjustment."
    }
   },
-  "overview": "I see a market where buyers have more choice and room to negotiate, while homes priced appropriately continue to go under contract. October data still shows elevated inventory and adjustments, particularly on the Eastside. Buyers have not all stepped away, though. The recent company briefing highlighted relatively resilient pending activity despite uncertainty, and King County's pending count rose a little this week.\n\nOn the Eastside, slower sales have allowed inventory to build, but Bellevue and Sammamish have seen listings decline since July. The company's observation of fewer new listings is relevant here too. A decline in inventory alone does not prove that demand has recovered. I am watching how well contracts hold up as fewer homes come onto the market.\n\nSouth King County and Pierce County remain areas I am watching. In October, median sale prices in Kent, Maple Valley and Tacoma were above last year, while Renton and Federal Way saw modest adjustments of around 2–3%. October pending sales in Renton, Kent and Federal Way were within about 5% of last year. Pierce's pending count fell this week but still exceeded new listings. Rather than calling a recovery, I am watching whether continued contract activity can help prices hold.\n\nSnohomish's monthly figures show a clear adjustment, but that does not necessarily mean its recent trend keeps deteriorating. The company described relatively steady conditions since Labor Day, and this week's pending count was unchanged. Lynnwood's October sales were above 98% of original asking prices, with the median sale price around last year's level. I wonder whether easier commuting by light rail plays a part, although no single factor can explain that resilience.\n\nSeattle also varies from home to home. The October monthly data shows median days on market of 12 and sales at about 98% of original asking prices. Even with more inventory, buyers are moving on homes with the right price and condition.\n\nNot every seller seems willing to wait until spring. The company briefing highlighted sellers continuing to seek a sale through relisting or price adjustments. Buyers should review a property's earlier listing history and price changes, as well as its latest appearance on the market.\n\nIf contract activity holds around these levels and inventory does not continue building, some areas may hold around current prices rather than see another substantial adjustment. I also want to look beyond the number of people moving in or out and consider incoming households' incomes and purchasing power.\n\nAs I often say, setting the initial asking price matters for sellers. Buyers have more time to compare and negotiate, but it helps to understand whether a home has already been repriced for the market rather than expect a large discount on every listing. Take time to assess your options, while staying ready when the right home appears."
+  "overview": "I see a market where buyers have more choice and room to negotiate, while homes priced appropriately continue to go under contract. October data still shows elevated inventory and adjustments, particularly on the Eastside. Buyers have not all stepped away, though. The recent company briefing highlighted relatively resilient pending activity despite uncertainty, and King County's pending count rose a little this week.\n\nOn the Eastside, slower sales have allowed inventory to build, but Bellevue and Sammamish have seen listings decline since July. The company's observation of fewer new listings is relevant here too. A decline in inventory alone does not prove that demand has recovered. I am watching how well contracts hold up as fewer homes come onto the market.\n\nSouth King County and Pierce County remain areas I am watching. For August–October, median sale prices in Kent, Maple Valley and Tacoma were above the same period last year, while Renton and Federal Way were down 3.4% and 2.3%, respectively. October pending sales in Renton, Kent and Federal Way were within about 5% of last year. Pierce's pending count fell this week but still exceeded new listings. Rather than calling a recovery, I am watching whether continued contract activity can help prices hold.\n\nSnohomish's monthly figures show a clear adjustment, but that does not necessarily mean its recent trend keeps deteriorating. The company described relatively steady conditions since Labor Day, and this week's pending count was unchanged. Lynnwood's October sales were above 98% of original asking prices, with the median sale price around last year's level. I wonder whether easier commuting by light rail plays a part, although no single factor can explain that resilience.\n\nSeattle also varies from home to home. The October monthly data shows median days on market of 12 and sales at about 98% of original asking prices. Even with more inventory, buyers are moving on homes with the right price and condition.\n\nNot every seller seems willing to wait until spring. The company briefing highlighted sellers continuing to seek a sale through relisting or price adjustments. Buyers should review a property's earlier listing history and price changes, as well as its latest appearance on the market.\n\nIf contract activity holds around these levels and inventory does not continue building, some areas may hold around current prices rather than see another substantial adjustment. I also want to look beyond the number of people moving in or out and consider incoming households' incomes and purchasing power.\n\nAs I often say, setting the initial asking price matters for sellers. Buyers have more time to compare and negotiate, but it helps to understand whether a home has already been repriced for the market rather than expect a large discount on every listing. Take time to assess your options, while staying ready when the right home appears."
  },
- "overview": "지금 시장은 바이어에게 선택권과 협상 여지가 생긴 가운데, 가격이 맞는 집은 계속 계약으로 이어지는 모습이라고 보고 있습니다. 10월 자료만 보면 이스트사이드를 중심으로 매물이 예년보다 많고 조정도 이어지고 있어요. 그렇다고 바이어들이 모두 멈춰 있는 시장은 아닙니다. 최근 회사 브리핑에서도 불확실성 속에서 펜딩이 비교적 잘 버티고 있다는 점을 짚었고, 이번 주 킹카운티 펜딩도 지난주보다 조금 늘었습니다.\n\n이스트사이드는 나온 집들이 예전보다 천천히 팔리면서 매물이 쌓여 왔지만, 벨뷰와 사마미시는 7월 이후 매물이 줄고 있습니다. 회사에서 이야기한 신규 매물 감소도 이런 흐름과 함께 볼 부분이에요. 다만 매물이 줄었다는 이유만으로 수요가 회복됐다고 보기는 어렵습니다. 저는 새로 나오는 집이 줄어드는 동안 계약이 어느 정도 유지되는지를 같이 보고 있습니다.\n\n계속 주목하는 곳은 사우스 킹카운티와 피어스카운티입니다. 10월 자료에서 켄트, 메이플밸리, 타코마의 중간 거래가는 작년보다 높았고, 렌튼과 페더럴웨이는 2~3% 내외의 소폭 조정에 그쳤습니다. 렌튼, 켄트, 페더럴웨이의 10월 펜딩도 작년과 5% 안팎 차이였습니다. 피어스는 이번 주 펜딩이 줄었지만 신규 매물보다는 많았습니다. 아직 회복을 단정하기보다는, 이 정도의 계약이 이어지면서 가격이 버틸 수 있을지 보고 있어요.\n\n스노호미시는 월간 자료에서 조정이 뚜렷하지만, 최근 흐름까지 계속 나빠진다고 볼 필요는 없겠습니다. 회사에서는 노동절 이후 비교적 안정적인 모습이라고 봤고, 이번 주 펜딩도 지난주와 같았습니다. 린우드는 10월에 처음 내놓은 가격의 98% 이상에 거래됐고 중간 거래가도 작년 수준을 지켰습니다. 라이트레일로 출퇴근이 편해진 점도 영향을 주는 것은 아닐까 생각하지만, 가격이 버티는 이유를 하나로 설명하기는 어렵습니다.\n\n시애틀도 집마다 결과가 갈리는 시장입니다. 10월 월간 자료에서는 판매 소요일 중간값이 12일이고 처음 가격의 약 98%에 거래됐습니다. 매물이 많아졌어도 가격과 상태가 맞는 집에는 바이어가 움직이고 있다는 점을 함께 보셨으면 합니다.\n\n연말이라고 해서 모든 셀러가 봄까지 기다리는 것도 아닌 것 같습니다. 회사 브리핑에서는 재등록이나 가격 조정을 하면서 지금 판매를 이어가려는 움직임을 짚었어요. 바이어분들은 매물이 새로 나왔다는 것만 보지 마시고, 이전 판매 이력과 가격 조정 내역까지 살펴보시면 협상할 때 도움이 되겠습니다.\n\n지금 정도의 계약이 유지되고 매물이 더 쌓이지 않는다면, 큰 폭의 추가 조정보다는 현재 가격대에서 버티는 지역도 나오지 않을까 조심스럽게 생각합니다. 앞으로는 전입·전출 인원뿐 아니라, 지역에 들어오는 가구의 소득과 실제 구매 여력도 함께 살펴보고 싶습니다.\n\n늘 말씀드리지만 셀러분들께는 처음 가격을 어떻게 정하느냐가 중요합니다. 바이어분들께는 비교하고 협상할 여유가 생긴 시기이지만, 모든 집에서 큰 할인을 기대하기보다는 이미 시장에 맞게 조정된 집인지 알아보시는 게 좋겠습니다. 충분히 살펴보시되 좋은 집이 나왔을 때 놓치지 않으셨으면 좋겠습니다."
+ "overview": "지금 시장은 바이어에게 선택권과 협상 여지가 생긴 가운데, 가격이 맞는 집은 계속 계약으로 이어지는 모습이라고 보고 있습니다. 10월 자료만 보면 이스트사이드를 중심으로 매물이 예년보다 많고 조정도 이어지고 있어요. 그렇다고 바이어들이 모두 멈춰 있는 시장은 아닙니다. 최근 회사 브리핑에서도 불확실성 속에서 펜딩이 비교적 잘 버티고 있다는 점을 짚었고, 이번 주 킹카운티 펜딩도 지난주보다 조금 늘었습니다.\n\n이스트사이드는 나온 집들이 예전보다 천천히 팔리면서 매물이 쌓여 왔지만, 벨뷰와 사마미시는 7월 이후 매물이 줄고 있습니다. 회사에서 이야기한 신규 매물 감소도 이런 흐름과 함께 볼 부분이에요. 다만 매물이 줄었다는 이유만으로 수요가 회복됐다고 보기는 어렵습니다. 저는 새로 나오는 집이 줄어드는 동안 계약이 어느 정도 유지되는지를 같이 보고 있습니다.\n\n계속 주목하는 곳은 사우스 킹카운티와 피어스카운티입니다. 도시 가격을 집계한 8~10월 기준으로 켄트, 메이플밸리, 타코마의 중간 거래가는 작년 같은 기간보다 높았고, 렌튼과 페더럴웨이는 각각 3.4%, 2.3% 낮았습니다. 렌튼, 켄트, 페더럴웨이의 10월 펜딩도 작년과 5% 안팎 차이였습니다. 피어스는 이번 주 펜딩이 줄었지만 신규 매물보다는 많았습니다. 아직 회복을 단정하기보다는, 이 정도의 계약이 이어지면서 가격이 버틸 수 있을지 보고 있어요.\n\n스노호미시는 월간 자료에서 조정이 뚜렷하지만, 최근 흐름까지 계속 나빠진다고 볼 필요는 없겠습니다. 회사에서는 노동절 이후 비교적 안정적인 모습이라고 봤고, 이번 주 펜딩도 지난주와 같았습니다. 린우드는 10월에 처음 내놓은 가격의 98% 이상에 거래됐고 중간 거래가도 작년 수준을 지켰습니다. 라이트레일로 출퇴근이 편해진 점도 영향을 주는 것은 아닐까 생각하지만, 가격이 버티는 이유를 하나로 설명하기는 어렵습니다.\n\n시애틀도 집마다 결과가 갈리는 시장입니다. 10월 월간 자료에서는 판매 소요일 중간값이 12일이고 처음 가격의 약 98%에 거래됐습니다. 매물이 많아졌어도 가격과 상태가 맞는 집에는 바이어가 움직이고 있다는 점을 함께 보셨으면 합니다.\n\n연말이라고 해서 모든 셀러가 봄까지 기다리는 것도 아닌 것 같습니다. 회사 브리핑에서는 재등록이나 가격 조정을 하면서 지금 판매를 이어가려는 움직임을 짚었어요. 바이어분들은 매물이 새로 나왔다는 것만 보지 마시고, 이전 판매 이력과 가격 조정 내역까지 살펴보시면 협상할 때 도움이 되겠습니다.\n\n지금 정도의 계약이 유지되고 매물이 더 쌓이지 않는다면, 큰 폭의 추가 조정보다는 현재 가격대에서 버티는 지역도 나오지 않을까 조심스럽게 생각합니다. 앞으로는 전입·전출 인원뿐 아니라, 지역에 들어오는 가구의 소득과 실제 구매 여력도 함께 살펴보고 싶습니다.\n\n늘 말씀드리지만 셀러분들께는 처음 가격을 어떻게 정하느냐가 중요합니다. 바이어분들께는 비교하고 협상할 여유가 생긴 시기이지만, 모든 집에서 큰 할인을 기대하기보다는 이미 시장에 맞게 조정된 집인지 알아보시는 게 좋겠습니다. 충분히 살펴보시되 좋은 집이 나왔을 때 놓치지 않으셨으면 좋겠습니다."
 }
 ;
 fetch('notes.json',{cache:'no-store'}).then(r=>r.ok?r.json():null).then(j=>{if(j&&j.areas){NOTES=j;renderVerdict();renderJun();renderTable();renderWeekly();}}).catch(()=>{});
@@ -987,7 +1002,7 @@ let cur='King', range=60, sortKey='price', sortDir=-1;
 const $=id=>document.getElementById(id);
 const money=v=>v>=999500?`$${(v/1e6).toFixed(2)}M`:`$${Math.round(v/1e3).toLocaleString()}K`;
 const num=v=>Math.round(v).toLocaleString();
-const arrow=(v,d=1)=>Math.abs(v)<0.05?`<span class="chg eq">${T('변동 없음','No change')}</span>`:`<span class="chg ${v>0?'up':'dn'}">${v>0?'▲':'▼'} ${Math.abs(v).toFixed(d)}%</span>`;
+const arrow=(v,d=1)=>Math.abs(v)<0.5*10**(-d)?`<span class="chg eq">${T('변동 없음','No change')}</span>`:`<span class="chg ${v>0?'up':'dn'}">${v>0?'▲':'▼'} ${Math.abs(v).toFixed(d)}%</span>`;
 const yoy=(s,i,j)=>(s[i]/s[j]-1)*100;
 const byId=id=>A.find(a=>a.id===id);
 function S(a){
@@ -1002,7 +1017,7 @@ function signals(a){
   const sg=[
     {l:T('재고 소진 기간','Months of inventory'), now:s.msi.toFixed(1)+T('개월',' mo'), avg:bm.toFixed(1)+T('개월',' mo'), v: s.msi>bm*1.15?1:s.msi<bm*0.85?-1:0},
     {l:T('판매 소요일','Days on market'), now:s.dom+T('일',' days'), avg:Math.round(bd)+T('일',' days'), v: s.dom>bd*1.15?1:s.dom<bd*0.85?-1:0},
-    {l:T('최초 리스팅가 대비','Sale-to-original-list'), now:s.po.toFixed(1)+'%', avg:bp.toFixed(1)+'%', v: s.po<bp-0.8?1:s.po>bp+0.8?-1:0}];
+    {l:T('최초 리스팅가 대비','Sale-to-original-list ratio'), now:s.po.toFixed(1)+'%', avg:bp.toFixed(1)+'%', v: s.po<bp-0.8?1:s.po>bp+0.8?-1:0}];
   return {sg, score: sg.reduce((t,x)=>t+x.v,0)};
 }
 function verdict(a){ const N=NA(a.id); if(N&&N.label) return [N.label,N.tag,N.cls]; const sc=signals(a).score;
@@ -1019,7 +1034,7 @@ function renderVerdict(){
   $('v-name').textContent=LANG==='en'?a.en.toUpperCase():`${a.ko.toUpperCase()} · ${a.en.toUpperCase()}`;
   $('v-big').textContent=v;
   const NN=NA(cur); $('v-sub').textContent=NN&&NN.sub?NN.sub:'';
-  $('v-why').textContent=nb===3?T('세 신호 모두 예년보다 바이어에게 유리합니다. 매물이 많고, 팔리는 데 오래 걸리고, 처음 가격보다 낮게 거래되고 있습니다.','All three signals favor buyers compared with the usual level: more listings, longer time to sell, and homes selling below their first price.')
+  $('v-why').textContent=nb===3?T('세 신호 모두 예년보다 바이어에게 유리합니다. 재고 소진 기간과 판매 소요일이 길고, 최초 리스팅가 대비 거래가 비율이 낮습니다.','All three signals favor buyers compared with the seasonal baseline: higher months of inventory, longer selling times, and homes selling further below their original asking prices.')
     : ns===3?T('세 신호 모두 예년보다 셀러에게 유리합니다.','All three signals favor sellers compared with the usual level.')
     : T(`신호 3개 중 바이어 쪽 ${nb}개, 셀러 쪽 ${ns}개, 예년과 비슷한 것 ${3-nb-ns}개입니다.`,`Of the 3 signals, ${nb} favor buyers, ${ns} favor sellers, and ${3-nb-ns} are near the usual level.`);
   const tag=x=>x.v>0?`<span class="tag by">${T('바이어 쪽','Buyers')}</span>`:x.v<0?`<span class="tag se">${T('셀러 쪽','Sellers')}</span>`:`<span class="tag">${T('예년 수준','Usual')}</span>`;
@@ -1045,7 +1060,7 @@ function chart(host,months,vals,fmt,kind,zero){
   const t=ticks(zero?0:lo-pad,hi+pad);lo=t[0];hi=t[t.length-1];
   const bw=(w-pl-pr)/(kind==='bar'?n:(n-1));
   const X=i=>kind==='bar'?pl+i*bw+bw/2:pl+i*bw, Y=v=>pt+(hi-v)*(h-pt-pb)/(hi-lo);
-  let o=`<svg viewBox="0 0 ${w} ${h}" role="img" aria-label="${host.dataset.label} ${T('트랜드, 최근 값','trend, latest')} ${fmt(vals[n-1])}">`;
+  let o=`<svg viewBox="0 0 ${w} ${h}" role="img" aria-label="${host.dataset.label} ${T('트렌드, 최근 값','trend, latest')} ${fmt(vals[n-1])}">`;
   for(const tv of t.slice(1)){o+=`<line x1="${pl}" x2="${w-pr}" y1="${Y(tv)}" y2="${Y(tv)}" stroke="#dedede" stroke-dasharray="2 3"/><text x="${pl}" y="${Y(tv)-4}" class="ax">${fmt(tv)}</text>`}
   o+=`<line x1="${pl}" x2="${w-pr}" y1="${h-pb}" y2="${h-pb}" stroke="#111" stroke-width=".8"/>`;
   const yStep=n>72?2:1; months.forEach((m,i)=>{if(m.endsWith('-01')&&(+m.slice(0,4))%yStep===0)o+=`<text x="${X(i)}" y="${h-7}" class="ax" text-anchor="middle">${n>72?m.slice(0,4):m.slice(0,4)}</text>`});
@@ -1071,7 +1086,7 @@ function chart(host,months,vals,fmt,kind,zero){
 function LM(a){const L=a.L;if(!L)return null;const [y,m]=L.s.split('-').map(Number);return Array.from({length:L.inv.length},(_,i)=>{const k=(m-1)+i;return `${y+Math.floor(k/12)}-${String(k%12+1).padStart(2,'0')}`})}
 function renderCharts(){
   const a=byId(cur), L=a.L, lm=LM(a);
-  $('t-title').textContent=T(`${a.ko} 트랜드`,`${a.en} Trends`);
+  $('t-title').textContent=T(`${a.ko} 트렌드`,`${a.en} Trends`);
   const pm=NM.slice(0,a.p.length);
   const G=(k)=>L?[lm,L[k]]:[NM,a[k]];
   const P=L&&L.p?[lm.slice(-L.p.length),L.p]:[pm,a.p];
@@ -1082,7 +1097,7 @@ function renderCharts(){
     [T('거래 건수','Closed sales'),T('NWMLS · 월별','NWMLS · monthly'),...G('cs'),v=>num(v),'bar',true],
     [T('재고 소진 기간','Months of inventory'),T('NWMLS · 개월','NWMLS · months'),...G('msi'),v=>v.toFixed(1),'line',true],
     [T('판매 소요일','Days on market'),T('NWMLS · 중간값, 일','NWMLS · median, days'),...G('dom'),v=>Math.round(v)+T('일',''),'line',true],
-    [T('최초 리스팅가 대비','Sale-to-original-list'),T('NWMLS · %','NWMLS · %'),G('po')[0],G('po')[1].map(v=>v*100),pct,'line',false]];
+    [T('최초 리스팅가 대비','Sale-to-original-list ratio'),T('NWMLS · %','NWMLS · %'),G('po')[0],G('po')[1].map(v=>v*100),pct,'line',false]];
   const lm0=(L?lm:NM).slice(-1)[0], mi=+lm0.slice(5);
   $('samelg').innerHTML=range>12?`<span style="display:inline-block;width:10px;height:10px;background:#e8a33d;margin-right:6px"></span>${T(`주황색은 해마다 ${mi}월 (같은 달끼리 비교)`,`Orange marks ${MON[mi-1]} of each year (same-month comparison)`)} · <span style="display:inline-block;width:10px;height:10px;background:#1f4d3a;margin:0 6px"></span>${T('최신 달','Latest month')}`:'';
   $('charts').innerHTML=defs.map((d,i)=>`<div class="card"><h3>${d[0]}<small>${d[1]}</small></h3><div id="ch${i}" data-label="${d[0]}"></div></div>`).join('');
@@ -1099,11 +1114,11 @@ function renderJun(){
   $('j-overview-body').textContent=overview;
 }
 
-const COLS=()=>LANG==='en'?[['ko','City'],['price','Median price'],['priceY','YoY'],['inv','Listings'],['invY','YoY'],['msi','Months of inv.'],['dom','Days on mkt'],['po','Sale-to-orig. list'],['sc','Direction']]:[['ko','도시'],['price','중간 거래가'],['priceY','작년 대비'],['inv','현재 매물'],['invY','작년 대비'],['msi','재고 소진 기간'],['dom','판매 소요일'],['po','최초 리스팅가 대비'],['sc','시장 방향']];
+const COLS=()=>LANG==='en'?[['ko','City'],['price','Median price'],['priceY','YoY'],['inv','Listings'],['invY','YoY'],['msi','Months of inv.'],['dom','Days on mkt'],['po','Sale/orig. list'],['sc','Direction']]:[['ko','도시'],['price','중간 거래가'],['priceY','작년 대비'],['inv','현재 매물'],['invY','작년 대비'],['msi','재고 소진 기간'],['dom','판매 소요일'],['po','최초 리스팅가 대비'],['sc','시장 방향']];
 function renderTable(){
-  $('thead').innerHTML=COLS().map((c,i)=>`<th scope="col"><button type="button" data-k="${c[0]}" data-i="${i}">${c[1]}${sortKey===c[0]&&i!==8?(sortDir<0?' ↓':' ↑'):''}</button></th>`).join('');
+  $('thead').innerHTML=COLS().map((c,i)=>`<th scope="col" aria-sort="${sortKey===c[0]?(sortDir<0?'descending':'ascending'):'none'}"><button type="button" data-k="${c[0]}" data-i="${i}">${c[1]}${sortKey===c[0]?(sortDir<0?' ↓':' ↑'):''}</button></th>`).join('');
   const rows=A.filter(a=>a.kind==='city').map(a=>({a,...S(a),ko:nm(a)}));
-  rows.forEach(r=>r.sc=signals(r.a).score);
+  rows.forEach(r=>{const cls=verdict(r.a)[2];r.sc=({s:-2,'':0,mix:1,b:2,by:3})[cls]??0;});
   rows.sort((x,y)=>sortKey==='ko'?x.ko.localeCompare(y.ko,LANG)*sortDir:(x[sortKey]-y[sortKey])*sortDir);
   $('tbody').innerHTML=rows.map(r=>{const [,v,c]=verdict(r.a);return `<tr data-id="${r.a.id}" class="${r.a.id===cur?'on':''}" tabindex="0"><td class="cn">${nm(r.a)}${LANG==="en"?"":`<small>${r.a.en}</small>`}</td><td>${money(r.price)}</td><td>${arrow(r.priceY)}</td><td>${num(r.inv)}</td><td>${arrow(r.invY,0)}</td><td>${r.msi.toFixed(1)}${T('개월','')}</td><td>${r.dom}${T('일','')}</td><td>${r.po.toFixed(1)}%</td><td><span class="pill ${c}">${v}</span></td></tr>`}).join('');
 }
@@ -1124,20 +1139,20 @@ select('King');
 
 function renderWeekly(){
   const w=WEEKLY[WEEKLY.length-1], pw=WEEKLY.length>1?WEEKLY[WEEKLY.length-2]:null;
-  const [,month,day]=w.start.split('-').map(Number), week=Math.ceil(day/7);
-  $('wk-period').textContent=T(`${month}월 ${week}주차`,`${MON[month-1]} · Week ${week}`);
+  const [,month,day]=w.start.split('-').map(Number);
+  $('wk-period').textContent=T(`${month}월 ${day}일 시작 주간`,`Week of ${MON[month-1]} ${day}`);
   const f=d=>{const [y,m,dd]=d.split('-');return LANG==='en'?`${MON[+m-1]} ${+dd}`:`${+m}월 ${+dd}일`};
-  $('wk-date').textContent=`${f(w.start)} ${T('~','–')} ${f(w.end)}, ${w.end.slice(0,4)}`;
+  $('wk-date').textContent=T(`${w.end.slice(0,4)}년 ${f(w.start)} ~ ${f(w.end)}`,`${f(w.start)} – ${f(w.end)}, ${w.end.slice(0,4)}`);
   $('wk-mini').innerHTML=['King','Snohomish','Pierce'].map(id=>`<b>${nm(byId(id))}</b> ${T('펜딩','pending')} ${w[id][1]}`).join(' · ')
   if(typeof setWk==='function')setWk();
   $('wk-grid').innerHTML=['King','Snohomish','Pierce'].map(id=>{
     const v=w[id], mx=Math.max(...v), a=byId(id);
     return `<div class="wkc"><h3>${nm(a)}${LANG==='en'?'':`<small>${a.en.toUpperCase()}</small>`}</h3>`+v.map((x,i)=>{
       let ch='';
-      if(pw){const o=pw[id][i], d=x-o, pc=o?d/o*100:0;
+      if(pw){const o=pw[id][i], d=x-o, pc=o?d/o*100:null;
         const provisional=id==='Pierce'&&i===3&&pw.end==='2026-11-09';
-        ch=`<small class="${d>0?'up':d<0?'dn':''}">${d===0?T('지난주와 같음','Same as last week'):`${d>0?'▲':'▼'} ${Math.abs(pc).toFixed(1)}% (${d>0?'+':'−'}${Math.abs(d)})`}${provisional?T(' · 확인 중',' · provisional'):''}</small>`;}
-      return `<div class="wr"><span>${WKL()[i]}</span><span class="bar"><i style="width:${(x/mx*100).toFixed(1)}%"></i></span><b>${x}${ch}</b></div>`;
+        ch=`<small class="${d>0?'up':d<0?'dn':''}">${d===0?T('지난주와 같음','Same as last week'):`${pc===null?T('비교 불가','N/A'):`${d>0?'▲':'▼'} ${Math.abs(pc).toFixed(1)}%`} (${d>0?'+':'−'}${Math.abs(d)})`}${provisional?T(' · 확인 중',' · provisional'):''}</small>`;}
+      return `<div class="wr"><span>${WKL()[i]}</span><span class="bar"><i style="width:${((mx?x/mx:0)*100).toFixed(1)}%"></i></span><b>${x}${ch}</b></div>`;
     }).join('')+'</div>';
   }).join('');
   const brief=LANG==='en'&&NOTES.en?NOTES.en.weekly:NOTES.weekly;
@@ -1150,7 +1165,7 @@ function renderWeekly(){
   }));
 }
 let WKOPEN=(()=>{try{const v=localStorage.getItem('wkopen');if(v!==null)return v==='1'}catch(e){}return window.matchMedia('(min-width:861px)').matches})();
-function setWk(){ $('weekly').classList.toggle('closed',!WKOPEN); $('wk-tog').setAttribute('aria-expanded',WKOPEN); $('wk-togl').textContent=WKOPEN?T('접기','Hide'):T('펼쳐 보기','Show'); }
+function setWk(){ $('weekly').classList.toggle('closed',!WKOPEN); $('wk-tog').setAttribute('aria-expanded',WKOPEN); $('wk-open').setAttribute('aria-expanded',WKOPEN); $('wk-togl').textContent=WKOPEN?T('접기','Hide'):T('펼쳐 보기','Show'); }
 const wkFlip=()=>{WKOPEN=!WKOPEN;try{localStorage.setItem('wkopen',WKOPEN?'1':'0')}catch(e){}setWk()};
 $('wk-tog').addEventListener('click',wkFlip);$('wk-open').addEventListener('click',wkFlip);$('wk-mini').addEventListener('click',wkFlip);
 renderWeekly();
