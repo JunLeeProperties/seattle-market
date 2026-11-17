@@ -232,7 +232,7 @@ footer b{color:var(--ink)}
     </div>
     <p class="wkmini" id="wk-mini"></p>
     <button type="button" class="wkopen" id="wk-open" aria-controls="wk-grid"><span><b data-en="Open this week&#39;s report">이번 주 주간 리포트 펼쳐 보기</b><small data-en="New listings · Pending · Sold · Price cuts · Canceled, by county, vs. last week">카운티별 신규 매물 · 펜딩 · 거래 · 가격 인하 · 취소, 지난주와 비교</small></span><i>▾</i></button>
-    <p class="wknote" data-en="Activity by county for the week · Change vs. last week · Source: NWMLS · Canceled includes expired">카운티별 한 주 동안의 거래 활동 · 증감은 지난주 대비 · 출처 NWMLS · 취소에는 만료 매물 포함</p>
+    <p class="wknote" data-en="Activity by county for the week · Change vs. last week · Source: NWMLS · New listings: Active only (First Look excluded) · Canceled includes expired">카운티별 한 주 동안의 거래 활동 · 증감은 지난주 대비 · 출처 NWMLS · 신규 매물은 Active 기준 (First Look 제외) · 취소에는 만료 매물 포함</p>
     <div class="wkgrid" id="wk-grid"></div>
   </section>
 
@@ -489,7 +489,8 @@ function renderWeekly(){
     return `<div class="wkc"><h3>${nm(a)}${LANG==='en'?'':`<small>${a.en.toUpperCase()}</small>`}</h3>`+v.map((x,i)=>{
       let ch='';
       if(pw){const o=pw[id][i], d=x-o, pc=o?d/o*100:0;
-        ch=`<small class="${d>0?'up':d<0?'dn':''}">${d===0?T('지난주와 같음','Same as last week'):`${d>0?'▲':'▼'} ${Math.abs(pc).toFixed(1)}% (${d>0?'+':'−'}${Math.abs(d)})`}</small>`;}
+        const provisional=id==='Pierce'&&i===3&&pw.end==='2026-11-09';
+        ch=`<small class="${d>0?'up':d<0?'dn':''}">${d===0?T('지난주와 같음','Same as last week'):`${d>0?'▲':'▼'} ${Math.abs(pc).toFixed(1)}% (${d>0?'+':'−'}${Math.abs(d)})`}${provisional?T(' · 확인 중',' · provisional'):''}</small>`;}
       return `<div class="wr"><span>${WKL()[i]}</span><span class="bar"><i style="width:${(x/mx*100).toFixed(1)}%"></i></span><b>${x}${ch}</b></div>`;
     }).join('')+((()=>{const W=LANG==='en'&&NOTES.en?NOTES.en.weekly:NOTES.weekly;return W&&W[id]?`<p class="wkread"><b>${T('이번 주 읽기','This week')}</b>${W[id]}</p>`:''})())+'</div>';
   }).join('');
@@ -502,3 +503,4 @@ renderWeekly();
 </script>
 </body>
 </html>
+

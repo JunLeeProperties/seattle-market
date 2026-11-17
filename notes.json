@@ -1,9 +1,9 @@
 {
  "_안내": "따옴표(\") 안의 글을 고치면 웹페이지에 반영됩니다. overview는 전체 시장 의견이며, areas.<도시ID>.jun_memo는 지역별 자유 형식 의견입니다. 매수·매도 구분 없이 문단을 쓰고, 문단 사이는 줄을 두 번 바꿉니다. 아직 작성하지 않은 지역의 jun_memo는 빈 문자열(\"\")로 둡니다. 빈칸에는 자동 초안을 표시하지 않습니다. 영어는 en.overview와 en.areas 안에 같은 구조로 있습니다.",
  "weekly": {
-  "King": "새 매물(434건)과 펜딩(433건)이 거의 같습니다. 가격을 내린 매물(488건)이 펜딩보다 많아, 셀러들이 가격을 시장에 맞춰 가는 흐름이 이어지고 있습니다. 거래 완료가 21% 줄었지만 지난주에 10월 말 클로징이 몰렸던 영향이 커서, 한 주 숫자만으로 판단하기는 이릅니다.",
-  "Snohomish": "새 매물은 12% 늘었는데 펜딩은 190건으로 지난주와 비슷합니다. 가격을 내린 매물(257건)이 펜딩보다 많아 바이어가 고를 수 있는 폭이 넓습니다. 거래 완료 39% 감소도 월말 클로징 효과를 감안해서 보시는 게 좋습니다.",
-  "Pierce": "새 매물(176건)보다 펜딩(292건)이 훨씬 많습니다. 월간 지표로는 바이어 쪽이지만, 이번 주만 보면 나오는 매물보다 계약이 더 빠르게 이뤄지고 있습니다. 한두 주 더 지켜볼 만한 지역입니다."
+  "King": "신규 매물은 334건으로 지난주보다 23.0% 줄었고, 펜딩은 454건으로 4.8% 늘었습니다. 가격 인하는 433건으로 11.3% 줄었지만 여전히 적지 않습니다. 새로 나온 매물보다 계약으로 이어진 건수가 많았던 한 주입니다.",
+  "Snohomish": "신규 매물은 133건으로 지난주보다 20.8% 줄었고, 펜딩은 190건으로 같았습니다. 거래 완료는 111건으로 9.9% 늘었지만, 가격 인하도 273건으로 6.2% 늘었습니다. 계약 흐름은 유지되는 가운데 가격 조정도 이어지고 있습니다.",
+  "Pierce": "신규 매물은 141건으로 지난주보다 19.9% 줄었고, 펜딩도 261건으로 10.6% 줄었습니다. 그래도 펜딩은 신규 매물보다 120건 많았습니다. 가격 인하는 322건으로 지난주 입력값인 222건보다 45.0% 늘었습니다. 다만 지난주 가격 인하 수치는 원자료와의 대조가 남아 있어, 증가 폭은 확인이 필요합니다."
  },
  "areas": {
   "King": {
@@ -45,7 +45,7 @@
    "read": [
     "재고 소진 기간 4.3개월(예년 3.3개월), 판매 소요일 33일(예년 25일), 최초 리스팅가 대비 96.8%(예년 98.2%)로 세 가지 신호가 모두 바이어 쪽입니다.",
     "반면 10월 새 매물은 1,122건으로 작년 10월보다 15% 적고 예년보다도 적습니다. 현재 매물도 8월 4,409채에서 4,102채로 줄었습니다.",
-    "최근 주간 자료에서도 펜딩(292건)이 새 매물(176건)보다 훨씬 많습니다. 쌓인 재고가 조금씩 소화되고 있다는 뜻입니다.",
+    "11월 9~16일 주간 자료에서도 펜딩(261건)이 신규 매물(141건)보다 많았습니다. 다만 펜딩도 지난주보다 10.6% 줄어, 계약 건수가 늘어난 것은 아닙니다.",
     "중간 거래가는 55만 달러로 작년보다 0.9% 올랐습니다. 세 카운티 중 가격이 내리지 않은 유일한 곳입니다."
    ],
    "watch": "새 매물 감소가 이어져 재고 소진 기간이 4개월 아래로 내려가는지",
@@ -263,9 +263,9 @@
  },
  "en": {
   "weekly": {
-   "King": "New listings (434) and pendings (433) are almost equal. Price cuts (488) outnumber pendings, so sellers continue to adjust prices to the market. Closed sales fell 21%, but last week included a rush of end-of-October closings, so it's too early to judge from one week.",
-   "Snohomish": "New listings rose 12%, while pendings stayed at 190, about the same as last week. Price cuts (257) outnumber pendings, giving buyers plenty of choice. The 39% drop in closed sales should also be read with the end-of-month closing effect in mind.",
-   "Pierce": "Pendings (292) far outnumber new listings (176). The monthly numbers lean toward buyers, but this week contracts are happening faster than new homes come on the market. Worth watching for another week or two."
+   "King": "New listings fell 23.0% to 334, while pending sales rose 4.8% to 454. Price reductions fell 11.3% to 433 but remained substantial. More homes went pending than came onto the market this week.",
+   "Snohomish": "New listings fell 20.8% to 133, while pending sales held at 190. Closed sales rose 9.9% to 111, but price reductions also rose 6.2% to 273. Contract activity held steady as sellers continued adjusting prices.",
+   "Pierce": "New listings fell 19.9% to 141, and pending sales fell 10.6% to 261. Pending sales still exceeded new listings by 120. Price reductions rose 45.0% to 322 from last week’s recorded 222. That prior figure still needs to be checked against the original source, so the size of the increase remains provisional."
   },
   "areas": {
    "King": {
@@ -301,7 +301,7 @@
     "read": [
      "Months of inventory 4.3 (usually 3.3), days on market 33 (usually 25), and sale-to-original-list 96.8% (usually 98.2%). All three signals point to buyers.",
      "On the other hand, October new listings were 1,122, 15% fewer than last October and below normal. Active listings fell from 4,409 in August to 4,102.",
-     "Recent weekly data also shows far more pendings (292) than new listings (176), meaning the built-up inventory is slowly being absorbed.",
+     "In the Nov 9–16 weekly data, pending sales (261) exceeded new listings (141). Pending sales also fell 10.6% from the prior week, so this does not indicate an increase in contracts.",
      "The median sale price is $550K, up 0.9% from last year, the only one of the three counties where prices did not fall."
     ],
     "watch": "Whether shrinking new listings push months of inventory below 4",

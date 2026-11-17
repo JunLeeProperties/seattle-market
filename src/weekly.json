@@ -48,5 +48,73 @@
    222,
    111
   ]
+ },
+ {
+  "start": "2026-11-09",
+  "end": "2026-11-16",
+  "King": [
+   334,
+   454,
+   274,
+   433,
+   363
+  ],
+  "Snohomish": [
+   133,
+   190,
+   111,
+   273,
+   111
+  ],
+  "Pierce": [
+   141,
+   261,
+   160,
+   322,
+   106
+  ],
+  "source_status_counts": {
+   "King": {
+    "First Look": 36,
+    "Active": 334,
+    "Back On Market": 32,
+    "List Price Reduced": 433,
+    "List Price Increased": 24,
+    "Contingent": 12,
+    "Listing Expired": 77,
+    "Listing Pending": 454,
+    "Listing Sold": 274,
+    "Listing Canceled": 286
+   },
+   "Snohomish": {
+    "First Look": 16,
+    "Active": 133,
+    "Back On Market": 19,
+    "List Price Reduced": 273,
+    "List Price Increased": 15,
+    "Contingent": 4,
+    "Listing Expired": 30,
+    "Listing Pending": 190,
+    "Listing Sold": 111,
+    "Listing Canceled": 81
+   },
+   "Pierce": {
+    "First Look": 20,
+    "Active": 141,
+    "Back On Market": 30,
+    "List Price Reduced": 322,
+    "List Price Increased": 19,
+    "Contingent": 5,
+    "Listing Expired": 20,
+    "Listing Pending": 261,
+    "Listing Sold": 160,
+    "Listing Canceled": 86
+   }
+  },
+  "definitions": {
+   "new_listings": "Active only; First Look and Back On Market excluded",
+   "canceled_expired": "Listing Canceled + Listing Expired",
+   "period": "Assumed next weekly period after 2026-11-02–2026-11-09; counts supplied by Jun on 2026-11-16"
+  }
  }
 ]
