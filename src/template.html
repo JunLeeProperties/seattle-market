@@ -147,8 +147,12 @@ footer b{color:var(--ink)}
 .wr b{font-size:15px;font-weight:900;min-width:36px;text-align:right}
 .wr small{display:block;font-size:10.5px;color:var(--grey);font-weight:400;text-align:right}
 @media(max-width:860px){.wkgrid{grid-template-columns:1fr}}
-.wkread{margin-top:12px;padding-top:12px;border-top:1px solid #c9d6ce;font-size:13px;line-height:1.7;color:#333}
-.wkread b{display:block;font-size:11px;letter-spacing:.14em;color:var(--g);margin-bottom:3px}
+.wkbrief{margin-top:22px;padding:24px 26px;background:#f7f8f6;border-top:2px solid var(--g)}
+.wkbrief h3{font-size:21px;line-height:1.5;letter-spacing:-.02em;margin:8px 0 16px;word-break:keep-all}
+.wkbrief-body{max-width:780px}
+.wkbrief-body p{font-size:14.5px;line-height:1.9;margin:0 0 16px;word-break:keep-all}
+.wkbrief-source{font-size:11.5px;line-height:1.7;color:var(--grey);border-top:1px solid var(--rule);padding-top:12px}
+@media(max-width:600px){.wkbrief{padding:20px 18px}.wkbrief h3{font-size:19px}.wkbrief-body p{font-size:14px;line-height:1.85}}
 .vsub{font-size:16px;font-weight:700;color:var(--g2);margin:0 0 10px;line-height:1.5;word-break:keep-all}
 .pill.mix,.tag.mix{background:#fff7e0;border-color:#b58900;color:#6b5200}
 .deep{margin-top:30px;padding-top:24px;border-top:1px solid var(--rule)}
@@ -194,7 +198,7 @@ footer b{color:var(--ink)}
 .wktog{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--ink);padding:7px 14px;font-size:13px;font-weight:700;min-height:36px;background:#fff;cursor:pointer}
 .wktog[aria-expanded=true]{background:var(--ink);color:#fff}
 .wktog i{font-style:normal;transition:transform .2s}.wktog[aria-expanded=true] i{transform:rotate(180deg)}
-#weekly.closed .wkgrid,#weekly.closed .wknote{display:none}
+#weekly.closed .wkgrid,#weekly.closed .wknote,#weekly.closed .wkbrief{display:none}
 #weekly.closed{padding-bottom:22px}
 .wkmini{display:none;font-size:13px;color:#333;margin-top:6px}
 #weekly.closed .wkmini{display:block;cursor:pointer}
@@ -228,12 +232,18 @@ footer b{color:var(--ink)}
   <section id="weekly">
     <div class="wkhead">
       <div><div class="eyebrow" data-en="PART 1 · WEEKLY MARKET RECAP">PART 1 · WEEKLY MARKET RECAP</div><h2 class="wk-title"><span data-en="Weekly Report">주간 리포트</span><span class="wk-period" id="wk-period"></span></h2><p class="wkdate" id="wk-date"></p></div>
-      <button type="button" class="wktog" id="wk-tog" aria-expanded="true" aria-controls="wk-grid"><span id="wk-togl">접기</span><i>▾</i></button>
+      <button type="button" class="wktog" id="wk-tog" aria-expanded="true" aria-controls="wk-grid wk-brief"><span id="wk-togl">접기</span><i>▾</i></button>
     </div>
     <p class="wkmini" id="wk-mini"></p>
-    <button type="button" class="wkopen" id="wk-open" aria-controls="wk-grid"><span><b data-en="Open this week&#39;s report">이번 주 주간 리포트 펼쳐 보기</b><small data-en="New listings · Pending · Sold · Price cuts · Canceled, by county, vs. last week">카운티별 신규 매물 · 펜딩 · 거래 · 가격 인하 · 취소, 지난주와 비교</small></span><i>▾</i></button>
+    <button type="button" class="wkopen" id="wk-open" aria-controls="wk-grid wk-brief"><span><b data-en="Open this week&#39;s report">이번 주 주간 리포트 펼쳐 보기</b><small data-en="New listings · Pending · Sold · Price cuts · Canceled, by county, vs. last week">카운티별 신규 매물 · 펜딩 · 거래 · 가격 인하 · 취소, 지난주와 비교</small></span><i>▾</i></button>
     <p class="wknote" data-en="Activity by county for the week · Change vs. last week · Source: NWMLS · New listings: Active only (First Look excluded) · Canceled includes expired">카운티별 한 주 동안의 거래 활동 · 증감은 지난주 대비 · 출처 NWMLS · 신규 매물은 Active 기준 (First Look 제외) · 취소에는 만료 매물 포함</p>
     <div class="wkgrid" id="wk-grid"></div>
+    <article class="wkbrief" id="wk-brief" aria-labelledby="wk-brief-title">
+      <div class="eyebrow" data-en="WEEKLY UPDATE">주간 업데이트</div>
+      <h3 id="wk-brief-title"></h3>
+      <div class="wkbrief-body" id="wk-brief-body"></div>
+      <p class="wkbrief-source" id="wk-brief-source"></p>
+    </article>
   </section>
 
   <div class="chap" id="monthly">
@@ -492,8 +502,16 @@ function renderWeekly(){
         const provisional=id==='Pierce'&&i===3&&pw.end==='2026-11-09';
         ch=`<small class="${d>0?'up':d<0?'dn':''}">${d===0?T('지난주와 같음','Same as last week'):`${d>0?'▲':'▼'} ${Math.abs(pc).toFixed(1)}% (${d>0?'+':'−'}${Math.abs(d)})`}${provisional?T(' · 확인 중',' · provisional'):''}</small>`;}
       return `<div class="wr"><span>${WKL()[i]}</span><span class="bar"><i style="width:${(x/mx*100).toFixed(1)}%"></i></span><b>${x}${ch}</b></div>`;
-    }).join('')+((()=>{const W=LANG==='en'&&NOTES.en?NOTES.en.weekly:NOTES.weekly;return W&&W[id]?`<p class="wkread"><b>${T('이번 주 읽기','This week')}</b>${W[id]}</p>`:''})())+'</div>';
+    }).join('')+'</div>';
   }).join('');
+  const brief=LANG==='en'&&NOTES.en?NOTES.en.weekly:NOTES.weekly;
+  const paragraphs=brief&&Array.isArray(brief.paragraphs)?brief.paragraphs:[];
+  $('wk-brief').hidden=!paragraphs.length;
+  $('wk-brief-title').textContent=brief&&brief.title||'';
+  $('wk-brief-source').textContent=brief&&brief.source||'';
+  $('wk-brief-body').replaceChildren(...paragraphs.map(text=>{
+    const p=document.createElement('p');p.textContent=text;return p;
+  }));
 }
 let WKOPEN=(()=>{try{const v=localStorage.getItem('wkopen');if(v!==null)return v==='1'}catch(e){}return window.matchMedia('(min-width:861px)').matches})();
 function setWk(){ $('weekly').classList.toggle('closed',!WKOPEN); $('wk-tog').setAttribute('aria-expanded',WKOPEN); $('wk-togl').textContent=WKOPEN?T('접기','Hide'):T('펼쳐 보기','Show'); }
