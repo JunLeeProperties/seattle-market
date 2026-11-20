@@ -231,6 +231,72 @@ footer b{color:var(--ink)}
  .top .cta{white-space:nowrap;flex-shrink:0;font-size:12px;padding:9px 10px}
 }
 </style>
+<style id="polish-c">
+/* ===== 개선안 C (Impeccable polish) — 원본 template.html 위에 덮어쓰는 스타일 ===== */
+:root{--gd:#173d2e;--axis:#6f6f6f}
+/* 1. 영문 소제목(eyebrow) 제거: 한글 제목이 스스로 무게를 갖게 */
+.eyebrow{display:none!important}
+.hero-meta{margin-bottom:18px}
+/* 2. 섹션 간격: 제목 위는 넉넉하게, 아래는 촘촘하게 */
+section{padding:44px 0}
+h2{margin:0 0 6px;text-wrap:balance}
+.sub,.jlead{margin-bottom:20px}
+.chap{padding-top:34px}
+#weekly{padding-top:30px}
+/* 3. 판정 박스: 순검정 → 브랜드 딥그린 (하단 연락처 영역과 같은 계열) */
+.verdict{background:var(--gd)}
+.sig,.sr{border-color:#ffffff26}
+.vwhy{color:#d9e5de}
+.sr small,.sfoot{color:#b7cabe}
+.tag{border-color:#ffffff66}
+.tag.by{background:var(--g2);border-color:var(--g2);color:var(--gd)}
+.tag.se{color:var(--gd)}
+/* 4. 데이터 분석 번호(01~04) → 순서 의미가 없어서 작은 사각 표시로 */
+.col.data li,.deep li{padding-left:22px}
+.col.data li::before,.deep li::before{content:"";width:7px;height:7px;background:var(--g);top:.78em;left:2px}
+/* 5. Jun 의견 박스: 왼쪽 세로줄 대신 흰 카드 전체 */
+.memo{border-left:0;border:1px solid #c9d6ce;padding:18px 20px}
+/* 6. 숫자: 자릿수 정렬(표 숫자체) */
+.kpi b,.sr b,.wr b,.wr small,.chg,.report-period strong,.vbig{font-variant-numeric:tabular-nums}
+.kpi b{letter-spacing:-.03em}
+.kpi i .chg{margin-right:4px}
+/* 7. 그래프 축 글자 대비 올리기 (3.4:1 → 5:1) */
+.ax{fill:var(--axis)}
+.pg em{color:#5c5c5c}
+/* 8. 주간 카드 막대: 흰 바탕 위 그린 → 조금 더 진하게 대비 */
+.wr .bar{background:#fff;border-radius:2px;overflow:hidden}
+/* 9. 브라우저 기본 요소도 브랜드색으로 */
+::selection{background:var(--g);color:#fff}
+html{scrollbar-color:#b9c7be transparent;accent-color:var(--g)}
+a{text-underline-offset:3px}
+:focus-visible{outline:2px solid var(--g);outline-offset:3px;border-radius:2px}
+/* 10. 버튼·칩 상태 */
+.chip,.seg button,.lang button,.wktog,th button{transition:background-color .15s ease-out,color .15s ease-out,border-color .15s ease-out}
+.chip[aria-pressed=true],.seg button[aria-pressed=true],.lang button[aria-pressed="true"],.wktog[aria-expanded=true]{background:var(--gd);border-color:var(--gd)}
+.chip:hover{border-color:var(--g)}
+.top .cta:hover{background:var(--gd)}
+/* 11. 모바일 */
+@media(max-width:600px){
+ section{padding:34px 0}
+ .kpi b{font-size:26px}
+ .verdict>div{padding:22px 20px}
+ .memo{padding:16px}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+/* 12. 한국어 단어 중간 줄바꿈 막기 */
+.hero p,.sub,.jlead,.wknote,.data-period,.vwhy,.dwatch,.contact p,footer{word-break:keep-all}
+.wkc h3 small{letter-spacing:.12em;font-size:10px;color:var(--g2)}
+h2,h3,.vbig,.vsub{word-break:keep-all}
+/* 13. 한글에 넓은 자간은 어색해서 줄임 */
+.vname,.verdict [class*=gauge] .vname{letter-spacing:.06em}
+/* 14. 작은 글씨 키우기와 대비 (검사기 지적 반영) */
+.clist span,.contact .eyebrow{color:#c3d6cb;font-size:11px}
+.vsub{color:#bcd3c5}
+.badge,.wkc h3 small{font-size:11px}
+.data-period,.wkbrief-source,.kpi span,.sfoot,.card h3 small,.wknote,.sub,footer,.pg em,td.cn small,th button,th{font-size:12px}
+.sr small{font-size:12px}
+.wr small{font-size:11.5px}
+</style>
 </head>
 <body>
 <header class="top"><div class="wrap">
@@ -242,7 +308,7 @@ footer b{color:var(--ink)}
 
 <main class="wrap">
   <div class="hero">
-    <div class="hero-meta"><div class="eyebrow">SEATTLE MARKET INDEX</div><div class="report-period" data-en="<span>MONTHLY DATA</span><strong>OCTOBER 2026</strong>"><span>월간 데이터 기준</span><strong>2026년 10월</strong></div></div>
+    <div class="hero-meta"><div class="report-period" data-en="<span>MONTHLY DATA</span><strong>OCTOBER 2026</strong>"><span>월간 데이터 기준</span><strong>2026년 10월</strong></div></div>
     <h1 data-en="Seattle Real Estate<br>Market at a Glance">한눈에 보는<br>시애틀 부동산 시장</h1>
     <p data-en="Home prices, inventory and sales pace across King, Snohomish and Pierce counties and 14 cities, updated every month. Choose an area to update its monthly analysis, figures and charts.">킹 · 스노호미시 · 피어스 3개 카운티와 14개 도시의 집값, 매물, 거래 속도를 매달 정리합니다. 지역을 고르시면 해당 지역의 월간 분석과 숫자, 그래프를 보실 수 있습니다.</p>
     <div class="upd" data-en="Data: <b>NWMLS October 2026</b> · city prices <b>Aug–Oct 2026</b> · Market data updated weekly and monthly; commentary refreshed as needed">기준: <b>NWMLS 2026년 10월</b> · 도시 가격 <b>2026년 8~10월</b> · 시장 데이터는 주간·월간으로, 의견은 수시로 업데이트</div>
@@ -250,7 +316,7 @@ footer b{color:var(--ink)}
 
   <section id="weekly">
     <div class="wkhead">
-      <div><div class="eyebrow" data-en="PART 1 · WEEKLY MARKET RECAP">PART 1 · WEEKLY MARKET RECAP</div><h2 class="wk-title"><span data-en="Weekly Report">주간 리포트</span><span class="wk-period" id="wk-period"></span></h2><p class="wkdate" id="wk-date"></p></div>
+      <div><h2 class="wk-title"><span data-en="Weekly Report">주간 리포트</span><span class="wk-period" id="wk-period"></span></h2><p class="wkdate" id="wk-date"></p></div>
       <button type="button" class="wktog" id="wk-tog" aria-expanded="true" aria-controls="wk-grid wk-brief"><span id="wk-togl">접기</span><i>▾</i></button>
     </div>
     <p class="wkmini" id="wk-mini"></p>
@@ -269,7 +335,7 @@ footer b{color:var(--ink)}
   </section>
 
   <div class="chap" id="monthly">
-    <div class="eyebrow" data-en="PART 2 · MONTHLY ANALYSIS">PART 2 · MONTHLY ANALYSIS</div>
+    
     <h2 data-en="<span class='month-label'>October</span> Monthly Analysis by Area"><span class="month-label">10월</span> 지역별 월간 분석</h2>
     <p class="sub" data-en="NWMLS, October 2026 · Pick an area and the analysis, numbers and charts below all switch to it.">NWMLS 2026년 10월 기준 · 지역을 고르시면 아래 분석, 숫자, 그래프가 모두 그 지역으로 바뀝니다.</p>
   </div>
@@ -280,7 +346,7 @@ footer b{color:var(--ink)}
   <div class="picker" id="picker" role="group" aria-label="지역 선택"></div>
 
   <section id="jun">
-    <div class="eyebrow">ANALYSIS &amp; OPINION</div><h2 id="j-title">시장 분석과 현장에서 보는 Jun의 의견</h2>
+    <h2 id="j-title">시장 분석과 현장에서 보는 Jun의 의견</h2>
     <p class="jlead" data-en="Explore the NWMLS data alongside Jun&#39;s perspective, informed by client work and discussions with colleagues.">NWMLS 데이터 분석과 함께, 현장 경험과 동료들과 나눈 이야기를 바탕으로 정리한 Jun의 의견을 담았습니다.</p>
     <div class="two">
       <div class="col data">
@@ -310,7 +376,7 @@ footer b{color:var(--ink)}
   </section>
 
   <section id="trend">
-    <div class="eyebrow">TRENDS</div><h2 id="t-title">트렌드</h2>
+    <h2 id="t-title">트렌드</h2>
     <p class="sub" data-en="Hover over or tap a chart to see that month&#39;s number.">그래프 위에 마우스를 올리거나 손가락으로 누르면 그 달의 숫자가 보입니다.</p>
     <div class="seg" role="group" aria-label="기간" id="range">
       <button type="button" data-n="12" aria-pressed="false" data-en="1Y">1년</button><button type="button" data-n="60" aria-pressed="true" data-en="5Y">5년</button><button type="button" data-n="120" aria-pressed="false" data-en="10Y">10년</button>
@@ -321,7 +387,7 @@ footer b{color:var(--ink)}
 
 
   <section id="compare">
-    <div class="eyebrow">CITY COMPARISON</div><h2 data-en="City Comparison">도시 비교</h2>
+    <h2 data-en="City Comparison">도시 비교</h2>
     <p class="sub" data-en="City prices: Aug–Oct; other figures: October. Changes are year over year. Tap a column to sort, or a city to view its analysis.">도시 가격은 8~10월, 나머지는 10월 기준이며 증감은 작년 대비입니다. 열 제목을 누르면 정렬되고, 도시를 누르면 해당 지역 분석으로 이동합니다.</p>
     <div class="tw"><table><thead><tr id="thead"></tr></thead><tbody id="tbody"></tbody></table></div>
   </section>
@@ -330,7 +396,7 @@ footer b{color:var(--ink)}
 
 <div class="contact" id="contact"><div class="wrap cgrid">
   <div>
-    <div class="eyebrow" style="color:var(--g2)">CONTACT</div>
+    
     <h2 data-en="Curious what homes in your area are worth?">우리 동네 시세가 궁금하다면</h2>
     <p data-en="Tell me the neighborhood, home type and price range you&#39;re interested in, and I&#39;ll send you tailored data and this month&#39;s market report (PDF), in Korean or English.">관심 있는 동네와 집 종류, 가격대를 알려주시면 맞춤 자료와 이달의 마켓 리포트(PDF)를 한국어 또는 영어로 보내드립니다.</p>
     <div class="clist">
