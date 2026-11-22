@@ -297,18 +297,40 @@ h2,h3,.vbig,.vsub{word-break:keep-all}
 .sr small{font-size:12px}
 .wr small{font-size:11.5px}
 </style>
+<style id="v2">
+/* v2: 휴대폰에서 답을 먼저, 차트 글씨, 지역 링크, PDF 링크 */
+.hero-meta .rpt{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 16px;border:1px solid var(--g);color:var(--g);font-size:14px;font-weight:700;text-decoration:none;border-radius:4px;transition:background-color .15s ease-out,color .15s ease-out}
+.hero-meta .rpt:hover{background:var(--g);color:#fff}
+.hero-meta .rpt svg{width:16px;height:16px;flex:none}
+.ax{font-size:12px}.el{font-size:12.5px}
+.nowbar{position:fixed;left:0;right:0;top:60px;z-index:9;background:#fffffff2;backdrop-filter:blur(6px);border-bottom:1px solid var(--rule);transform:translateY(-8px);opacity:0;visibility:hidden;transition:opacity .2s ease-out,transform .2s ease-out,visibility 0s .2s}
+.nowbar.on{opacity:1;transform:none;visibility:visible;transition:opacity .2s ease-out,transform .2s ease-out}
+.nowbar .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;height:48px}
+.nowbar span{font-size:13px;color:var(--grey);word-break:keep-all}
+.nowbar b{color:var(--ink);font-size:15px;margin-left:6px}
+.nowbar .vt{margin-left:8px;font-size:12px;font-weight:700;color:var(--g)}
+.nowbar button{min-height:36px;padding:0 14px;border:1px solid var(--ink);font-size:13px;font-weight:700;background:#fff;flex:none}
+.nowbar button:hover{border-color:var(--g);color:var(--g)}
+.share{display:inline-flex;align-items:center;gap:6px;margin-top:14px;min-height:40px;padding:0 14px;border:1px solid #ffffff66;color:#fff;font-size:13px;font-weight:700}
+.share:hover{border-color:#fff}
+.wkbrief-more{display:inline-flex;align-items:center;gap:6px;min-height:44px;padding:0 16px;border:1px solid var(--g);color:var(--g);font-size:14px;font-weight:700;margin:0 0 16px;background:#fff}
+.wkbrief-more:hover{background:var(--g);color:#fff}
+.wkbrief-body.short p+p{display:none}
+@media(max-width:600px){.nowbar{top:60px}.nowbar .wrap{padding:0 16px}.nowbar .vt{display:block;margin:0}.nowbar span{line-height:1.3}}
+</style>
 </head>
 <body>
 <header class="top"><div class="wrap">
   <img src="data:image/png;base64,__LOGO__" alt="Jun Lee Properties">
-  <nav aria-label="페이지 내 이동"><a href="#weekly" data-en="Weekly">주간</a><a href="#monthly" data-en="Monthly">월간</a><a href="#jun" data-en="Analysis">분석·의견</a><a href="#market" data-en="Market">시장 현황</a><a href="#trend" data-en="Trends">트렌드</a><a href="#compare" data-en="Compare">도시 비교</a></nav>
+  <nav aria-label="페이지 내 이동"><a href="#weekly" data-en="Weekly">주간</a><a href="#monthly" data-en="Monthly">월간</a><a href="#market" data-en="Market">시장 현황</a><a href="#jun" data-en="Analysis">분석·의견</a><a href="#trend" data-en="Trends">트렌드</a><a href="#compare" data-en="Compare">도시 비교</a></nav>
   <div class="lang" role="group" aria-label="Language"><button type="button" data-lang="ko">한국어</button><button type="button" data-lang="en">EN</button></div>
   <a class="cta" href="#contact" data-en="Contact">상담 문의</a>
 </div></header>
+<div class="nowbar" id="nowbar" aria-hidden="true"><div class="wrap"><span><span data-en="Viewing">지금 보는 지역</span><b id="nb-name"></b><em class="vt" id="nb-v" style="font-style:normal"></em></span><button type="button" id="nb-change" data-en="Change area">지역 바꾸기</button></div></div>
 
 <main class="wrap">
   <div class="hero">
-    <div class="hero-meta"><div class="report-period" data-en="<span>MONTHLY DATA</span><strong>OCTOBER 2026</strong>"><span>월간 데이터 기준</span><strong>2026년 10월</strong></div></div>
+    <div class="hero-meta"><div class="report-period" data-en="<span>MONTHLY DATA</span><strong>OCTOBER 2026</strong>"><span>월간 데이터 기준</span><strong>2026년 10월</strong></div><a class="rpt" href="report/" data-en="<svg viewBox=&quot;0 0 16 16&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;1.6&quot; aria-hidden=&quot;true&quot;><path d=&quot;M4 1.5h5.5L13 5v9.5H4z&quot;/><path d=&quot;M9.5 1.5V5H13&quot;/><path d=&quot;M6.5 9.5 8.5 11.5 10.5 9.5M8.5 7v4.5&quot;/></svg>October Market Report (PDF)"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 1.5h5.5L13 5v9.5H4z"/><path d="M9.5 1.5V5H13"/><path d="M6.5 9.5 8.5 11.5 10.5 9.5M8.5 7v4.5"/></svg>10월 마켓 리포트 PDF</a></div>
     <h1 data-en="Seattle Real Estate<br>Market at a Glance">한눈에 보는<br>시애틀 부동산 시장</h1>
     <p data-en="Home prices, inventory and sales pace across King, Snohomish and Pierce counties and 14 cities, updated every month. Choose an area to update its monthly analysis, figures and charts.">킹 · 스노호미시 · 피어스 3개 카운티와 14개 도시의 집값, 매물, 거래 속도를 매달 정리합니다. 지역을 고르시면 해당 지역의 월간 분석과 숫자, 그래프를 보실 수 있습니다.</p>
     <div class="upd" data-en="Data: <b>NWMLS October 2026</b> · city prices <b>Aug–Oct 2026</b> · Market data updated weekly and monthly; commentary refreshed as needed">기준: <b>NWMLS 2026년 10월</b> · 도시 가격 <b>2026년 8~10월</b> · 시장 데이터는 주간·월간으로, 의견은 수시로 업데이트</div>
@@ -339,11 +361,21 @@ h2,h3,.vbig,.vsub{word-break:keep-all}
     <h2 data-en="<span class='month-label'>October</span> Monthly Analysis by Area"><span class="month-label">10월</span> 지역별 월간 분석</h2>
     <p class="sub" data-en="NWMLS, October 2026 · Pick an area and the analysis, numbers and charts below all switch to it.">NWMLS 2026년 10월 기준 · 지역을 고르시면 아래 분석, 숫자, 그래프가 모두 그 지역으로 바뀝니다.</p>
   </div>
-  <details class="op-overview" id="j-overview">
-    <summary><span data-en="Jun's Perspective · Overall Market">현장에서 보는 Jun의 의견 · 전체 시장</span><span class="op-toggle" aria-hidden="true">+</span></summary>
-    <div class="op-body" id="j-overview-body"></div>
-  </details>
   <div class="picker" id="picker" role="group" aria-label="지역 선택"></div>
+
+  <section id="market">
+    <div class="verdict" aria-live="polite">
+      <div><div class="vname" id="v-name"></div><div class="vbig" id="v-big"></div><p class="vsub" id="v-sub"></p><p class="vwhy" id="v-why"></p><button type="button" class="share" id="v-share" data-en="Copy link to this area">이 지역 링크 복사</button></div>
+      <div class="gauge">
+        <div class="vname" data-en="3 signals vs. the usual level for this season">예년 같은 시기와 비교한 신호 3개</div>
+        <div class="sig" id="sig"></div>
+        <p class="sfoot" data-en="Usual level = average of Sep–Nov 2024 and 2025">예년 = 2024·2025년 9~11월 평균</p>
+      </div>
+    </div>
+    <div class="kpis" id="kpis" style="margin-top:26px"></div>
+  </section>
+
+
 
   <section id="jun">
     <h2 id="j-title">시장 분석과 현장에서 보는 Jun의 의견</h2>
@@ -363,18 +395,6 @@ h2,h3,.vbig,.vsub{word-break:keep-all}
     </div>
   </section>
 
-  <section id="market">
-    <div class="verdict">
-      <div><div class="vname" id="v-name"></div><div class="vbig" id="v-big"></div><p class="vsub" id="v-sub"></p><p class="vwhy" id="v-why"></p></div>
-      <div class="gauge">
-        <div class="vname" data-en="3 signals vs. the usual level for this season">예년 같은 시기와 비교한 신호 3개</div>
-        <div class="sig" id="sig"></div>
-        <p class="sfoot" data-en="Usual level = average of Sep–Nov 2024 and 2025">예년 = 2024·2025년 9~11월 평균</p>
-      </div>
-    </div>
-    <div class="kpis" id="kpis" style="margin-top:26px"></div>
-  </section>
-
   <section id="trend">
     <h2 id="t-title">트렌드</h2>
     <p class="sub" data-en="Hover over or tap a chart to see that month&#39;s number.">그래프 위에 마우스를 올리거나 손가락으로 누르면 그 달의 숫자가 보입니다.</p>
@@ -385,6 +405,13 @@ h2,h3,.vbig,.vsub{word-break:keep-all}
     <div class="charts" id="charts"></div>
   </section>
 
+
+  <div class="wrapov">
+  <details class="op-overview" id="j-overview">
+    <summary><span data-en="Jun's Perspective · Overall Market">현장에서 보는 Jun의 의견 · 전체 시장</span><span class="op-toggle" aria-hidden="true">+</span></summary>
+    <div class="op-body" id="j-overview-body"></div>
+  </details>
+  </div>
 
   <section id="compare">
     <h2 data-en="City Comparison">도시 비교</h2>
@@ -493,7 +520,7 @@ function ticks(lo,hi,n=4){const span=hi-lo||1,raw=span/n,mag=10**Math.floor(Math
   const out=[];for(let x=Math.floor(lo/st)*st;x<=Math.ceil(hi/st)*st+1e-9;x+=st)out.push(+x.toFixed(6));return out}
 function chart(host,months,vals,fmt,kind,zero){
   const n=range&&range<vals.length?range:vals.length; months=months.slice(-n); vals=vals.slice(-n);
-  const w=520,h=230,pl=6,pr=62,pt=14,pb=24;
+  const w=Math.max(300,Math.round(host.clientWidth||520)),h=w<480?210:230,pl=6,pr=w<480?58:66,pt=16,pb=26;
   let lo=zero?0:Math.min(...vals),hi=Math.max(...vals);const pad=(hi-lo)*.1||1;
   const t=ticks(zero?0:lo-pad,hi+pad);lo=t[0];hi=t[t.length-1];
   const bw=(w-pl-pr)/(kind==='bar'?n:(n-1));
@@ -501,7 +528,7 @@ function chart(host,months,vals,fmt,kind,zero){
   let o=`<svg viewBox="0 0 ${w} ${h}" role="img" aria-label="${host.dataset.label} ${T('트렌드, 최근 값','trend, latest')} ${fmt(vals[n-1])}">`;
   for(const tv of t.slice(1)){o+=`<line x1="${pl}" x2="${w-pr}" y1="${Y(tv)}" y2="${Y(tv)}" stroke="#dedede" stroke-dasharray="2 3"/><text x="${pl}" y="${Y(tv)-4}" class="ax">${fmt(tv)}</text>`}
   o+=`<line x1="${pl}" x2="${w-pr}" y1="${h-pb}" y2="${h-pb}" stroke="#111" stroke-width=".8"/>`;
-  const yStep=n>72?2:1; months.forEach((m,i)=>{if(m.endsWith('-01')&&(+m.slice(0,4))%yStep===0)o+=`<text x="${X(i)}" y="${h-7}" class="ax" text-anchor="middle">${n>72?m.slice(0,4):m.slice(0,4)}</text>`});
+  const yStep=n>72?(w<480?3:2):(w<400&&n>24?2:1); months.forEach((m,i)=>{if(m.endsWith('-01')&&(+m.slice(0,4))%yStep===0)o+=`<text x="${X(i)}" y="${h-7}" class="ax" text-anchor="middle">${n>72?m.slice(0,4):m.slice(0,4)}</text>`});
   if(n<=13)months.forEach((m,i)=>{if(i%3===0&&!m.endsWith('-01'))o+=`<text x="${X(i)}" y="${h-7}" class="ax" text-anchor="middle">${+m.slice(5)}${T('월','')}</text>`});
   const LMm=months[n-1].slice(5), same=i=>months[i].slice(5)===LMm;
   if(n>13)months.forEach((m,i)=>{if(same(i)&&i!==n-1&&kind!=='bar')o+=`<line x1="${X(i)}" x2="${X(i)}" y1="${pt}" y2="${h-pb}" stroke="#e8a33d" stroke-width="1" opacity=".55"/>`});
@@ -510,14 +537,14 @@ function chart(host,months,vals,fmt,kind,zero){
     o+=`<polygon points="${X(0)},${h-pb} ${pts} ${X(n-1)},${h-pb}" fill="#e9f0eb"/><polyline points="${pts}" fill="none" stroke="#111" stroke-width="2.2" stroke-linejoin="round"/><circle cx="${X(n-1)}" cy="${Y(vals[n-1])}" r="3.6" fill="#111"/>`;
     if(n>13)vals.forEach((v,i)=>{if(same(i)&&i!==n-1)o+=`<circle cx="${X(i)}" cy="${Y(v)}" r="3.4" fill="#e8a33d" stroke="#fff" stroke-width="1"/>`});}
   o+=`<text x="${w-pr+8}" y="${Y(vals[n-1])+4}" class="el">${fmt(vals[n-1])}</text>`;
-  o+=`<g class="tip" visibility="hidden"><line y1="${pt}" y2="${h-pb}" stroke="#1f4d3a"/><circle r="4" fill="#1f4d3a"/><rect width="118" height="22" fill="#111"/><text fill="#fff" font-size="11.5" font-weight="700"></text></g>`;
+  o+=`<g class="tip" visibility="hidden"><line y1="${pt}" y2="${h-pb}" stroke="#1f4d3a"/><circle r="4" fill="#1f4d3a"/><rect width="124" height="24" fill="#111"/><text fill="#fff" font-size="12.5" font-weight="700"></text></g>`;
   o+=`<rect x="${pl}" y="${pt}" width="${w-pl-pr}" height="${h-pt-pb}" fill="transparent"/></svg>`;
   host.innerHTML=o;
   const svg=host.querySelector('svg'),tip=svg.querySelector('.tip'),[ln,dot,box,tx]=tip.children;
   const move=e=>{const r=svg.getBoundingClientRect();const x=(e.clientX-r.left)/r.width*w;
     let i=Math.round(kind==='bar'?(x-pl)/bw-.5:(x-pl)/bw);i=Math.max(0,Math.min(n-1,i));
     const cx=X(i),cy=Y(vals[i]);ln.setAttribute('x1',cx);ln.setAttribute('x2',cx);dot.setAttribute('cx',cx);dot.setAttribute('cy',cy);
-    const bx=Math.min(w-pr-118,Math.max(pl,cx-59));box.setAttribute('x',bx);box.setAttribute('y',0);tx.setAttribute('x',bx+8);tx.setAttribute('y',15);
+    const bx=Math.min(w-pr-124,Math.max(pl,cx-62));box.setAttribute('x',bx);box.setAttribute('y',0);tx.setAttribute('x',bx+8);tx.setAttribute('y',16);
     tx.textContent=`${months[i].replace('-','.')}  ${fmt(vals[i])}`;tip.setAttribute('visibility','visible')};
   svg.addEventListener('pointermove',move);svg.addEventListener('pointerdown',move);svg.addEventListener('pointerleave',()=>tip.setAttribute('visibility','hidden'));
 }
@@ -562,18 +589,29 @@ function renderTable(){
 }
 function select(id,scroll){
   cur=id; document.querySelectorAll('.chip').forEach(b=>b.setAttribute('aria-pressed',b.dataset.id===id));
-  renderVerdict();renderKpis();renderCharts();renderJun();renderTable();
-  if(scroll)$('jun').scrollIntoView({behavior:'smooth',block:'start'});
+  renderVerdict();renderKpis();renderCharts();renderJun();renderTable();renderNow();
+  try{const u=new URL(location);if(id==='King')u.searchParams.delete('area');else u.searchParams.set('area',id.toLowerCase());history.replaceState(null,'',u)}catch(e){}
+  if(scroll){const m=$('market'),top=m.getBoundingClientRect().top;if(scroll==='force'||top>innerHeight*.55||top<0)m.scrollIntoView({behavior:matchMedia('(prefers-reduced-motion:reduce)').matches?'auto':'smooth',block:'start'})}
 }
+function renderNow(){const a=byId(cur);$('nb-name').textContent=nm(a);$('nb-v').textContent=verdict(a)[0]}
+function areaFromURL(){try{const q=(new URLSearchParams(location.search).get('area')||'').toLowerCase().replace(/[\s_]+/g,'-');const a=A.find(x=>x.id.toLowerCase()===q||x.en.toLowerCase().replace(/\s+/g,'-')===q);return a?a.id:null}catch(e){return null}}
 applyStatic();
 renderPicker();
 document.querySelector('.lang').addEventListener('click',e=>{const b=e.target.closest('button');if(!b||b.dataset.lang===LANG)return;LANG=b.dataset.lang;try{localStorage.setItem('lang',LANG);const u=new URL(location);u.searchParams.set('lang',LANG);history.replaceState(null,'',u)}catch(e){}applyStatic();renderPicker();select(cur);renderWeekly();});
-$('picker').addEventListener('click',e=>{const b=e.target.closest('.chip');if(b)select(b.dataset.id)});
+$('picker').addEventListener('click',e=>{const b=e.target.closest('.chip');if(b)select(b.dataset.id,true)});
 $('range').addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;range=+b.dataset.n;[...$('range').children].forEach(x=>x.setAttribute('aria-pressed',x===b));renderCharts()});
 $('thead').addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;const k=b.dataset.k;if(sortKey===k)sortDir*=-1;else{sortKey=k;sortDir=k==='ko'?1:-1}renderTable()});
-$('tbody').addEventListener('click',e=>{const tr=e.target.closest('tr');if(tr)select(tr.dataset.id,true)});
-$('tbody').addEventListener('keydown',e=>{if(e.key==='Enter'){const tr=e.target.closest('tr');if(tr)select(tr.dataset.id,true)}});
-select('King');
+$('tbody').addEventListener('click',e=>{const tr=e.target.closest('tr');if(tr)select(tr.dataset.id,'force')});
+$('tbody').addEventListener('keydown',e=>{if(e.key==='Enter'){const tr=e.target.closest('tr');if(tr)select(tr.dataset.id,'force')}});
+select(areaFromURL()||'King');
+// 지금 보는 지역 바: 지역 고르는 칸이 화면 위로 지나가면 보임
+(()=>{const bar=$('nowbar'),pk=$('picker'),end=$('compare');
+  const upd=()=>{const pb=pk.getBoundingClientRect().bottom,eb=end.getBoundingClientRect().top;const on=pb<60&&eb>140;bar.classList.toggle('on',on);bar.setAttribute('aria-hidden',!on)};
+  addEventListener('scroll',upd,{passive:true});addEventListener('resize',upd);upd();
+  $('nb-change').addEventListener('click',()=>{pk.scrollIntoView({behavior:'smooth',block:'start'});const b=pk.querySelector('.chip[aria-pressed=true]');if(b)setTimeout(()=>b.focus({preventScroll:true}),400)});})();
+$('v-share').addEventListener('click',async e=>{const b=e.currentTarget,u=new URL(location);u.searchParams.set('area',cur.toLowerCase());u.searchParams.set('lang',LANG);const old=b.textContent;
+  try{if(navigator.share&&matchMedia('(pointer:coarse)').matches){await navigator.share({title:document.title,url:u.href});return}await navigator.clipboard.writeText(u.href);b.textContent=T('링크를 복사했습니다','Link copied')}catch(err){b.textContent=T('복사하지 못했습니다','Could not copy')}setTimeout(()=>b.textContent=old,2200)});
+let RW=innerWidth;addEventListener('resize',()=>{if(Math.abs(innerWidth-RW)>40){RW=innerWidth;renderCharts()}});
 
 function renderWeekly(){
   const w=WEEKLY[WEEKLY.length-1], pw=WEEKLY.length>1?WEEKLY[WEEKLY.length-2]:null;
@@ -598,9 +636,13 @@ function renderWeekly(){
   $('wk-brief').hidden=!paragraphs.length;
   $('wk-brief-title').textContent=brief&&brief.title||'';
   $('wk-brief-source').textContent=brief&&brief.source||'';
-  $('wk-brief-body').replaceChildren(...paragraphs.map(text=>{
+  const body=$('wk-brief-body');
+  body.replaceChildren(...paragraphs.map(text=>{
     const p=document.createElement('p');p.textContent=text;return p;
   }));
+  let more=$('wk-more');if(!more){more=document.createElement('button');more.type='button';more.id='wk-more';more.className='wkbrief-more';body.after(more);more.addEventListener('click',()=>{const s=body.classList.toggle('short');more.setAttribute('aria-expanded',!s);more.textContent=s?T(`더 읽기 (${body.children.length-1}문단 더)`,`Read more (${body.children.length-1} more)`):T('접기','Show less')})}
+  more.hidden=paragraphs.length<2;body.classList.toggle('short',paragraphs.length>1);more.setAttribute('aria-expanded','false');
+  more.textContent=T(`더 읽기 (${paragraphs.length-1}문단 더)`,`Read more (${paragraphs.length-1} more)`);
 }
 let WKOPEN=(()=>{try{const v=localStorage.getItem('wkopen');if(v!==null)return v==='1'}catch(e){}return window.matchMedia('(min-width:861px)').matches})();
 function setWk(){ $('weekly').classList.toggle('closed',!WKOPEN); $('wk-tog').setAttribute('aria-expanded',WKOPEN); $('wk-open').setAttribute('aria-expanded',WKOPEN); $('wk-togl').textContent=WKOPEN?T('접기','Hide'):T('펼쳐 보기','Show'); }
