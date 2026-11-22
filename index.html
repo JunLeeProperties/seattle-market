@@ -1236,8 +1236,14 @@ select(areaFromURL()||'King');
   const upd=()=>{const pb=pk.getBoundingClientRect().bottom,eb=end.getBoundingClientRect().top;const on=pb<60&&eb>140;bar.classList.toggle('on',on);bar.setAttribute('aria-hidden',!on)};
   addEventListener('scroll',upd,{passive:true});addEventListener('resize',upd);upd();
   $('nb-change').addEventListener('click',()=>{pk.scrollIntoView({behavior:'smooth',block:'start'});const b=pk.querySelector('.chip[aria-pressed=true]');if(b)setTimeout(()=>b.focus({preventScroll:true}),400)});})();
-$('v-share').addEventListener('click',async e=>{const b=e.currentTarget,u=new URL(location);u.searchParams.set('area',cur.toLowerCase());u.searchParams.set('lang',LANG);const old=b.textContent;
-  try{if(navigator.share&&matchMedia('(pointer:coarse)').matches){await navigator.share({title:document.title,url:u.href});return}await navigator.clipboard.writeText(u.href);b.textContent=T('링크를 복사했습니다','Link copied')}catch(err){b.textContent=T('복사하지 못했습니다','Could not copy')}setTimeout(()=>b.textContent=old,2200)});
+$('v-share').addEventListener('click',async e=>{const b=e.currentTarget,old=b.textContent;
+  const href=location.origin+location.pathname+'?area='+encodeURIComponent(cur.toLowerCase())+'&lang='+LANG;
+  const legacy=()=>{const t=document.createElement('textarea');t.value=href;t.setAttribute('readonly','');t.style.cssText='position:fixed;top:0;left:0;opacity:0';document.body.appendChild(t);t.select();let ok=false;try{ok=document.execCommand('copy')}catch(_){}t.remove();return ok};
+  let done=false;
+  if(navigator.share&&matchMedia('(pointer:coarse)').matches){try{await navigator.share({title:document.title,url:href});return}catch(err){if(err&&err.name==='AbortError')return}}
+  try{await navigator.clipboard.writeText(href);done=true}catch(_){done=legacy()}
+  if(done){b.textContent=T('링크를 복사했습니다','Link copied');setTimeout(()=>b.textContent=old,2200)}
+  else{window.prompt(T('아래 주소를 길게 눌러 복사해 주세요','Copy this link'),href)}});
 let RW=innerWidth;addEventListener('resize',()=>{if(Math.abs(innerWidth-RW)>40){RW=innerWidth;renderCharts()}});
 
 function renderWeekly(){
