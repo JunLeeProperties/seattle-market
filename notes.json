@@ -1,15 +1,13 @@
 {
  "_안내": "따옴표(\") 안의 글을 고치면 웹페이지에 반영됩니다. overview는 전체 시장 의견이며, areas.<도시ID>.jun_memo는 지역별 자유 형식 의견입니다. 매수·매도 구분 없이 문단을 쓰고, 문단 사이는 줄을 두 번 바꿉니다. 아직 작성하지 않은 지역의 jun_memo는 빈 문자열(\"\")로 둡니다. 빈칸에는 자동 초안을 표시하지 않습니다. 영어는 en.overview와 en.areas 안에 같은 구조로 있습니다.",
  "weekly": {
-  "title": "신규 매물은 줄고 있지만, 가격을 맞춰 가는 과정은 계속되고 있습니다",
+  "title": "거래 완료는 늘고, 가격 인하는 줄었습니다",
   "paragraphs": [
-   "이번 주에는 세 카운티 모두 신규 매물이 줄었고, 펜딩은 신규 매물보다 많았습니다. 킹카운티는 펜딩이 지난주보다 4.8% 늘었고, 스노호미시는 같았으며, 피어스는 10.6% 줄었습니다. 지역마다 차이는 있지만, 새로 나오는 매물이 줄어드는 가운데 계약은 계속 이뤄지고 있습니다.",
-   "이번 회사 브리핑에서도 금리와 고용에 대한 불확실성 속에서 펜딩이 비교적 잘 버티고 있다는 점을 짚었습니다. 다만 이를 모든 지역의 계약이 늘고 있다는 뜻으로 보기는 어렵습니다. 바이어들이 가격과 조건을 더 꼼꼼히 비교하면서, 맞는 집에는 움직이고 있다고 보는 편이 좋겠습니다.",
-   "연말로 접어들면 매물을 거두는 셀러가 늘기 마련인데, 회사에서는 올해 재등록과 가격 조정을 통해 판매를 이어가려는 움직임에 주목했습니다. 매물이 다시 나왔다면 처음 가격부터 지금까지 얼마나 조정됐는지, 전체 시장 노출 기간은 어느 정도인지 함께 살펴볼 필요가 있습니다.",
-   "이스트사이드는 회사 브리핑에서 신규 매물 감소가 재고 부담을 덜어 주는 흐름으로 설명됐습니다. 스노호미시는 노동절 이후 비교적 안정적인 흐름이라는 평가가 있었고, 이번 주 펜딩도 지난주 수준을 유지했습니다. 피어스는 회사에서 가격 인하 추세가 둔화된다고 봤지만, 이번에 받은 건수는 지난주 입력값보다 늘었습니다. 비교 기간과 집계 기준이 확인되기 전까지는 같은 흐름으로 단정하지 않겠습니다.",
-   "지금은 바이어가 가격과 조건을 충분히 이야기해 볼 수 있는 시장이라고 생각합니다. 다만 모든 셀러가 크게 양보하는 것은 아닙니다. 이미 가격을 조정한 집인지, 비슷한 집의 최근 거래가와 현재 경쟁 매물은 어떤지 확인한 뒤 접근하시면 좋겠습니다. 셀러분들께는 처음 가격을 정하는 것과 함께, 나온 뒤의 반응에 맞춰 대응하는 것이 중요해 보입니다."
+   "이번 주에는 세 카운티 모두 거래 완료가 지난주보다 30% 넘게 늘었습니다. 킹카운티 32.1%, 스노호미시 30.6%, 피어스 33.1% 증가입니다. 가격 인하 건수는 세 곳 모두 줄었는데, 스노호미시가 30.8%로 가장 크게 줄었고 킹카운티 12.5%, 피어스 13.0% 감소입니다.",
+   "신규 매물은 지역별로 엇갈렸습니다. 킹카운티는 10.8% 줄었고, 스노호미시는 9.8%, 피어스는 25.5% 늘었습니다. 펜딩은 킹카운티 5.3%, 피어스 3.1% 줄었고 스노호미시는 지난주와 같았습니다. 세 곳 모두 펜딩이 신규 매물보다 많았습니다.",
+   "취소·만료는 킹카운티가 7.2% 늘었고, 스노호미시는 0.9%, 피어스는 7.5% 줄었습니다. 추수감사절 주간을 앞둔 수치라 다음 주에는 휴일 영향으로 움직임이 줄어들 수 있습니다."
   ],
-  "source": "11월 9~16일 카운티별 주간 수치와 공유받은 회사 브리핑을 함께 정리했습니다. 회사 브리핑의 비교 기간·대상은 주간 표와 다를 수 있습니다."
+  "source": "11월 16~23일 NWMLS 카운티별 주간 수치 기준입니다. 신규 매물은 Active만 셌고, 취소·만료는 Canceled와 Expired를 합한 값입니다."
  },
  "areas": {
   "King": {
@@ -269,15 +267,13 @@
  },
  "en": {
   "weekly": {
-   "title": "Fewer new listings, while sellers continue adjusting prices",
+   "title": "More closed sales, fewer price reductions",
    "paragraphs": [
-    "New listings fell in all three counties this week, and pending sales exceeded new listings in each. Pending sales rose 4.8% in King County, held steady in Snohomish County and fell 10.6% in Pierce County. Conditions vary, but homes are still going under contract as fewer listings come onto the market.",
-    "The company briefing also highlighted relatively resilient pending activity despite uncertainty around interest rates and employment. That does not mean contracts are increasing in every area. Buyers appear to be comparing prices and terms carefully, then moving when a home fits.",
-    "Sellers often take homes off the market as the holidays approach. This year's company briefing instead drew attention to sellers continuing to pursue a sale through relisting and price adjustments. For a relisted home, it helps to review the full pricing history and total time exposed to the market.",
-    "The briefing described fewer new listings as easing inventory pressure on the Eastside. It also characterized Snohomish as relatively steady since Labor Day; this week's pending count was unchanged. For Pierce, the briefing described a slowing trend in price reductions, while the newly supplied count is above last week's recorded figure. Those observations should not be treated as directly comparable until their periods and definitions are confirmed.",
-    "I see this as a market where buyers have room to discuss price and terms, although not every seller will make a large concession. Look at whether a home has already been repriced and recent comparable sale prices and competing listings. For sellers, the initial price matters, as does responding to the feedback that follows."
+    "Closed sales rose more than 30% week over week in all three counties: 32.1% in King, 30.6% in Snohomish and 33.1% in Pierce. Price reductions fell everywhere, led by Snohomish at 30.8%, with King down 12.5% and Pierce down 13.0%.",
+    "New listings were mixed. King fell 10.8%, while Snohomish rose 9.8% and Pierce rose 25.5%. Pending sales fell 5.3% in King and 3.1% in Pierce and were unchanged in Snohomish. Pending sales exceeded new listings in all three counties.",
+    "Canceled and expired listings rose 7.2% in King and fell 0.9% in Snohomish and 7.5% in Pierce. With Thanksgiving week ahead, next week's activity may slow because of the holiday."
    ],
-   "source": "Based on Nov 9–16 county activity and the company briefing shared with Jun. The briefing may cover different periods or groups of properties from the weekly figures."
+   "source": "Based on NWMLS county activity for Nov 16–23. New listings count Active only; canceled/expired combines Canceled and Expired."
   },
   "areas": {
    "King": {
