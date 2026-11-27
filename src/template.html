@@ -337,10 +337,10 @@ h2,h3,.vbig,.vsub{word-break:keep-all}
 /* 그래프 그려지기 */
 .cwait .ln{stroke-dasharray:1;stroke-dashoffset:1}.cwait .ar,.cwait .end,.cwait .el{opacity:0}.cwait .bars{transform:scaleY(0)}
 .bars{transform-box:fill-box;transform-origin:bottom}
-.draw .ln{stroke-dasharray:1;animation:mpDraw .8s var(--ease) both}
-.draw .ar{animation:mpFade .5s .25s both}
-.draw .end,.draw .el{animation:mpFade .25s .6s both}
-.draw .bars{animation:mpGrowY .55s var(--ease) both}
+.draw .ln{stroke-dasharray:1;animation:mpDraw 1.6s cubic-bezier(.33,0,.2,1) both}
+.draw .ar{animation:mpFade .9s .5s both}
+.draw .end,.draw .el{animation:mpFade .35s 1.35s both}
+.draw .bars{animation:mpGrowY 1.2s var(--ease) both}
 /* 주간 막대 */
 .wkwait .wr .bar i{transform:scaleX(0)}
 .wr .bar i{transform-origin:left}
