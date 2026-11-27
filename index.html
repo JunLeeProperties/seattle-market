@@ -317,6 +317,46 @@ h2,h3,.vbig,.vsub{word-break:keep-all}
 .wkbrief-more:hover{background:var(--g);color:#fff}
 .wkbrief-body.short p+p{display:none}
 @media(max-width:600px){.nowbar{top:60px}.nowbar .wrap{padding:0 16px}.nowbar .vt{display:block;margin:0}.nowbar span{line-height:1.3}}
+/* 13. 움직임 (2026-11-26): 한 곳에 큰 움직임은 하나만, 숫자는 처음부터 최종 값 */
+:root{--ease:cubic-bezier(.16,1,.3,1);--press:cubic-bezier(.3,0,.2,1)}
+@keyframes mpIn{from{opacity:0;transform:translateY(var(--rise,8px))}to{opacity:1;transform:none}}
+@keyframes mpFade{from{opacity:0}to{opacity:1}}
+@keyframes mpDraw{from{stroke-dashoffset:1}to{stroke-dashoffset:0}}
+@keyframes mpGrowY{from{transform:scaleY(0)}to{transform:scaleY(1)}}
+@keyframes mpGrowX{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+/* 누를 때 반응 */
+.chip,.seg button,.lang button,.wktog,.wkopen,.rpt,.share,.wkbrief-more,.nowbar button,.top .cta{transition:background-color .15s ease-out,color .15s ease-out,border-color .15s ease-out,transform .12s var(--press)}
+.chip:active,.seg button:active,.lang button:active,.wktog:active,.wkopen:active,.rpt:active,.share:active,.wkbrief-more:active,.nowbar button:active,.top .cta:active{transform:scale(.97)}
+@media(pointer:coarse){.chip,.seg button,.nowbar button,.lang button{min-height:44px}}
+/* 지역을 바꿨을 때: 판정·신호·숫자가 살짝 올라오며 바뀜 */
+.swap .verdict>div:first-child,.swap .sr,.swap .kpi,.swap .two{animation:mpIn .32s var(--ease) both}
+.swap .sr:nth-child(2),.swap .kpi:nth-child(2){animation-delay:40ms}
+.swap .sr:nth-child(3),.swap .kpi:nth-child(3){animation-delay:80ms}
+.swap .kpi:nth-child(4){animation-delay:120ms}.swap .kpi:nth-child(5){animation-delay:160ms}
+@media(max-width:600px){.swap{--rise:6px}}
+/* 그래프 그려지기 */
+.cwait .ln{stroke-dasharray:1;stroke-dashoffset:1}.cwait .ar,.cwait .end,.cwait .el{opacity:0}.cwait .bars{transform:scaleY(0)}
+.bars{transform-box:fill-box;transform-origin:bottom}
+.draw .ln{stroke-dasharray:1;animation:mpDraw .8s var(--ease) both}
+.draw .ar{animation:mpFade .5s .25s both}
+.draw .end,.draw .el{animation:mpFade .25s .6s both}
+.draw .bars{animation:mpGrowY .55s var(--ease) both}
+/* 주간 막대 */
+.wkwait .wr .bar i{transform:scaleX(0)}
+.wr .bar i{transform-origin:left}
+.wkgrow .wr .bar i{animation:mpGrowX .6s var(--ease) both}
+.wkgrow .wr:nth-child(3) .bar i{animation-delay:40ms}.wkgrow .wr:nth-child(4) .bar i{animation-delay:80ms}.wkgrow .wr:nth-child(5) .bar i{animation-delay:120ms}.wkgrow .wr:nth-child(6) .bar i{animation-delay:160ms}
+/* 펼침 */
+.op-toggle{transition:transform .25s var(--ease)}
+.op-overview[open] .op-body{animation:mpIn .3s var(--ease) both;--rise:6px}
+.wkbrief-body:not(.short) p+p{animation:mpIn .3s var(--ease) both;--rise:6px}
+/* 스크롤하면 조용히 올라오는 블록 */
+html.rvon .rv{opacity:0;transform:translateY(14px)}
+html.rvon .rv.in{opacity:1;transform:none;transition:opacity .6s var(--ease),transform .6s var(--ease)}
+@media(max-width:600px){html.rvon .rv{transform:translateY(10px)}html.rvon .rv.in{transition-duration:.5s}}
+/* 금액 줄바꿈 막기 */
+.kpi b{white-space:nowrap}.nw{white-space:nowrap}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.cwait .ln{stroke-dashoffset:0}.cwait .ar,.cwait .end,.cwait .el{opacity:1}.cwait .bars,.wkwait .wr .bar i{transform:none}html.rvon .rv{opacity:1;transform:none}}
 </style>
 </head>
 <body>
@@ -1223,9 +1263,9 @@ function chart(host,months,vals,fmt,kind,zero){
   if(n<=13)months.forEach((m,i)=>{if(i%3===0&&!m.endsWith('-01'))o+=`<text x="${X(i)}" y="${h-7}" class="ax" text-anchor="middle">${+m.slice(5)}${T('월','')}</text>`});
   const LMm=months[n-1].slice(5), same=i=>months[i].slice(5)===LMm;
   if(n>13)months.forEach((m,i)=>{if(same(i)&&i!==n-1&&kind!=='bar')o+=`<line x1="${X(i)}" x2="${X(i)}" y1="${pt}" y2="${h-pb}" stroke="#e8a33d" stroke-width="1" opacity=".55"/>`});
-  if(kind==='bar'){vals.forEach((v,i)=>{o+=`<rect x="${X(i)-bw*.36}" y="${Y(v)}" width="${Math.max(bw*.72,1)}" height="${h-pb-Y(v)}" fill="${i===n-1?'#1f4d3a':(n>13&&same(i))?'#e8a33d':'#cfd8d2'}"/>`})}
+  if(kind==='bar'){o+='<g class="bars">';vals.forEach((v,i)=>{o+=`<rect x="${X(i)-bw*.36}" y="${Y(v)}" width="${Math.max(bw*.72,1)}" height="${h-pb-Y(v)}" fill="${i===n-1?'#1f4d3a':(n>13&&same(i))?'#e8a33d':'#cfd8d2'}"/>`});o+='</g>'}
   else{const pts=vals.map((v,i)=>`${X(i).toFixed(1)},${Y(v).toFixed(1)}`).join(' ');
-    o+=`<polygon points="${X(0)},${h-pb} ${pts} ${X(n-1)},${h-pb}" fill="#e9f0eb"/><polyline points="${pts}" fill="none" stroke="#111" stroke-width="2.2" stroke-linejoin="round"/><circle cx="${X(n-1)}" cy="${Y(vals[n-1])}" r="3.6" fill="#111"/>`;
+    o+=`<polygon class="ar" points="${X(0)},${h-pb} ${pts} ${X(n-1)},${h-pb}" fill="#e9f0eb"/><polyline class="ln" pathLength="1" points="${pts}" fill="none" stroke="#111" stroke-width="2.2" stroke-linejoin="round"/><circle class="end" cx="${X(n-1)}" cy="${Y(vals[n-1])}" r="3.6" fill="#111"/>`;
     if(n>13)vals.forEach((v,i)=>{if(same(i)&&i!==n-1)o+=`<circle cx="${X(i)}" cy="${Y(v)}" r="3.4" fill="#e8a33d" stroke="#fff" stroke-width="1"/>`});}
   o+=`<text x="${w-pr+8}" y="${Y(vals[n-1])+4}" class="el">${fmt(vals[n-1])}</text>`;
   o+=`<g class="tip" visibility="hidden"><line y1="${pt}" y2="${h-pb}" stroke="#1f4d3a"/><circle r="4" fill="#1f4d3a"/><rect width="124" height="24" fill="#111"/><text fill="#fff" font-size="12.5" font-weight="700"></text></g>`;
@@ -1289,11 +1329,11 @@ function areaFromURL(){try{const q=(new URLSearchParams(location.search).get('ar
 applyStatic();
 renderPicker();
 document.querySelector('.lang').addEventListener('click',e=>{const b=e.target.closest('button');if(!b||b.dataset.lang===LANG)return;LANG=b.dataset.lang;try{localStorage.setItem('lang',LANG);const u=new URL(location);u.searchParams.set('lang',LANG);history.replaceState(null,'',u)}catch(e){}applyStatic();renderPicker();select(cur);renderWeekly();});
-$('picker').addEventListener('click',e=>{const b=e.target.closest('.chip');if(b)select(b.dataset.id,true)});
-$('range').addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;range=+b.dataset.n;[...$('range').children].forEach(x=>x.setAttribute('aria-pressed',x===b));renderCharts()});
+$('picker').addEventListener('click',e=>{const b=e.target.closest('.chip');if(b){select(b.dataset.id,true);playSwap()}});
+$('range').addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;range=+b.dataset.n;[...$('range').children].forEach(x=>x.setAttribute('aria-pressed',x===b));renderCharts();drawCharts()});
 $('thead').addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;const k=b.dataset.k;if(sortKey===k)sortDir*=-1;else{sortKey=k;sortDir=k==='ko'?1:-1}renderTable()});
-$('tbody').addEventListener('click',e=>{const tr=e.target.closest('tr');if(tr)select(tr.dataset.id,'force')});
-$('tbody').addEventListener('keydown',e=>{if(e.key==='Enter'){const tr=e.target.closest('tr');if(tr)select(tr.dataset.id,'force')}});
+$('tbody').addEventListener('click',e=>{const tr=e.target.closest('tr');if(tr){select(tr.dataset.id,'force');playSwap()}});
+$('tbody').addEventListener('keydown',e=>{if(e.key==='Enter'){const tr=e.target.closest('tr');if(tr){select(tr.dataset.id,'force');playSwap()}}});
 select(areaFromURL()||'King');
 // 지금 보는 지역 바: 지역 고르는 칸이 화면 위로 지나가면 보임
 (()=>{const bar=$('nowbar'),pk=$('picker'),end=$('compare');
@@ -1346,6 +1386,21 @@ function setWk(){ $('weekly').classList.toggle('closed',!WKOPEN); $('wk-tog').se
 const wkFlip=()=>{WKOPEN=!WKOPEN;try{localStorage.setItem('wkopen',WKOPEN?'1':'0')}catch(e){}setWk()};
 $('wk-tog').addEventListener('click',wkFlip);$('wk-open').addEventListener('click',wkFlip);$('wk-mini').addEventListener('click',wkFlip);
 renderWeekly();
+// 13. 움직임: 사용자가 직접 바꿀 때와 처음 화면에 들어올 때만. 숫자는 처음부터 최종 값.
+var RM=matchMedia('(prefers-reduced-motion:reduce)').matches, IOK='IntersectionObserver' in window;
+function playSwap(){if(RM)return;['market','jun'].forEach(id=>{const e=$(id);e.classList.remove('swap');void e.offsetWidth;e.classList.add('swap');clearTimeout(e._sw);e._sw=setTimeout(()=>e.classList.remove('swap'),700)});drawCharts()}
+function drawCharts(){if(RM)return;const c=$('charts');if(c.classList.contains('cwait'))return;c.querySelectorAll('svg').forEach(s=>s.classList.add('draw'))}
+function growWk(){if(RM)return;const g=$('wk-grid');g.classList.remove('wkwait','wkgrow');void g.offsetWidth;g.classList.add('wkgrow');clearTimeout(g._t);g._t=setTimeout(()=>g.classList.remove('wkgrow'),1000)}
+if(!RM&&IOK){
+  const c=$('charts');c.classList.add('cwait');
+  const io=new IntersectionObserver(es=>{if(es.some(x=>x.isIntersecting)){io.disconnect();c.classList.remove('cwait');drawCharts()}},{threshold:.15});io.observe(c);
+  const g=$('wk-grid');g.classList.add('wkwait');
+  const io2=new IntersectionObserver(es=>{if(es.some(x=>x.isIntersecting)){io2.disconnect();growWk()}},{threshold:.2});io2.observe(g);
+  [$('wk-tog'),$('wk-open'),$('wk-mini')].forEach(b=>b.addEventListener('click',()=>{if(WKOPEN)requestAnimationFrame(growWk)}));
+  const els=[$('jun'),$('trend'),document.querySelector('.wrapov'),$('compare'),document.querySelector('.contact .cgrid')].filter(Boolean);
+  els.forEach(e=>e.classList.add('rv'));document.documentElement.classList.add('rvon');
+  const io3=new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting){x.target.classList.add('in');io3.unobserve(x.target)}}),{rootMargin:'0px 0px -10% 0px'});els.forEach(e=>io3.observe(e));
+}
 </script>
 </body>
 </html>
